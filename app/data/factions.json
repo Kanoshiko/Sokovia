@@ -8,7 +8,7 @@
     "sokovie_monarchiste": {
         "nom": "Sokovie Monarchiste",
         "cout": "0",
-        "note": "1fois/jour vous pouvez utiliser une comp. basique Diplomatique d’un membre de votre faction.",
+        "note": "1fois/jour vous pouvez utiliser une compétence diplomatique au niveau basique d’un membre de votre faction.",
         "description": "Vous êtes citoyen Sokovien, aligné sur les Monarchistes. Vous faites partie d’une cour et respectez son étiquette."
     },
     "sokovie_latverienne": {
@@ -23,7 +23,7 @@
         "note": "Vous avez accès à toute discussion en tant qu’observateur silencieux. On ne peut vous refuser le droit d’écouter.",
         "description": "Vous êtes citoyen européen, africain ou asiatique, vous faites partie du conseil qui devra déterminer laquelle des trois parties ci-dessus devra recevoir la légitimité et la reconnaissance au niveau international."
     },
-    "autres": {
+    "Autres": {
         "nom": "Autres",
         "cout": "0",
         "note": "",

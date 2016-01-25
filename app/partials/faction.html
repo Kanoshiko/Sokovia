@@ -1,0 +1,20 @@
+<h2 class="page-header">Faction</h2>
+<table class="table">
+    <tr>
+        <th>Faction</th>
+        <th>Description</th>
+        <th>Note</th>
+        <th>Coût</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="f in listeFactions">
+        <td><b>{{f.nom}}</b></td>
+        <td>{{f.description}}</td>
+        <td>{{f.note}}</td>
+        <td>{{f.cout}} pt.</td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.changeFaction(f)" ng-show="!perso.isFactionSelected(f)">Choisir</span>
+            <span ng-show="perso.isFactionSelected(f)">✓</span>
+        </td>
+    </tr>
+</table>

@@ -14,148 +14,181 @@ angular.module('myApp.runs', [])
 
                 $http.get('data/factions.json').success(function (data) {
                     $rootScope.listeFactions = data;
-                    $rootScope.perso.faction = $rootScope.listeFactions["autres"];
+                    $rootScope.perso.faction = $rootScope.listeFactions["Autres"];
+                });
+                
+                $http.get('data/allegeances.json').success(function (data) {
+                    $rootScope.listeAllegeances = data;
+                    $rootScope.perso.allegeance = $rootScope.listeAllegeances["Sans"];
                 });
 
                 $http.get('data/specialites.json').success(function (data) {
                     $rootScope.listeSpecialites = data;
-                    $rootScope.perso.specialite = $rootScope.listeSpecialites["sans"];
+                    $rootScope.perso.specialite = $rootScope.listeSpecialites["Sans"];
                 });
 
                 $http.get('data/competences.json').success(function (data) {
                     $rootScope.listeCompetences = data;
                     $rootScope.perso.competences = {};
                 });
+                
+                $http.get('data/pouvoirs_inhumains.json').success(function (data) {
+                    $rootScope.listePouvoirsInhumains = data;
+                    $rootScope.perso.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
+                });
 
                 //Types
                 $rootScope.perso.changeType = function (type) {
-                    $rootScope.perso.budget = 10 - parseInt(type.cout);
-                    $rootScope.perso.type = type;
-                    $rootScope.perso.specialite = $rootScope.listeSpecialites["sans"];
-                    $rootScope.perso.competences = {};
+                    this.budget = 10 - parseInt(type.cout);
+                    this.type = type;
+                    this.allegeance = $rootScope.listeAllegeances["Sans"];
+                    this.specialite = $rootScope.listeSpecialites["Sans"];
+                    this.competences = {};
+                    this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
                 };
 
                 $rootScope.perso.isTypeSelected = function (type) {
-                    return (type === $rootScope.perso.type);
+                    return (type === this.type);
                 };
 
                 // Factions
                 $rootScope.perso.changeFaction = function (faction) {
-                    $rootScope.perso.budget = $rootScope.perso.budget + parseInt($rootScope.perso.faction.cout) - parseInt(faction.cout);
-                    $rootScope.perso.faction = faction;
+                    this.budget = this.budget + parseInt(this.faction.cout) - parseInt(faction.cout);
+                    this.faction = faction;
                 };
 
                 $rootScope.perso.isFactionSelected = function (faction) {
-                    return (faction === $rootScope.perso.faction);
+                    return (faction === this.faction);
+                };
+                
+                // Allegeances
+                $rootScope.perso.changeAllegeance = function (allegeance) {
+                    this.budget = 10 - parseInt(this.type.cout) - parseInt(allegeance.cout);
+                    this.allegeance = allegeance;
+                    this.competences = {};
+                };
+
+                $rootScope.perso.isAllegeanceSelected = function (allegeance) {
+                    return (allegeance === this.allegeance);
                 };
 
                 //Specialites
+                $rootScope.perso.haveAcccessSpecialite = function () {
+                    return (this.type !== $rootScope.listeTypes["mystique"] && this.type !== $rootScope.listeTypes["inhumain"]);
+                };
+                
                 $rootScope.perso.changeSpecialite = function (specialite) {
-                    $rootScope.perso.budget = 10 - parseInt($rootScope.perso.type.cout) - parseInt(specialite.cout);
-                    $rootScope.perso.specialite = specialite;
-                    $rootScope.perso.competences = {};
+                    this.budget = 10 - parseInt(this.type.cout) - parseInt(specialite.cout);
+                    this.specialite = specialite;
+                    this.competences = {};
                 };
 
                 $rootScope.perso.isSpecialiteSelected = function (specialite) {
-                    return (specialite === $rootScope.perso.specialite);
+                    return (specialite === this.specialite);
                 };
+                
+                // Pouvoir inhumain
+                $rootScope.perso.haveAcccessPouvoirInhumain = function () {
+                    return (this.type === $rootScope.listeTypes["inhumain"]);
+                };
+                
+                $rootScope.perso.changePouvoirInhumain = function (pouvoirInhumain) {
+                    this.budget = this.budget + parseInt(this.pouvoirInhumain.cout) - parseInt(pouvoirInhumain.cout);
+                    this.pouvoirInhumain = pouvoirInhumain;
+                };
+
+                $rootScope.perso.isPouvoirInhumainSelected = function (pouvoirInhumain) {
+                    return (pouvoirInhumain === this.pouvoirInhumain);
+                };
+                
 
                 //Compétences
                 $rootScope.perso.haveAcccessExpertComp = function () {
-                    return ($rootScope.perso.type === $rootScope.listeTypes["prodige"] || $rootScope.perso.type === $rootScope.listeTypes["humain"]);
+                    return (this.type === $rootScope.listeTypes["prodige"] || this.type === $rootScope.listeTypes["humain"]);
                 };
 
-                $rootScope.perso.haveAcccessSurhumainComp = function () {
-                    return ($rootScope.perso.type === $rootScope.listeTypes["prodige"] || $rootScope.perso.type === $rootScope.listeTypes["augmente"]);
+                $rootScope.perso.haveAcccessProdigeComp = function () {
+                    return (this.type === $rootScope.listeTypes["prodige"]);
                 };
 
                 $rootScope.perso.addBasiqueComp = function (comp) {
-                    if (!$rootScope.perso.competences[comp.nom.toString() + "1"] && $rootScope.perso.budget > 0) {
-                        $rootScope.perso.budget = $rootScope.perso.budget - 1;
-                        $rootScope.perso.competences[comp.nom.toString() + "1"] = comp.nom + " - basique : " + comp.basique;
+                    if (!this.competences[comp.nom.toString() + "1"] && this.budget > 0) {
+                        this.budget = this.budget - 1;
+                        this.competences[comp.nom.toString() + "1"] = comp.nom + " - basique : " + comp.basique;
                     }
                 };
 
                 $rootScope.perso.addAvanceComp = function (comp) {
-                    $rootScope.perso.addBasiqueComp(comp);
-                    if (!$rootScope.perso.competences[comp.nom.toString() + "2"] && $rootScope.perso.budget > 0) {
-                        $rootScope.perso.budget = $rootScope.perso.budget - 1;
-                        $rootScope.perso.competences[comp.nom.toString() + "2"] = comp.nom + " - avance : " + comp.avance;
+                    this.addBasiqueComp(comp);
+                    if (!this.competences[comp.nom.toString() + "2"] && this.budget > 0) {
+                        this.budget = this.budget - 1;
+                        this.competences[comp.nom.toString() + "2"] = comp.nom + " - avancé : " + comp.avance;
                     }
                 }
 
                 $rootScope.perso.addExpertComp = function (comp) {
-                    $rootScope.perso.addAvanceComp(comp);
-                    if (!$rootScope.perso.competences[comp.nom.toString() + "3"] && $rootScope.perso.budget > 0) {
-                        $rootScope.perso.budget = $rootScope.perso.budget - 1;
-                        $rootScope.perso.competences[comp.nom.toString() + "3"] = comp.nom + " - expert : " + comp.expert;
+                    this.addAvanceComp(comp);
+                    if (!this.competences[comp.nom.toString() + "3"] && this.budget > 0) {
+                        this.budget = this.budget - 1;
+                        this.competences[comp.nom.toString() + "3"] = comp.nom + " - expert : " + comp.expert;
                     }
                 }
 
-                $rootScope.perso.addSurhumainComp = function (comp) {
-                    if ($rootScope.perso.type !== $rootScope.listeTypes["augmente"]) {
-                        $rootScope.perso.addExpertComp(comp);
-                        if (!$rootScope.perso.competences[comp.nom.toString() + "4"] && $rootScope.perso.budget > 0) {
-                            $rootScope.perso.budget = $rootScope.perso.budget - 1;
-                            $rootScope.perso.competences[comp.nom.toString() + "4"] = comp.nom + " - surhumain : " + comp.surhumain;
-                        }
-                    } else {
-                        if (!$rootScope.perso.competences[comp.nom.toString() + "4"] && $rootScope.perso.budget > 0) {
-                            $rootScope.perso.budget = $rootScope.perso.budget - 1;
-                            $rootScope.perso.competences[comp.nom.toString() + "4"] = comp.nom + " - surhumain : " + comp.surhumain;
-                        }
+                $rootScope.perso.addProdigeComp = function (comp) {
+                    this.addExpertComp(comp);
+                    if (!this.competences[comp.nom.toString() + "4"] && this.budget > 0) {
+                        this.budget = this.budget - 1;
+                        this.competences[comp.nom.toString() + "4"] = comp.nom + " - prodige : " + comp.prodige;
                     }
                 }
 
                 $rootScope.perso.removeBasiqueComp = function (comp) {
-                    if ($rootScope.perso.competences[comp.nom.toString() + "1"]) {
-                        delete $rootScope.perso.competences[comp.nom.toString() + "1"];
-                        $rootScope.perso.budget = $rootScope.perso.budget + 1;
+                    if (this.competences[comp.nom.toString() + "1"]) {
+                        delete this.competences[comp.nom.toString() + "1"];
+                        this.budget = this.budget + 1;
                     }
 
-                    $rootScope.perso.removeAvanceComp(comp);
+                    this.removeAvanceComp(comp);
                 };
 
                 $rootScope.perso.removeAvanceComp = function (comp) {
-                    if ($rootScope.perso.competences[comp.nom.toString() + "2"]) {
-                        delete $rootScope.perso.competences[comp.nom.toString() + "2"];
-                        $rootScope.perso.budget = $rootScope.perso.budget + 1;
+                    if (this.competences[comp.nom.toString() + "2"]) {
+                        delete this.competences[comp.nom.toString() + "2"];
+                        this.budget = this.budget + 1;
                     }
 
-                    $rootScope.perso.removeExpertComp(comp);
+                    this.removeExpertComp(comp);
                 }
 
                 $rootScope.perso.removeExpertComp = function (comp) {
-                    if ($rootScope.perso.competences[comp.nom.toString() + "3"]) {
-                        delete $rootScope.perso.competences[comp.nom.toString() + "3"];
-                        $rootScope.perso.budget = $rootScope.perso.budget + 1;
+                    if (this.competences[comp.nom.toString() + "3"]) {
+                        delete this.competences[comp.nom.toString() + "3"];
+                        this.budget = this.budget + 1;
                     }
-
-                    if ($rootScope.perso.type !== $rootScope.listeTypes["augmente"]) {
-                        $rootScope.perso.removeSurhumainComp(comp);
-                    }
+                    
+                    this.removeProdigeComp(comp);
                 }
 
-                $rootScope.perso.removeSurhumainComp = function (comp) {
-                    if ($rootScope.perso.competences[comp.nom.toString() + "4"]) {
-                        $rootScope.perso.budget = $rootScope.perso.budget + 1;
-                        delete $rootScope.perso.competences[comp.nom.toString() + "4"];
+                $rootScope.perso.removeProdigeComp = function (comp) {
+                    if (this.competences[comp.nom.toString() + "4"]) {
+                        this.budget = this.budget + 1;
+                        delete this.competences[comp.nom.toString() + "4"];
                     }
                 }
 
                 $rootScope.perso.haveBasiqueComp = function (comp) {
-                    return $rootScope.perso.competences[comp.nom + "1"];
+                    return this.competences[comp.nom + "1"];
                 };
 
                 $rootScope.perso.haveAvanceComp = function (comp) {
-                    return $rootScope.perso.competences[comp.nom + "2"];
+                    return this.competences[comp.nom + "2"];
                 };
 
                 $rootScope.perso.haveExpertComp = function (comp) {
-                    return $rootScope.perso.competences[comp.nom + "3"];
+                    return this.competences[comp.nom + "3"];
                 };
 
-                $rootScope.perso.haveSurhumainComp = function (comp) {
-                    return $rootScope.perso.competences[comp.nom + "4"];
+                $rootScope.perso.haveProdigeComp = function (comp) {
+                    return this.competences[comp.nom + "4"];
                 };
             }]);

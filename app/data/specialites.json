@@ -35,10 +35,10 @@
         "note": "1 Comp basique Technicien gratuite. Les Comp Soldat coûtent +1Pt.",
         "description": "Informaticien, Mécanicien, Electronicien, Architecte, Concepteur de jeux vidéo, Fan de Lego."
     },
-    "sans": {
+    "Sans": {
         "nom": "Sans spécialité",
         "cout": "0",
-        "note": "RAS.",
-        "description": "RAS."
+        "note": "",
+        "description": "Aucune spécialité."
     }
 }

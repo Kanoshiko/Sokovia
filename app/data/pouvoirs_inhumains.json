@@ -1,0 +1,62 @@
+{
+    "Voix Suave": {
+        "nom": "Voix Suave",
+        "effet": "Annoncez « Par mon pouvoir, sois mon ami pendant 5mn » OU Annoncez « Par mon pouvoir, [Désignez ou nommez quelqu’un] te veut du mal, 5mn ».",
+        "contrepartie": "Vous devez porter sur la bouche un filtre, un masque, quelque chose qui régule votre voix. Sinon vous ne pouvez que hurler tout le temps."
+    }, 
+    "Onde de choc": {
+        "nom": "Onde de choc",
+        "effet": "Vous frappez vos mains l’une contre l’autre (prévoyez quelque chose sur vos paumes qui fassent un bruit bien fort, métal ou autre), vous annoncez « Blessé » en désignant une personne devant vous.",
+        "contrepartie": "Vos mains sont assez grosses, maladroites (comme portant des gants très épais) vous avez du mal à saisir de petits objets ou à manipuler des machines."
+    }, 
+    "Regard du Basilic": {
+        "nom": "Regard du Basilic",
+        "effet": "Vous Annoncez « Paralysé » après avoir croisé le regard d’une personne. Vous êtes immunisé à la Peur. Votre pouvoir ne fonctionne que si vos yeux sont en contact direct avec la cible.",
+        "contrepartie": "Vos pupilles doivent être inhumaines, étranges, de couleurs non naturelles, vous sifflez en présence d’une personne que vous n’aimez pas, vous ne pouvez pas vous en empêcher. "
+    }, 
+    "Vol vital": {
+        "nom": "Vol vital",
+        "effet": "Vous touchez votre cible et vous annoncez « Grave », Vous récupérez ces 3 coups pour vous. Vous pouvez dépasser votre maximum de coups de 3.",
+        "contrepartie": "Vos mains portent des ventouses ou des petites bouches et vos cheveux sont totalement blancs (il est impossible de les teindre, mais vous pouvez les cacher). Si vous touchez quelqu’un que vous ayez ou pas des gants, il perd un coup et vous ne gagnez rien. "
+    }, 
+    "Force surhumaine": {
+        "nom": "Force surhumaine",
+        "effet": "Pour 2PE, vous frappez à « Grave » pendant tout un combat, quel que soit l’arme de contact que vous utilisez. Dans cet état, vous pouvez dépenser 1PE de plus pour transformer votre « Grave » en « Blessure ».",
+        "contrepartie": "Quelque chose de visible chez vous ne peut laisser aucun doute quant à votre nature d’Inhumain. Que vous ayez des cornes, une queue, un visage défiguré, des yeux en plus, des crocs, ou tout ça en même temps.  "
+    }, 
+    "Lecture d’Aura": {
+        "nom": "Lecture d’Aura",
+        "effet": "Vous pouvez lire les émotions d’une personne et ses pensées de surface. Regardez-le sans bouger pendant 1mn. Utilisez un PNj ou un Orga pour demander à la cible « Dis-moi en un mot le genre de personne que tu es au fond de toi ». Vous pouvez aussi faire cette annonce vous-même à la cible.",
+        "contrepartie": "Vos yeux sont très sensibles aux lumières fortes. Vous portez de grosses lunettes de soleil (type lunettes de ski) même dans une pièce allumée à l’électricité. Vous n’êtes bien qu’en éclairage nocturne."
+    }, 
+    "Peau Résistante": {
+        "nom": "Peau Résistante",
+        "effet": "Pour 1PE Vous ignorez tous les annonces de dégât « Grave » pendant un combat (vous marquez le coup, mais c’est une égratignure). Pour 1PE de plus dans cet état vous pouvez ignorer une annonce « Blessure »",
+        "contrepartie": "Votre peau a une apparence repoussante, couleur surnaturelle, métallique, écaille, peau trouée, plaies ouvertes… Motifs sur toutes la peau etc…"
+    }, 
+    "Régénération": {
+        "nom": "Régénération",
+        "effet": "Votre corps dépasse de très loin les capacités de réparation des humains. Pour chaque tranche de 20s que vous passez sans rien faire ni rien dire vous regagnez 1 coup. Si vous êtes Blessé vous repassez en Normal. Si vous êtes Inconscient, votre inconscience ne dure que 10s et vous repassez à Blessé, si vous êtes dans le Coma, au bout des 15 mn vous repassez Inconscient au lieu de mourir, puis de Inconscient à Blessé etc… Vos membres brisés ou tranché reviennent à la normale en 10mn. Si vous êtes achevé en revanche, vous êtes bien mort. Vous êtes toujours cependant sensibles aux poisons et drogues.",
+        "contrepartie": "Vous ne pouvez recevoir aucun autre soin que ceux que votre corps prodigue. Aucun implant, aucune amélioration génétique, rien. Votre sang n’est pas utilisable dans aucun composé, votre ADN non plus."
+    }, 
+    "Soins par apposition des mains": {
+        "nom": "Soins par apposition des mains",
+        "effet": "Vous pouvez tout guérir par apposition des mains (5mn), dégâts, peur, paraylsie, amputation etc… ",
+        "contrepartie": "Pour utiliser ce pouvoir vous ne dépensez pas des PE mais des PV. Vous devez dépenser 1PV par stade à rendre / maladie / poison etc…"
+    }, 
+    "Intangibilité": {
+        "nom": "Intangibilité",
+        "effet": "Vous devenez intangible, vous êtes toujours visible mais vous n’avez plus aucune consistance, vous pouvez traverser les gens, les portes, les murs (vous disparaissez devant en HJ et réapparaissez derrière). Sous cette forme vous ne pouvez interagir avec rien, ne rien toucher ni utiliser vos autres compétences. Cet Etat dure 5mn maximum.",
+        "contrepartie": "En redevenant tangible vous tombez Inconscient à cause du choc métabolique."
+    }, 
+    "Manipulation Capillaire": {
+        "nom": "Manipulation Capillaire",
+        "effet": "(vous devez avoir les cheveux longs) Attachez trois ou quatre mèches de cheveux avec des lames en mousse. Lorsque vous tournez sur vous-même, vous pouvez annoncer « Figé » à une personne en face de vous si vous le touchez. Si vous êtes assis à côté de quelqu’un, vous pouvez lui annoncer « Paralysé » et lui coller une mèche de vos cheveux sur l’épaule. Aucun de vous deux ne peux bouger cependant, mais le pouvoir dure tant que vous le voulez.",
+        "contrepartie": "Vos cheveux ne sont pas que des cheveux, ce sont des êtres doués d’une volonté collective propre. Tous les jours à 13h et à minuit, leur personnalité, inverse à la vôtre s’empare de vous et agit avec pour principale objectif de se divertir."
+    }, 
+    "Autre": {
+        "nom": "Autre",
+        "effet": "A voir avec les orgas",
+        "contrepartie": "A voir avec les orgas."
+    }
+}

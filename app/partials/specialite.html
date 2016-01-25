@@ -1,0 +1,20 @@
+<h2 class="page-header">Spécialité</h2>
+<table class="table" ng-show="perso.haveAcccessSpecialite()">
+    <tr>
+        <th>Spécialités</th>
+        <th>Description</th>
+        <th>Note</th>
+        <th>Coût</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="s in listeSpecialites">
+        <td><b>{{s.nom}}</b></td>
+        <td>{{s.description}}</td>
+        <td>{{s.note}}</td>
+        <td>{{s.cout}} pt.</td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.changeSpecialite(s)" ng-show="!perso.isSpecialiteSelected(s)">Choisir</span>
+            <span ng-show="perso.isSpecialiteSelected(s)">✓</span>
+        </td>
+    </tr>
+</table>

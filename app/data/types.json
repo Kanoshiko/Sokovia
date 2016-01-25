@@ -3,36 +3,43 @@
         "nom": "Humain",
         "cout": "-1",
         "description": "Vous êtes un humain.",
-        "note": "Vous pouvez prendre jusqu’à 2 compétences au Niveau « Expert » à la création du personnage."
+        "note": "",
+        "niveau_comp_max": "Deux compétences « Expert » et les autres « Avancé »"
     },
     "prodige": {
         "nom": "Prodige",
         "cout": "1",
         "description": "Vous êtes un prodige de la nature, une personne extrêmement qualifiée, ou ayant atteint la limite humaine de ce qu’il est possible d’atteindre. Aux yeux de la science vous êtes toujours un humain.",
-        "note": "Pour 5Pts vous avez les 4 Niveaux d’une compétences possédant un Niveau Surhumain, exemple Prodige de Force = Force Basique + Avancé + Expert + Surhumain"
+        "note": "",
+        "niveau_comp_max": "Une compétence « Prodige » et les autres « Avancé »"
     },
     "augmente": {
         "nom": "Augmenté",
         "cout": "4",
         "description": "Vous êtes le fruit d’une expérience ratée ou réussie liée à une organisation secrète ou non (manipulation génétique, implant cybernétique). Vos gênes ont été modifiés, vous n’êtes plus tout à fait un humain.",
-        "note": "Vous pouvez prendre un pouvoir d’Augmenté même si vous n’avez pas les niveaux inférieurs de la compétence. Vous ne pouvez PAS prendre de compétence au-dessus du niveau Avancé."
+        "note": "Vous pouvez prendre un pouvoir d’Augmenté.",
+        "niveau_comp_max": "« Avancé »"
     },
     "inhumain": {
         "nom": "Inhumain",
         "cout": "3",
         "description": "Réveillé un jour dans une fâcheuse situation avec un pouvoir que vous n’aviez pas demandé, tout le monde vous recherche pour vous protéger, ou vous disséquer. Votre nature est secrète dans la mesure du possible même si plusieurs inhumains sont trop différents pour passer pour des humains et devront se trouver des protecteurs rapidement ou avoir déjà un accord. Vous n’êtes plus un humain. Les pouvoirs d’Inhumains ont tous une contrepartie un peu pénible.",
-        "note": "Vous ne pouvez PAS prendre de compétence au-dessus du niveau Avancé. Vous ne pouvez PAS avoir de Spécialité."
+        "note": "Vous pouvez choisir un pouvoir d'Inhumain. PAS de Spécialité.",
+        "niveau_comp_max": "« Avancé »"
     },
     "exosquelette": {
         "nom": "Exosquelette",
         "cout": "4",
         "description": "Vos capacités sont liées à votre exosquelette, chaque fois que vous tombez inconscient il faut le réparer, soit vous-même si vous avez la compétence pour le faire, soit par une personne compétente. Pendant la réparation vous perdez les capacités liés à votre armure. L’apparence de votre exosquelette est laissée à votre convenance mais il doit au moins couvrir le torse de façon très visible.",
-        "note": "Les exosquelettes sont des armures optimisées contre un type de dégât, tout dépend du type d’exosquelette que vous choisissez. Vous ne pouvez PAS prendre de compétence au-dessus du niveau Avancé."
+        "note": "Les exosquelettes sont des armures optimisées contre un type de dégât, tout dépend du type d’exosquelette que vous choisissez.",
+        "niveau_comp_max": "« Avancé »"
     },
     "mystique": {
         "nom": "Mystique",
         "cout": "0",
         "description": "Vous avez un lien avec le monde ésotérique, qui peut être dû au sang ou à l’expérience. C’est une porte qu’on ne peut pas refermer une fois ouverte et qui attire souvent plus d’ennuis que de reconnaissance. L’immense majorité des gens croit d’ailleurs bien plus aux Aliens qu’à la magie. Et ceux qui y croient la combatte souvent. Vous êtes un humain… ou pas.",
-        "note": "Vous pouvez acheter jusqu’à 3 Sortilèges au prix de 3 points le sortilège. Vous ne pouvez PAS prendre de compétence au-dessus du niveau Avancé. Vous ne pouvez PAS avoir de Spécialité."
+        "note": "Vous pouvez acheter jusqu’à 3 Sortilèges au prix de 3 points le sortilège. PAS de Spécialité.",
+        "niveau_comp_max": "« Avancé »"
+        
     }
 }

@@ -1,0 +1,18 @@
+<h2 class="page-header">Pouvoir inhumain</h2>
+<table class="table" ng-show="perso.haveAcccessPouvoirInhumain()">
+    <tr>
+        <th>Pouvoir inhumain</th>
+        <th>Effet</th>
+        <th>Contrepartie</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="p in listePouvoirsInhumains">
+        <td><b>{{p.nom}}</b></td>
+        <td>{{p.effet}}</td>
+        <td>{{p.contrepartie}}</td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.changePouvoirInhumain(p)" ng-show="!perso.isPouvoirInhumainSelected(p)">Choisir</span>
+            <span ng-show="perso.isPouvoirInhumainSelected(p)">✓</span>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,22 @@
+<h2 class="page-header">Type</h2>
+<table class="table">
+    <tr>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Note</th>
+        <th>Niveau max de compétences</th>
+        <th>Coût</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="t in listeTypes">
+        <td><b>{{t.nom}}</b></td>
+        <td>{{t.description}}</td>
+        <td>{{t.note}}</td>
+        <td>{{t.niveau_comp_max}}</td>
+        <td>{{t.cout}} pt.</td>
+        <td>
+            <span class="btn btn-primary"  ng-click="perso.changeType(t)" ng-show="!perso.isTypeSelected(t)">Choisir</span>
+            <span ng-show="perso.isTypeSelected(t)">✓</span>
+        </td>
+    </tr>
+</table>

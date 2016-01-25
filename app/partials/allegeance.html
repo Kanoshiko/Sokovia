@@ -1,0 +1,20 @@
+<h2 class="page-header">Allégeance</h2>
+<table class="table">
+    <tr>
+        <th>Allégeance</th>
+        <th>Description</th>
+        <th>Note</th>
+        <th>Coût</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="a in listeAllegeances">
+        <td><b>{{a.nom}}</b></td>
+        <td>{{a.description}}</td>
+        <td>{{a.note}}</td>
+        <td>{{a.cout}} pt.</td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.changeAllegeance(a)" ng-show="!perso.isAllegeanceSelected(a)">Choisir</span>
+            <span ng-show="perso.isAllegeanceSelected(a)">✓</span>
+        </td>
+    </tr>
+</table>
