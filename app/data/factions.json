@@ -1,0 +1,38 @@
+{
+    "sokovie_loyaliste": {
+        "nom": "Sokovie Loyaliste",
+        "cout": "0",
+        "note": "Si vous êtes à côté d’une personne Loyaliste, vous pouvez prendre un coup à sa place 1fois / combat, annoncez « je prends ».",
+        "description": "Vous êtes citoyen Sokovien, aligné sur les Loyalistes. Vous portez l’uniforme et répondez à une stricte hiérarchie militaire."
+    },
+    "sokovie_monarchiste": {
+        "nom": "Sokovie Monarchiste",
+        "cout": "0",
+        "note": "1fois/jour vous pouvez utiliser une comp. basique Diplomatique d’un membre de votre faction.",
+        "description": "Vous êtes citoyen Sokovien, aligné sur les Monarchistes. Vous faites partie d’une cour et respectez son étiquette."
+    },
+    "sokovie_latverienne": {
+        "nom": "Sokovie Latvérienne",
+        "cout": "0",
+        "note": "Si on tente de vous forcer à révéler des informations cruciales sur votre pays, vous pouvez vous plonger dans le Coma au lieu de répondre.",
+        "description": "Vous êtes citoyen Sokovien ou Latvérien, vous êtes un agent civil ou non d’une puissance miliaire occupante et œuvrez pour l’unification de la Sokovie et de la Latvérie."
+    },
+    "onu": {
+        "nom": "ONU",
+        "cout": "0",
+        "note": "Vous avez accès à toute discussion en tant qu’observateur silencieux. On ne peut vous refuser le droit d’écouter.",
+        "description": "Vous êtes citoyen européen, africain ou asiatique, vous faites partie du conseil qui devra déterminer laquelle des trois parties ci-dessus devra recevoir la légitimité et la reconnaissance au niveau international."
+    },
+    "autres": {
+        "nom": "Autres",
+        "cout": "0",
+        "note": "",
+        "description": "Vous êtes un acteur indépendant ayant un laisser-passer officiel pour cette zone de guerre. Vous représentez un organisme ou une société officielle et avez un objectif bien précis, que ce soit de vous vendre au plus offrant ou de faire avancer votre propre cause."
+    }
+}
+
+
+
+
+
+

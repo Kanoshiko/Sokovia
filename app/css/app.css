@@ -1,0 +1,23 @@
+.encadre{
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 5px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.competencesSelectionnees{
+    background-color: transparent;
+    border: 1px dashed black;
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 5px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    min-height: 1000px;
+}
+
+.tdTop{
+    position: relative;
+    vertical-align: top;
+}

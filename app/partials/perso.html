@@ -1,0 +1,145 @@
+<h1 class="page-header">Création de Personnage - {{perso.budget}} points</h1>
+
+<ul class="nav nav-tabs" id="myTab">
+    <li class="active"><a href="#home">Home</a></li>
+    <li><a href="#type">Type</a></li>
+    <li><a href="#faction">Faction</a></li>
+    <li><a href="#specialite">Spécialité</a></li>
+    <li><a href="#competence">Compétences</a></li>
+    <li><a href="#perso">Perso</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="home">...</div>
+    <div class="tab-pane" id="type">
+        <h2 class="page-header">Types</h2>
+        <table class="table">
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Note</th>
+                <th>Coût</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="t in listeTypes">
+                <td><b>{{t.nom}}</b></td>
+                <td>{{t.description}}</td>
+                <td>{{t.note}}</td>
+                <td>{{t.cout}} pt.</td>
+                <td>
+                    <span class="btn btn-primary"  ng-click="perso.changeType(t)" ng-show="!perso.isTypeSelected(t)">Choisir</span>
+                    <span ng-show="perso.isTypeSelected(t)">✓</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="faction">
+        <h2 class="page-header">Factions</h2>
+        <table class="table">
+            <tr>
+                <th>Faction</th>
+                <th>Description</th>
+                <th>Note</th>
+                <th>Coût</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="f in listeFactions">
+                <td><b>{{f.nom}}</b></td>
+                <td>{{f.description}}</td>
+                <td>{{f.note}}</td>
+                <td>{{f.cout}} pt.</td>
+                <td>
+                    <span class="btn btn-primary" ng-click="perso.changeFaction(f)" ng-show="!perso.isFactionSelected(f)">Choisir</span>
+                    <span ng-show="perso.isFactionSelected(f)">✓</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="specialite">
+        <h2 class="page-header">Spécialités</h2>
+        <table class="table">
+            <tr>
+                <th>Spécialités</th>
+                <th>Description</th>
+                <th>Note</th>
+                <th>Coût</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="s in listeSpecialites">
+                <td><b>{{s.nom}}</b></td>
+                <td>{{s.description}}</td>
+                <td>{{s.note}}</td>
+                <td>{{s.cout}} pt.</td>
+                <td>
+                    <span class="btn btn-primary" ng-click="perso.changeSpecialite(s)" ng-show="!perso.isSpecialiteSelected(s)">Choisir</span>
+                    <span ng-show="perso.isSpecialiteSelected(s)">✓</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="competence">
+        <h2 class="page-header">Compétences</h2>
+        <table class="table">
+            <tr>
+                <th>Compétences</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessSurhumainComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences">
+                <td>
+                    <b>{{c.nom}}</b>
+                    [{{c.domaine}}]
+                    {{ c.note}}
+                </td>
+                <td>
+                    {{c.basique}}
+                    <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">+</span>
+                    <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">-</span>
+                </td>
+                <td>
+                    {{c.avance}}
+                    <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">+</span>
+                    <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">-</span>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    {{c.expert}}
+                    <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c)" ng-click="perso.addExpertComp(c)">+</span>
+                    <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">-</span>
+                </td>
+                <td ng-show="perso.haveAcccessSurhumainComp()">
+                    {{c.surhumain}}
+                    <span class="btn btn-primary" ng-show="!perso.haveSurhumainComp(c)" ng-click="perso.addSurhumainComp(c)">+</span>
+                    <span class="btn btn-danger" ng-show="perso.haveSurhumainComp(c)" ng-click="perso.removeSurhumainComp(c)">-</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="tab-pane" id="perso">
+        <h4>Type : {{perso.type.nom}}</h4>
+        <ul>
+            <li>Description : {{perso.type.description}}</li>
+            <li>Note : {{perso.type.note}}</li>
+        </ul>
+        <h4>Faction : {{perso.faction.nom}}</h4>
+        <ul>
+            <li>Description : {{perso.faction.description}}</li>
+            <li>Note : {{perso.faction.note}}</li>
+        </ul>
+        <h4>Spécialité : {{perso.specialite.nom}}</h4>
+        <ul>
+            <li>Description : {{perso.specialite.description}}</li>
+            <li>Note : {{perso.specialite.note}}</li>
+        </ul>
+
+        <h4>Compétences :</h4>
+        <ul ng-repeat="c in perso.competences">
+            <li>{{c}}</li>
+        </ul>
+    </div>
+</div>

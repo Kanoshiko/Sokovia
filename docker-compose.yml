@@ -1,0 +1,7 @@
+
+app:
+  build: .
+  volumes:
+    - "./app:/usr/src/app/app"
+  ports:
+    - "8000:8000"

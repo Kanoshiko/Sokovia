@@ -1,0 +1,94 @@
+{
+    "Force": {
+        "nom": "Force",
+        "domaine": "commun",
+        "basique": "« Renverser » : Annoncez « Chute »",
+        "avance": "« Assommer » : Vous surprenez votre victime de dos et annoncez « Inconscient ».",
+        "expert": "« Brutalité » : « Brise-membre » sur un coup",
+        "surhumain": "(1) Renverser Groupe : idem qu’en basique mais vous pouvez faire chuter jusqu’à trois personnes d’un coup en les désignant lors de l’annonce. Bête de foire : Vous pouvez déchirer tout lien qui vous attacherait."
+    },
+    "Endurance": {
+        "nom": "Endurance",
+        "domaine": "commun",
+        "basique": "Vous pouvez supporter 6 coups en Normal  (permanent)",
+        "avance": "« Héroïsme » : Ignorez tous les coups pour sauver une personne se trouvant au milieu d’un combat. Dès qu’elle est à l’abri, vous tombez Inconscient (vous marquez les coups quand même)",
+        "expert": "Vous pouvez supporter 8 coups en Normal et 3 en Blessé (permanent)",
+        "surhumain": "(2) Vous pouvez supporter 10 coups en Normal et 4 en Blessé (permanent)"
+    },
+    "Agilité": {
+        "nom": "Agilité",
+        "domaine": "commun",
+        "basique": "« Esquive » : Prenez un coup, ne le comptez pas, mais roulez outrageusement sur le côté pour vous mettre hors de portée. Ne fonctionne que sur les coups sans annonce (ceux qui ne font perdre qu’1 coup). Note : vous n’esquivez ni les balles, ni les armes énergétiques.",
+        "avance": "« Vol » : Vous annoncer « vol d’arme » à une personne à moins de deux mètres de vous et lui prenez son arme.",
+        "expert": "« Fuite » : Vous annoncez « Disparition » et vous sortez du champ de vision de vos poursuivants.",
+        "surhumain": "(2) « Esquive absolue » : vous pouvez utiliser votre esquive sur tout type de dégâts."
+    },
+    "Couteau": {
+        "nom": "Couteau",
+        "domaine": "commun",
+        "basique": "Lame extra-courte (40cm avec la poignée)",
+        "avance": "« Libéré Délivré (permanent) » : Votre couteau ne peut jamais vous être enlevé, il est toujours considéré comme caché sur vous. Vous pouvez aussi  vous défaire de tout lien.",
+        "expert": "« Parade désespérée » : Sur un coup sans annonce qui vous touche, vous annoncez « renvoi », mais vous lâcher votre arme.",
+        "surhumain": ""
+    },
+    "Pugilat": {
+        "nom": "Pugilat",
+        "domaine": "commun",
+        "basique": "« Mains Nues » : Ambidextrie avec deux bâtons de 40cm maxi avec poignée et sans garde / Ou des tonfas.",
+        "avance": "« Uppercut » : Touchez votre adversaire et annoncez « Douleur ».",
+        "expert": "« Crochet » : Touchez le bras tenant l’arme chez votre adversaire et annoncez « Confusion ! »",
+        "surhumain": ""
+    },
+    "Courage": {
+        "nom": "Courage",
+        "domaine": "commun",
+        "basique": "« Audacieux » : Si vous vous battez à 1 contre 2 ou plus, vous ignorez les deux premiers coups.",
+        "avance": "« Non ! » : Vous ne fuyez pas devant une annonce de Peur, vous n’êtes pas marqué par la peur. « Hey ! » : Vous posez la main sur quelqu’un qui fuit et lui annoncez : « Courage ».",
+        "expert": "« Spider’s Taunt » : Vous vous moquez d’un ennemi. Si il vient s’occuper de vous et qu’un combat s’engage, vous tiendrez 3 coups de plus en Normal.",
+        "surhumain": "",
+        "note": "Les compétences de courage permettent de ne pas fuir, mais pas d’avancer vers la source de la peur."
+    },
+    "Religion": {
+        "nom": "Religion",
+        "domaine": "commun",
+        "basique": "« Sermon » : (Hors Combat) vous pouvez obliger une personne à écouter un sermon « Par ma Religion, écoute mon sermon pendant 5mn ». Il ne pourra rien faire d’autre pendant ce temps.",
+        "avance": "« Main divine » (permanent): Vous pouvez utiliser un livre saint (en mousse) comme arme de contact (35 cm maxi).",
+        "expert": "« Culpabilisation » : Si vous assistez à une discussion de bout en bout, à la fin de celle - ci vous pouvez annoncer « Par ma Religion que tous ceux qui ont menti au moins une fois  pendant cette réunion  se confesse à moi dans l’heure ».",
+        "surhumain": "",
+        "note": "Vous êtes représentant d’un culte, quel qu’il soit"
+    },
+    "Gun-Fu": {
+        "nom": "Gun-Fu",
+        "domaine": "martial",
+        "basique": "« Arme à Feu » : Vous pouvez utiliser une arme à feu (NERF, type arme de poing). Quel que soit votre modèle vous avez 4 munitions au début du GN. Les dégâts d’armes à feu s’annoncent « Grave ». « Achèvement » (permanent): Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas d’une balle dans la tête (ne tirez pas vraiment. Il faut qu’il vous reste au moins une balle pour achever au pistolet, la balle est dépensée).",
+        "avance": "« Fabrication » : Fabriquer 4 nouvelles Munitions (dans un labo)",
+        "expert": "« Gun-Two » : Vous pouvez utiliser deux armes à feu similaires en ambidextre et  vous pouvez porter des Manchons de défense sur les avants bras pour parer les coups des armes de contact. « Menace » : Surprenez une personne, votre arme sur son dos. Annoncez « Menace  vous pouvez la faire tomber dans l’inconscience d’un coup quand vous le voudrez annoncez « Inconscience ».",
+        "surhumain": "(1) « Sauce Castle » : Vous pouvez utiliser une arme lourde (modèle de NERF plus gros), vous commencez le GN avec 6 Munitions et vous fabriquez des munitions par 6 (dans un labo)."
+    },
+    "Voie des Poings": {
+        "nom": "Voie des Poings",
+        "domaine": "martial",
+        "basique": "« Poing d’Airain » : Touchez l’adversaire, annoncez : « Repoussé ».",
+        "avance": "« Poing de Lune » : Touchez votre adversaire avec les deux bâtons en même temps et annoncez « Inconscient 5mn ». « Achèvement » (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas, d’un coup au torse.",
+        "expert": "« Poing du Vent » : (permanent) vous pouvez essayer de dévier les balles de NERF avec vos bâtons (ou à mains nues pour le coup), qu’elles vous visent ou non.",
+        "surhumain": "(2) « Le Rand - Kaï » : Sur un coup, vous pouvez annoncer « Coma » (1 fois / combat)",
+        "note": "Prérequis : Pugilat"
+    },
+    "Voie des Lames": {
+        "nom": "Voie des Lames",
+        "domaine": "martial",
+        "basique": "« Lame Courte » : Vous pouvez utiliser une lame courte 70 cm maxi (Wakizashi, Glaive, Machette).",
+        "avance": "« Lame Longue » : Vous pouvez utiliser une lame longue 110 cm (Katana, épée bâtarde, Epée moderne). « Ambidextrie » : vous pouvez utiliser deux lames courtes et identiques en même temps. « Achèvement » (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas d’un coup sur le torse.",
+        "expert": "« Iaido » : La main posée sur la garde de votre lame, au fourreau ou à la ceinture, vous annoncez « Grave » sur une personne en face de vous sans avoir à dégainer.",
+        "surhumain": "(1) « Maître des Lames » : Vous pouvez achever les personnes n’étant que Blessées. Sur le Iaido, vous annoncez « Blessure ».",
+        "note": "Prérequis : Couteau"
+    },
+    "xxx": {
+        "nom": "xxx",
+        "domaine": "martial",
+        "basique": "",
+        "avance": "",
+        "expert": "",
+        "surhumain": ""
+    }
+}
