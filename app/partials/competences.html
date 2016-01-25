@@ -17,24 +17,32 @@
             {{ c.note}}
         </td>
         <td>
-            {{c.basique}}
-            <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
-            <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+            <div class="pull-right">
+                <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+            </div>
+            <div>{{c.basique}}</div>
         </td>
         <td>
-            {{c.avance}}
-            <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
-            <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+            <div class="pull-right">
+                <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+            </div>
+            <div>{{c.avance}}</div>
         </td>
         <td ng-show="perso.haveAcccessExpertComp()">
-            {{c.expert}}
-            <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
-            <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+            <div class="pull-right">
+                <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+            </div>
+            <div>{{c.expert}}</div>
         </td>
         <td ng-show="perso.haveAcccessProdigeComp()">
-            {{c.prodige}}
-            <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
-            <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+            <div class="pull-right">
+                <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+            </div>
+            <div>{{c.prodige}}</div>
         </td>
     </tr>
 </table>
