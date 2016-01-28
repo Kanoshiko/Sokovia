@@ -1,48 +1,331 @@
 <h2 class="page-header">Compétences</h2>
-<table class="table">
-    <tr>
-        <th>Domaines</th>
-        <th>Compétences</th>
-        <th>Basique</th>
-        <th>Avancé</th>
-        <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
-        <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
-    </tr>
-    <tr ng-repeat="c in listeCompetences | orderBy:'domaine'">
-        <td>
-            {{c.domaine}}
-        </td>
-        <td>
-            <b>{{c.nom}}</b><br/>
-            {{ c.note}}
-        </td>
-        <td>
-            <div class="pull-right">
-                <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
-                <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
-            </div>
-            <div>{{c.basique}}</div>
-        </td>
-        <td>
-            <div class="pull-right">
-                <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
-                <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
-            </div>
-            <div>{{c.avance}}</div>
-        </td>
-        <td ng-show="perso.haveAcccessExpertComp()">
-            <div class="pull-right">
-                <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
-                <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
-            </div>
-            <div>{{c.expert}}</div>
-        </td>
-        <td ng-show="perso.haveAcccessProdigeComp()">
-            <div class="pull-right">
-                <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
-                <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
-            </div>
-            <div>{{c.prodige}}</div>
-        </td>
-    </tr>
-</table>
+
+<ul class="nav nav-tabs">
+    <li><a href="#commun" data-toggle="tab">Commun</a></li>
+    <li><a href="#martial" data-toggle="tab">Martial</a></li>
+    <li><a href="#technique" data-toggle="tab">Technique</a></li>
+    <li><a href="#scientifique" data-toggle="tab">Scientifique</a></li>
+    <li><a href="#diplomatique" data-toggle="tab">Diplomatique</a></li>
+    <li><a href="#criminel" data-toggle="tab">Criminel</a></li>
+    <li><a href="#artistique" data-toggle="tab">Artistique</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="commun">
+        <table class="table">
+            <tr>
+                <th>Domaine commun</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences| filter:{ domaine: 'commun' } | orderBy:'domaine'">
+                <td>
+                    <b>{{c.nom}}</b><br/>
+                    {{ c.note}}
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.basique"></div>
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.avance"></div>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.expert"></div>
+                </td>
+                <td ng-show="perso.haveAcccessProdigeComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.prodige"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab-pane" id="martial">
+        <table class="table">
+            <tr>
+                <th>Domaine martial</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences| filter:{ domaine: 'martial' } | orderBy:'domaine'">
+                <td>
+                    <b>{{c.nom}}</b><br/>
+                    {{ c.note}}
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.basique"></div>
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.avance"></div>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.expert"></div>
+                </td>
+                <td ng-show="perso.haveAcccessProdigeComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.prodige"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab-pane" id="technique">
+        <p><i>La pratique du domaine technique nécessite du matériel / decorum pour certaines compétences, lâchez-vous.</i></p>
+        <table class="table">
+            <tr>
+                <th>Domaine technique</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences| filter:{ domaine: 'technique' } | orderBy:'domaine'">
+                <td>
+                    <b>{{c.nom}}</b><br/>
+                    {{ c.note}}
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.basique"></div>
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.avance"></div>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.expert"></div>
+                </td>
+                <td ng-show="perso.haveAcccessProdigeComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.prodige"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab-pane" id="scientifique">
+        <p><i>La pratique du domaine scientifique nécessite d’avoir accès à un laboratoire qu’il est possible de partager à plusieurs. Le décorum aussi est nécessaire, outils, matériel, etc…</i></p>
+        <table class="table">
+            <tr>
+                <th>Domaine scientifique</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences| filter:{ domaine: 'scientifique' } | orderBy:'domaine'">
+                <td>
+                    <b>{{c.nom}}</b><br/>
+                    {{ c.note}}
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.basique"></div>
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.avance"></div>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.expert"></div>
+                </td>
+                <td ng-show="perso.haveAcccessProdigeComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.prodige"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab-pane" id="diplomatique">
+        <table class="table">
+            <tr>
+                <th>Domaine diplomatique</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences| filter:{ domaine: 'diplomatique' } | orderBy:'domaine'">
+                <td>
+                    <b>{{c.nom}}</b><br/>
+                    {{ c.note}}
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.basique"></div>
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.avance"></div>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.expert"></div>
+                </td>
+                <td ng-show="perso.haveAcccessProdigeComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.prodige"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab-pane" id="criminel">
+        <table class="table">
+            <tr>
+                <th>Domaine criminel</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences| filter:{ domaine: 'criminel' } | orderBy:'domaine'">
+                <td>
+                    <b>{{c.nom}}</b><br/>
+                    {{ c.note}}
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.basique"></div>
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.avance"></div>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.expert"></div>
+                </td>
+                <td ng-show="perso.haveAcccessProdigeComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.prodige"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tab-pane" id="artistique">
+        <table class="table">
+            <tr>
+                <th>Domaine artistique</th>
+                <th>Basique</th>
+                <th>Avancé</th>
+                <th ng-show="perso.haveAcccessExpertComp()">Expert</th>
+                <th ng-show="perso.haveAcccessProdigeComp()">Prodige</th>
+            </tr>
+            <tr ng-repeat="c in listeCompetences| filter:{ domaine: 'artistique' } | orderBy:'domaine'">
+                <td>
+                    <b>{{c.nom}}</b><br/>
+                    {{ c.note}}
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveBasiqueComp(c)" ng-click="perso.addBasiqueComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveBasiqueComp(c)" ng-click="perso.removeBasiqueComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.basique"></div>
+                </td>
+                <td>
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveAvanceComp(c)" ng-click="perso.addAvanceComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveAvanceComp(c)" ng-click="perso.removeAvanceComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.avance"></div>
+                </td>
+                <td ng-show="perso.haveAcccessExpertComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveExpertComp(c) && c.expert" ng-click="perso.addExpertComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveExpertComp(c)" ng-click="perso.removeExpertComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.expert"></div>
+                </td>
+                <td ng-show="perso.haveAcccessProdigeComp()">
+                    <div class="pull-right">
+                        <span class="btn btn-primary" ng-show="!perso.haveProdigeComp(c) && c.prodige" ng-click="perso.addProdigeComp(c)">1 pt.</span>
+                        <span class="btn btn-danger" ng-show="perso.haveProdigeComp(c)" ng-click="perso.removeProdigeComp(c)">Supprimer</span>
+                    </div>
+                    <div ng-bind-html-unsafe="c.prodige"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

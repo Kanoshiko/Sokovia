@@ -2,74 +2,220 @@
     {
         "nom": "Force",
         "domaine": "Commun",
-        "basique": "« Renverser » : Annoncez « Chute »",
-        "avance": "« Assommer » : Vous surprenez votre victime de dos et annoncez « Inconscient ».",
-        "expert": "« Brutalité » : « Brise-membre » sur un coup",
-        "prodige": "Renverser Groupe : idem qu’en basique mais vous pouvez faire chuter jusqu’à trois personnes d’un coup en les désignant lors de l’annonce. Bête de foire : Vous pouvez déchirer tout lien qui vous attacherait."
+        "basique": "<u>Renverser</u> : Annoncez « Chute »",
+        "avance": "<u>Assommer</u> : Vous surprenez votre victime de dos et annoncez « Inconscient ».",
+        "expert": "<u>Brutalité</u> : « Brise-membre » sur un coup",
+        "prodige": "<u>Renverser Groupe</u> : idem qu’en basique mais vous pouvez faire chuter jusqu’à trois personnes d’un coup en les désignant lors de l’annonce.<br/><u>Bête de foire</u> : Vous pouvez déchirer tout lien qui vous attacherait."
     }, {
         "nom": "Endurance",
         "domaine": "Commun",
         "basique": "Vous pouvez supporter 6 coups en Normal  (permanent)",
-        "avance": "« Héroïsme » : Ignorez tous les coups pour sauver une personne se trouvant au milieu d’un combat. Dès qu’elle est à l’abri, vous tombez Inconscient (vous marquez les coups quand même)",
+        "avance": "<u>Héroïsme</u> : Ignorez tous les coups pour sauver une personne se trouvant au milieu d’un combat. Dès qu’elle est à l’abri, vous tombez Inconscient (vous marquez les coups quand même)",
         "expert": "Vous pouvez supporter 8 coups en Normal et 3 en Blessé (permanent)"
     }, {
         "nom": "Agilité",
         "domaine": "Commun",
-        "basique": "« Esquive » : Prenez un coup, ne le comptez pas, mais roulez outrageusement sur le côté pour vous mettre hors de portée. Ne fonctionne que sur les coups sans annonce (ceux qui ne font perdre qu’1 coup). Note : vous n’esquivez ni les balles, ni les armes énergétiques.",
-        "avance": "« Vol » : Vous annoncer « vol d’arme » à une personne à moins de deux mètres de vous et lui prenez son arme.",
-        "expert": "« Fuite » : Vous annoncez « Disparition » et vous sortez du champ de vision de vos poursuivants."
+        "basique": "<u>Esquive</u> : Prenez un coup, ne le comptez pas, mais roulez outrageusement sur le côté pour vous mettre hors de portée. Ne fonctionne que sur les coups sans annonce (ceux qui ne font perdre qu’1 coup).<br/>Note : vous n’esquivez ni les balles, ni les armes énergétiques.",
+        "avance": "<u>Vol</u> : Vous annoncer « vol d’arme » à une personne à moins de deux mètres de vous et lui prenez son arme.",
+        "expert": "<u>Fuite</u> : Vous annoncez « Disparition » et vous sortez du champ de vision de vos poursuivants."
     }, {
         "nom": "Couteau",
         "domaine": "Commun",
         "basique": "Lame extra-courte (40cm avec la poignée)",
-        "avance": "« Libéré Délivré (permanent) » : Votre couteau ne peut jamais vous être enlevé, il est toujours considéré comme caché sur vous. Vous pouvez aussi  vous défaire de tout lien.",
-        "expert": "« Parade désespérée » : Sur un coup sans annonce qui vous touche, vous annoncez « renvoi », mais vous lâcher votre arme."
+        "avance": "<u>Libéré Délivré (permanent)</u> : Votre couteau ne peut jamais vous être enlevé, il est toujours considéré comme caché sur vous. Vous pouvez aussi  vous défaire de tout lien.",
+        "expert": "<u>Parade désespérée</u> : Sur un coup sans annonce qui vous touche, vous annoncez « renvoi », mais vous lâcher votre arme."
     }, {
         "nom": "Pugilat",
         "domaine": "Commun",
-        "basique": "« Mains Nues » : Ambidextrie avec deux bâtons de 40cm maxi avec poignée et sans garde / Ou des tonfas.",
-        "avance": "« Uppercut » : Touchez votre adversaire et annoncez « Douleur ».",
-        "expert": "« Crochet » : Touchez le bras tenant l’arme chez votre adversaire et annoncez « Confusion ! »"
+        "basique": "<u>Mains Nues</u> : Ambidextrie avec deux bâtons de 40cm maxi avec poignée et sans garde / Ou des tonfas.",
+        "avance": "<u>Uppercut</u> : Touchez votre adversaire et annoncez « Douleur ».",
+        "expert": "<u>Crochet</u> : Touchez le bras tenant l’arme chez votre adversaire et annoncez « Confusion ! »"
     }, {
         "nom": "Courage",
         "domaine": "Commun",
-        "basique": "« Audacieux » : Si vous vous battez à 1 contre 2 ou plus, vous ignorez les deux premiers coups.",
-        "avance": "« Non ! » : Vous ne fuyez pas devant une annonce de Peur, vous n’êtes pas marqué par la peur. « Hey ! » : Vous posez la main sur quelqu’un qui fuit et lui annoncez : « Courage ».",
-        "expert": "« Spider’s Taunt » : Vous vous moquez d’un ennemi. Si il vient s’occuper de vous et qu’un combat s’engage, vous tiendrez 3 coups de plus en Normal.",
+        "basique": "<u>Audacieux</u> : Si vous vous battez à 1 contre 2 ou plus, vous ignorez les deux premiers coups.",
+        "avance": "<u>Non !</u> : Vous ne fuyez pas devant une annonce de Peur, vous n’êtes pas marqué par la peur.<br/><u>Hey !</u> : Vous posez la main sur quelqu’un qui fuit et lui annoncez : « Courage ».",
+        "expert": "<u>Spider’s Taunt</u> : Vous vous moquez d’un ennemi. Si il vient s’occuper de vous et qu’un combat s’engage, vous tiendrez 3 coups de plus en Normal.",
         "note": "Les compétences de courage permettent de ne pas fuir, mais pas d’avancer vers la source de la peur."
     },
     {
         "nom": "Religion",
         "domaine": "Commun",
-        "basique": "« Sermon » : (Hors Combat) vous pouvez obliger une personne à écouter un sermon « Par ma Religion, écoute mon sermon pendant 5mn ». Il ne pourra rien faire d’autre pendant ce temps.",
-        "avance": "« Main divine » (permanent): Vous pouvez utiliser un livre saint (en mousse) comme arme de contact (35 cm maxi).",
-        "expert": "« Culpabilisation » : Si vous assistez à une discussion de bout en bout, à la fin de celle - ci vous pouvez annoncer « Par ma Religion que tous ceux qui ont menti au moins une fois  pendant cette réunion  se confesse à moi dans l’heure ».",
+        "basique": "<u>Sermon</u> : (Hors Combat) vous pouvez obliger une personne à écouter un sermon « Par ma Religion, écoute mon sermon pendant 5mn ».<br/>Il ne pourra rien faire d’autre pendant ce temps.",
+        "avance": "<u>Main divine</u> (permanent): Vous pouvez utiliser un livre saint (en mousse) comme arme de contact (35 cm maxi).",
+        "expert": "<u>Culpabilisation</u> : Si vous assistez à une discussion de bout en bout, à la fin de celle - ci vous pouvez annoncer « Par ma Religion que tous ceux qui ont menti au moins une fois  pendant cette réunion  se confesse à moi dans l’heure ».",
         "note": "Vous êtes représentant d’un culte, quel qu’il soit"
     }, {
         "nom": "Gun-Fu",
         "domaine": "Martial",
-        "basique": "« Arme à Feu » : Vous pouvez utiliser une arme à feu (NERF, type arme de poing). Quel que soit votre modèle vous avez 4 munitions au début du GN. Les dégâts d’armes à feu s’annoncent « Grave ». « Achèvement » (permanent): Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas d’une balle dans la tête (ne tirez pas vraiment. Il faut qu’il vous reste au moins une balle pour achever au pistolet, la balle est dépensée).",
-        "avance": "« Fabrication » : Fabriquer 4 nouvelles Munitions (dans un labo)",
-        "expert": "« Gun-Two » : Vous pouvez utiliser deux armes à feu similaires en ambidextre et  vous pouvez porter des Manchons de défense sur les avants bras pour parer les coups des armes de contact. « Menace » : Surprenez une personne, votre arme sur son dos. Annoncez « Menace  vous pouvez la faire tomber dans l’inconscience d’un coup quand vous le voudrez annoncez « Inconscience ».",
-        "prodige": "« Sauce Castle » : Vous pouvez utiliser une arme lourde (modèle de NERF plus gros), vous commencez le GN avec 6 Munitions et vous fabriquez des munitions par 6 (dans un labo)."
+        "basique": "<u>Arme à Feu</u> : Vous pouvez utiliser une arme à feu (NERF, type arme de poing). Quel que soit votre modèle vous avez 4 munitions au début du GN.<br/>Les dégâts d’armes à feu s’annoncent « Grave ».<br/><u>Achèvement</u> (permanent): Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas d’une balle dans la tête (ne tirez pas vraiment. Il faut qu’il vous reste au moins une balle pour achever au pistolet, la balle est dépensée).",
+        "avance": "<u>Fabrication</u> : Fabriquer 4 nouvelles Munitions (dans un labo)",
+        "expert": "<u>Gun-Two</u> : Vous pouvez utiliser deux armes à feu similaires en ambidextre et  vous pouvez porter des Manchons de défense sur les avants bras pour parer les coups des armes de contact.<br/><u>Menace</u> : Surprenez une personne, votre arme sur son dos. Annoncez « Menace  vous pouvez la faire tomber dans l’inconscience d’un coup quand vous le voudrez annoncez « Inconscience ».",
+        "prodige": "<u>Sauce Castle</u> : Vous pouvez utiliser une arme lourde (modèle de NERF plus gros), vous commencez le GN avec 6 Munitions et vous fabriquez des munitions par 6 (dans un labo)."
     }, {
         "nom": "Voie des Poings",
         "domaine": "Martial",
-        "basique": "« Poing d’Airain » : Touchez l’adversaire, annoncez : « Repoussé ».",
-        "avance": "« Poing de Lune » : Touchez votre adversaire avec les deux bâtons en même temps et annoncez « Inconscient 5mn ». « Achèvement » (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas, d’un coup au torse.",
-        "expert": "« Poing du Vent » : (permanent) vous pouvez essayer de dévier les balles de NERF avec vos bâtons (ou à mains nues pour le coup), qu’elles vous visent ou non.",
+        "basique": "<u>Poing d’Airain</u> : Touchez l’adversaire, annoncez : « Repoussé ».",
+        "avance": "<u>Poing de Lune</u> : Touchez votre adversaire avec les deux bâtons en même temps et annoncez « Inconscient 5mn ».<br/><u>Achèvement</u> (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas, d’un coup au torse.",
+        "expert": "<u>Poing du Vent</u> : (permanent) vous pouvez essayer de dévier les balles de NERF avec vos bâtons (ou à mains nues pour le coup), qu’elles vous visent ou non.",
         "note": "Prérequis : Pugilat"
     }, {
         "nom": "Voie des Lames",
         "domaine": "Martial",
-        "basique": "« Lame Courte » : Vous pouvez utiliser une lame courte 70 cm maxi (Wakizashi, Glaive, Machette).",
-        "avance": "« Lame Longue » : Vous pouvez utiliser une lame longue 110 cm (Katana, épée bâtarde, Epée moderne). « Ambidextrie » : vous pouvez utiliser deux lames courtes et identiques en même temps. « Achèvement » (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas d’un coup sur le torse.",
-        "expert": "« Iaido » : La main posée sur la garde de votre lame, au fourreau ou à la ceinture, vous annoncez « Grave » sur une personne en face de vous sans avoir à dégainer.",
-        "prodige": "« Maître des Lames » : Vous pouvez achever les personnes n’étant que Blessées. Sur le Iaido, vous annoncez « Blessure ».",
+        "basique": "<u>Lame Courte</u> : Vous pouvez utiliser une lame courte 70 cm maxi (Wakizashi, Glaive, Machette).",
+        "avance": "<u>Lame Longue</u> : Vous pouvez utiliser une lame longue 110 cm (Katana, épée bâtarde, Epée moderne).<br/><u>Ambidextrie</u> : vous pouvez utiliser deux lames courtes et identiques en même temps.<br/><u>Achèvement</u> (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas d’un coup sur le torse.",
+        "expert": "<u>Iaido</u> : La main posée sur la garde de votre lame, au fourreau ou à la ceinture, vous annoncez « Grave » sur une personne en face de vous sans avoir à dégainer.",
+        "prodige": "<u>Maître des Lames</u> : Vous pouvez achever les personnes n’étant que Blessées. Sur le Iaido, vous annoncez « Blessure ».",
         "note": "Prérequis : Couteau"
     }, {
-        "nom": "xxx",
+        "nom": "Voie des Bâtons",
         "domaine": "Martial",
+        "basique": "<u>Bâton</u> : Vous pouvez utiliser un bâton (150cm, recouvert d’au moins, 1,5cm de mousse, cœur en fibre de verre ou équivalent).",
+        "avance": "<u>Les Ronces</u> : Vous touchez votre adversaire et annoncez « Figé »",
+        "expert": "<u>Le Roseau</u> : Mettez-vous en défense, le bâton tenu à deux mains à  une extrémité. Tant que vous êtes dans cette position vous ne pouvez que défendre pour toute la durée du combat (ou si vous fuyez), mais votre nombre de coups en Normal est doublé.<br/><u>Achèvement</u> (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas d’un coup sur le torse.",
+        "prodige": "<u>Le Chêne</u> : Vous posez le bâton horizontalement sur le sol, les deux mains posées sur lui. Tant que vous restez comme cela, aucun dégât ou annonce physique ne peut vous atteindre. Vous ne pouvez que parler ou réagir."
+    }, {
+        "nom": "Voie des Espadons",
+        "domaine": "Martial",
+        "basique": "<u>Lame extra-longue</u> : Vous pouvez utiliser une lame extra-longue 150 cm (épée à deux mains, tube de plomb etc..). à 180cm (Naginata, lance, dans ce cas toute l’arme doit être couverte de mousse, mais vous ne pouvez parer ou attaquer qu’avec la lame).",
+        "avance": "<u>Garde</u> : Si vous gardez un accès avec votre arme en main et qu’on essaye d’en forcer l’accès par la force, vous tiendrez 3 coups de plus.<br/><u>Achèvement</u> (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas.",
+        "expert": "<u>Lame lourde</u> : Si vous touchez votre adversaire vous pouvez choisir d’annoncer « Inconscient » ou « Confusion »",
+        "prodige": "<u>Empalement</u> : Vous touchez votre adversaire au torse et annoncez « Paralysé Empalé». vous le traverser avec votre arme et il reste paralysé tant que vous le gardez au bout de votre lame. Lorsque vous retirez l’épée, vous annoncez « Grave »"
+    }, {
+        "nom": "Voie des Chocs",
+        "domaine": "Martial",
+        "basique": "<u>Arme de Choc</u> : Vous pouvez manier un marteau, une masse, barre à mine ou une arme de ce type (80cm avec poignée)",
+        "avance": "<u>Ecrasement</u> : Vous frappez en annonçant «Brise bras / jambe ».<br/><u>Achèvement</u> (permanent) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas. D’un coup sur le torse.",
+        "expert": "<u>Dysfonction</u> : Vous frappez un objet (tenu ou non), ou une arme (tenue ou non), et vous annoncez « Désactivé ».",
+        "prodige": ""
+    }, {
+        "nom": "Projectiles",
+        "domaine": "Martial",
+        "basique": "<u>Zwwi</u> : Vous disposez de 8 Projectiles (dagues, shurikens, citrouilles miniatures (recouvert de mousse et sans danger) – Pensez à avoir des doubles car les pertes ne sont pas rares.<br/>Les projectiles ne font qu’1 coup et ne s’annoncent pas, mais si vous avez peur que la cible ne se rende compte de rien, criez « touché ! »",
+        "avance": "<u>Pschitt</u> : (nécessite un fumigène vert) : vous lancez le projectile strictement au sol et en extérieur. Et vous annoncez « Disparition ».  Vous passez HJ jusqu’au lieu sûr le plus proche.",
+        "expert": "<u>Zaaap</u> : (nécessite un fumigène bleu), vous lancez votre projectile  strictement au sol et en extérieur. Et annoncez « Ténèbres sur groupe »",
+        "prodige": "<u>LMAO</u> : (nécessite un fumigène rouge) : vous lancez le projectile strictement au sol et en extérieur. Et vous annoncez « Confusion sur groupe 1mn »."
+    }, {
+        "nom": "Armes Energétiques",
+        "domaine": "Martial",
+        "basique": "<u>Coup de semonce</u> : portée : 5m. Vous pouvez annoncer : « Figé » ou « Désactivé »",
+        "avance": "<u>Morsure</u> : A bout portant (1m) vous tirez et annoncez « Douleur 10s», la victime se tort de douleur pendant 10s sans rien pouvoir faire d’autre.<br/><u>Achèvement</u> (coûte 1PE) : Vous faites passer une personne inconsciente ou dans le coma, de vie à trépas..",
+        "expert": "<u>Micro-Ondes</u> : portée 5m. Vous pouvez annoncer : « Grave » (vos munitions étant limitées uniquement par vos PE).<br/><u>Surcharge</u> : Vous déréglez les batteries de votre arme, elle dégage un rayonnement d’énergie tout autour d’elle, vous pouvez annoncer « Grave sur 2m ». Votre arme sera inutilisable jusqu’à réparation. Vous prenez les dégâts aussi.",
+        "note": "(réservé Hydra ou Roxxon Oil)(ces armes sont représentées par des jouets faisant de la lumière et du bruit, plus il en fait, mieux c’est, il suffit de viser pour toucher)"
+    }, {
+        "nom": "Bouclier",
+        "domaine": "Martial",
+        "basique": "<u>Bouclier</u> : vous portez un bouclier de combat. On défend sur la surface, on attaque avec le bord et uniquement avec le bord. Il est Interdit de « pousser ».<br/>Si le Bouclier pare des balles pendant un combat il doit être réparé et n’est plus utilisable jusqu’à réparation.<br/>Les armes énergétiques traversent votre bouclier.<br/>Note : Le Bouclier se porte seul, sans autre arme ou défense dans l’autre main.",
+        "avance": "<u>Résonnance</u> : Sur un coup que vous parez vous pouvez annoncer « Chute ».<br/><u>Pacificateur</u> : Vous touchez votre adversaire avec le bouclier et lui annoncer « Désarme » (fonctionne aussi avec le frisbee)",
+        "expert": "<u>Défi</u> : Contre un adversaire ayant une arme de contact. Vous annoncez « Défi ». Vous pouvez tenir 3 coups de plus en Normal.",
+        "prodige": "<u>Osmium</u> : Votre bouclier est fait d’Osmium, le second métal  plus résistant au monde.<br/>Vous parez les armes énergétiques.<br/>En dépensant une Points d’Energie vous pouvez annoncer  « Renvoi » sur les Annonces d’Armes Energétiques.",
+        "note": "le bouclier à Marvel est une défense autant qu’une attaque, c’est pour cela que les 10 derniers cm de son contour doivent être en mousse et latex uniquement) Le bouclier doit être le plus léger et le plus mou possible. Le bouclier ne peut pas dépasser les 60cm de diamètre."
+    }, {
+        "nom": "Observation",
+        "domaine": "Technique",
+        "basique": "<u>Energizer</u> : +1 PE / jour.<br/><u>Organisation</u> : Votre participation à une Zone de Stress rajoute 1mn au temps limité.",
+        "avance": "<u>Mémoire Eidétique</u> : Après avoir passé 10mn  à observer un document, vous vous en souvenez par cœur. Vous pouvez soit garder une copie HJ des éléments importants du plan et /ou rendre le plan aux orgas et le considéré détruit (s’il peut être détruit), vous serez le seul à pouvoir vous souvenir de ce plan (pensez bien à garder une copie des éléments de jeu du plan si vous le détruisez).",
+        "expert": "<u>Faille</u> : Vous êtes doué pour trouver ce qui cloche dans les objets et les machines. Touchez un objet ou une créature technologique et annoncez « Désactivé »."
+    }, {
+        "nom": "Communications",
+        "domaine": "Technique",
+        "basique": "<u>Mobile</u> : (permanent) Vous avez le droit d’avoir un téléphone portable En Jeu. Il faudra nous donner le numéro de téléphone et le nom de votre personnage associé. Vous aurez le droit d’appeler et de téléphoner ou d’envoyer des SMS uniquement aux autres joueurs ayant la compétence Communication.<br/>Note : Vous ne pouvez appeler personne d’autre que les joueurs ayant cette compétence au moins en Basique.<br/>Note 2 : le fonctionnement de cette compétence dépend bien évidemment du réseau.",
+        "avance": "<u>Traîner l’oreille</u> : Vous avez le droit d’avoir sur vous un dictaphone ou d’utiliser la fonction dictaphone de votre téléphone pour enregistrer les discussions",
+        "expert": "<u>Avoir l’Oeil</u> : Vous avez le droit d’avoir sur vous un appareil photo ou de prendre des photos pendant le GN, ou des vidéos, que vous pourrez utiliser EJ (pour prouver une innocence, accuser quelqu’un, copier des documents etc…)<br/>Note : pensez bien à triller vos photos d’avant GN afin de ne pas tout mélanger entre le personnel et le GN.",
+        "prodige": "<u>TGCM : Brouilleur d’Ondes Cérébrales</u> : Votre cible choisie par vous et informée par vous-même ou un PNJ, sera incapable de communiquer avec la parole ou l’écriture pendant 10 mn (sauf annonces HJ).",
+        "note": "les appareils technologiques liés à cette compétence ne peuvent être volés."
+    }, {
+        "nom": "Cryptographie",
+        "domaine": "Technique",
+        "basique": "<u>Acharné</u> : (permanent) Vous avez le droit de tenter de casser tout type de codes ou de langage codé / secret, à l’exception langage magique (ce n’est pas un code, mais il ne peut être lu que par une personne pratiquant la magie). Note : Une personne n’ayant pas Cryptographie en basique ne peut pas essayer de lire les codes. ",
+        "avance": "<u>Apprenti</u> : Vous avez le droit de nommer une personne Apprenti Cryptographe pour une heure (une personne par PE dépensé). Cette personne reçoit donc Cryptographie Basique pour une heure tant qu’elle travaille à vos côtés.",
+        "expert": "<u>Bulle</u> : Vous pouvez déclarer la salle où vous décoder « sanctuarisée » pour tous ceux qui décodent à l’intérieur. Personne ne pourra vous déranger tant que vous décoder. Les touristes qui vous regardent devront par contre quitter la pièce. Personne ne pourra y entrer ou vous agresser d’aucune manière. La pièce sanctuarisée ne doit pas avoir déjà un rôle spécifique (labo, salle de magie etc…) personne ne pourra en entrer ou sortir.",
+        "prodige": "<u>Maître Cryptographe</u> :<br/>Vous pouvez créer un code à donner aux orgas le plus longtemps possible avant le GN afin qu’il soit utilisé EJ.<br/>Vous avez le droit de produire des documents EJ avant et pendant le GN avec ce code.<br/>Vos apprentis ne durent pas une heure mais une journée, même si vous n’êtes pas à leurs côtés."
+    }, {
+        "nom": "Fixeur",
+        "domaine": "Technique",
+        "basique": "<u>Réparation d’Exosquelettes</u> (labo): Vous pouvez réparer les Exosquelettes. La personne est obligée de vous dire quelle est la classe de son exosquelette.<br/><u>Outils létaux</u> : (permanent) Vous pouvez utiliser un outil comme arme de contact (bien entendu un faux aux normes du GN), clé à molette, barre à mine etc…) 80cm maxi avec poignée.",
+        "avance": "<u>Duplication</u> : Vous pouvez fabriquer n’importe quelle ressource utilisée par d’autres compétences et surtout n’importe où du moment que vous avez votre matériel avec vous (exemple les injections des médecins ou les munitions). Il faut tout de même qu’on vous prête un exemplaire usagé de la ressource à dupliquer. (dans un labo)",
+        "expert": "<u>Prothèse cybernétique</u> : Vous pouvez remplacer un bras ou une jambe, l’opération dure tout de même 10 mn pour tout raccorder et l’aide d’un Médecin Avancé, ou d’un Médecin Légiste Expert est nécessaire pour l’opération (dans un labo).<br/>Note : Le membre remplacé n’a pas de différence avec un membre normal, en revanche, si la personne tombe inconsciente, il faudra faire réparer le membre comme une armure sous peine de boiter ou d’avoir un bras raide.<br/><u>Implant cybernétique</u> : 5mn de préparation : vous pouvez vous implanter (ou à un exosquelette) une puce cybernétique qui augmente votre limite max de coups de 2 en Normal valable jusqu’à utilisation. soit un « Renvoi » valable jusqu’à utilisation. (Les Implants ne sont pas cumulables, un seul implant à la fois). "
+    }, {
+        "nom": "Sécurité Electronique",
+        "domaine": "Technique",
+        "basique": "<u>Caméléon</u> : Votre combinaison vous donne une Invisibilité (bandeau bleu sur la tête) durant 5 mn ou jusqu’à interruption volontaire ou par un acte agressif, tant que vous êtes immobile, plaqué contre un mur ou plaqué au sol.",
+        "avance": "<u>Sirène</u> : Vous pouvez poser des pièges électroniques basés sur la détection de mouvement, de poids ou de lumière. Ils doivent faire du bruit (afin de signaler si le piège est activé, et le son doit pouvoir être interrompu sans avoir à tout arracher) et peuvent aussi faire de la lumière. Ces pièges peuvent être posés soit pour protéger l’accès d’une porte, soit un coffre ou un placard.<br/>Vous pouvez avoir autant de pièges à poser que vous le désirez mais bien entendu la pose de l’un de ces Pièges vous coûte 1PE. Le retirer est en revanche gratuit.",
+        "expert": "<u>Périmètre de Sécurité</u> : Vous pouvez poser un piège (factice) dans une pièce. Si vous étiez agressé dans cette pièce, vous pourriez annoncez un « Blessure » sur un agresseur. (un seul Périmètre de Sécurité par Pièce).<br/>Votre présence dans la pièce où se trouve le piège suffit, même si vous êtes inconscient, comateux ou mort.",
+        "prodige": "<u>Safe Zone</u> : Poser au sol une balise lumineuse de la dimension approximative d’une pastèque. 3m maximum de long, le plus droit possible. Jusqu’à 4 personnes plus vous peuvent toucher la balise de la main et se trouver totalement protégé pendant 5mn, ils ne pourront en revanche rien faire d’autre que parler. La Zone est inviolable, personne ne peut vous atteindre d’aucune façon.",
+        "note": "(nécessite du matériel joueur fonctionnel)"
+    }, {
+        "nom": "Médecine",
+        "domaine": "Scientifique",
+        "basique": "<u>Soins</u> (labo) : vous ramenez une personne à son maximum du stade Normal, d’une injection (10s) (il faut donc qu’elle ne soit pas à 0 coup restant). Vous avez 3 injections pour commencer le GN. Seul un médecin peut appliquer ces injections.<br/>Note : le Soin  ne peut être appliqué que dans un labo.",
+        "avance": "<u>Préparation</u> (labo) : Fabriquer 3 nouvelles injections.<br/><u>Soins avancés</u> : Vos soins peuvent désormais faire remonter une personne Blessée à Normal.<br/><u>Réduction de fracture</u> : Avec 2 injections vous pouvez soigner un membre brisé. Le patient devra attendre 15 mn de convalescence avant de pouvoir réutilisé son membre.",
+        "expert": "<u>Soins expert</u> : Vos soins peuvent désormais faire remonter une personne de Coma à Blessée, puis une seconde injection pour le faire passer de Blessé à Normal.<br/><u>Psychologie</u> : Une discussion de 5mn isolé avec une personne la guérira de tous ses marqueurs de Peur. Si c’est la première fois qu’il est soigné par vous, il devra vous faire part de  l’une des peurs réelles de son personnage. A la fin du soin annoncez « Par la Médecine, donne-moi l’une de tes plus grandes peurs. Vous ne pouvez pas vous guérir vous-même."
+    }, {
+        "nom": "Médecine légale",
+        "domaine": "Scientifique",
+        "basique": "<u>Scène de crime</u> (n’importe où) : Etudiez un cadavre vous permet de déterminer les causes de sa mort (demandez au « mort », les marques que vous pouvez voir sur lui, avec quelle arme il a été tué, ou s’il y a des marques de strangulation, poison, balle, brûlure etc…)",
+        "avance": "<u>Blasé</u> (permanent): Vous ne fuyez pas devant une annonce de Peur, vous n’êtes jamais marqué par la peur.<br/><u>ADN</u> : Vous pouvez prendre des échantillons d’ADN sur un mort (10s), et plus tard les comparer avec ceux d’une tierce personne en accusation du meurtre (consentante ou inconsciente), puis lui annoncer « Par ma médecine, as-tu agressé la victime ? » elle doit répondre par Oui ou Non.",
+        "expert": "<u>Embaumement</u> (labo) (5mn) Vous pouvez protéger un cadavre contre la décomposition et donc le garder utilisable pour la médecine (ou d’autres pratiques moins officielles).<br/><u>Suspension</u> (labo) (5mn) : Vous pouvez suspendre les fonctions vitales minimales d’une personne dans le coma ou dans un état se dégradant rapidement (poison, drogue, maladie) pour pouvoir la soigner plus tard.<br/>Note : Si vous comptez aligner les cadavres embaumés, prévoyez de quoi faire trois ou quatre corps sous des draps.",
+        "prodige": "La Méthode Herbert West : Avec un échantillon ADN d’un mort, et une injection de sérum de votre serum fabriqué avec (5mn), vous pouvez réanimer  un corps et lui donner une nouvelle vie, limitée. Le corps obéira à vos ordre, A moins d’être en très mauvais état, il marchera et bougera normalement mais n’aura qu’une conscience limitée. Il ne pourra pas parler, juste gémir mais vous pouvez lui demander de se taire. Toutes ses compétences seront remplacées par : <i>Force Avancée</i>, <i>Endurance Avancée</i>, <i>Voie des Chocs Basique</i> (fournissez lui une arme).<br/>Si au bout d’une heure le corps est toujours debout, le sérum cessera de fonctionner, et le corps ne pourra plus jamais être animé.<br/>Note : vous ne pouvez utiliser qu’un seul serum à la fois et sur une personne morte depuis 30mn maximum."
+    }, {
+        "nom": "Génétique",
+        "domaine": "Scientifique",
+        "basique": "<u>Echantillon</u> (permanent) (labo) : Vous savez prendre un échantillon de sang pour l’utiliser (10s avec une seringue). Il faut que la personne soit consentante, inconsciente, dans le coma, ou morte depuis moins de 30mn.<br/><u>Traitement personnel</u> : (labo) Vous fabriquez 2 soins à partir d’un échantillon de sang d’une personne (le sang est détruit dans l’entreprise et ne peut servir à rien d’autre). Ces  soins ramènent une personne à son maximum du stade Normal, d’une injection (10s) (il faut donc qu’elle ne soit pas à 0 coup restant) avec l’avantage de pouvoir être utilisés sans vous ou médecin à proximité. En revanche ces soins ne fonctionnent que pour la personne qui vous a donné son sang.<br/>Note : le Traitement  ne peut rien sur les états Blessé et Coma.",
+        "avance": "<u>Analyse</u> (labo ; 5mn) : En prenant un échantillon de sang sur une personne consentante, inconsciente ou comateuse, vous pouvez en produire une analyse rapide vous donnant quelques informations (5mn en labo)) (l’échantillon de sang est détruit dans le processus) : Son type (Humain, Augmenté, Inhumain, Alien, Autre), son genre et son âge.<br/>Note : Soit c’est un PNJ et il peut vous répondre, soit vous demandez aux orgas. Soit c’est un joueur qui connait les réponses et qui vous les donne, soit c’est un joueur qui ignore les réponses et il faut demander aux orgas.",
+        "expert": "<u>Marqueur Génétique</u> :<br/>- Vous pouvez remonter plus haut sur les analyses de sang. Après avoir fait une analyse, vous lancer une étude des marqueurs (5mn, en labo). Vous pourrez ajouter trois informations au choix ci-dessous (l’échantillon de sang est détruit dans le processus).<br/>- Le lien de parenté (si comparaison de marqueurs génétiques avec un autre sujet).<br/>- Le nombre de coups qu’il peut endurer.<br/>- Le pouvoir s’il y a lieu (pour Augmentés et Inhumains).<br/><u>Clonage</u> : (labo) Avec un échantillon du sang d’une personne vous êtes capable de faire repousser un membre coupé. L’opération prend tout de même 10 mn pour tout raccorder et l’aide d’un Médecin Avancé, ou d’un Médecin Légiste Expert est nécessaire pour l’opération.  (dans un labo) (l’échantillon de sang est détruit dans le processus)."
+    }, {
+        "nom": "Physique / Chimie",
+        "domaine": "Scientifique",
+        "basique": "Parfum Soporifique (labo) : Vous pouvez fabriquer un parfum sous la forme d’un bâton d’encens.  Votre soporifique mis à brûler dans une pièce va dégager un parfum qui vous permettra d’annoncer « Inconscience sur groupe ». Vous n’êtes pas affecté.",
+        "avance": "Vérité Electrolytique ( labo) : Vous préparez à l’avance et en labo un petit bac d’électrolyse (dimension tupperware, avec de l’eau et de la lumière, Même une lava lampe customisée ira bien). Vous posez l’objet dans une pièce ou vous allez discuter 5mn avec la cible. Au bout de ces cinq minutes, vous pouvez annoncer « Par la Physique/ Chimie, m’as-tu menti dans la conversation que nous venons d’avoir ? » Réponse par Oui/ Non. Note : la cible n’est pas obligée d’avoir vu le bac à électrolyse. Assurez-vous qu’il ait une apparence bien spéciale.",
+        "expert": "Particule de Crosstech  (labo): Grâce à la particule inventée par Darren Cross, vous pouvez réduire un objet  non organique et non électronique, jusquà le mettre dans la poche. (l’objet concerné passe HJ et vous le remplacer par trois briques de lego noir 2x4 plots enchassées). L’effet dure 15mn maximum au-delà desquelles l’objet reprend sa taille (lancez un compte à rebours).",
+        "prodige": "Piège gravitique (une fois par heure maxi) : Vous posez une mine gravitique au sol, sous la forme d’une demi-sphère  (en mousse), peinte en rouge, dès qu’une personne passe à côté, vous pouvez lui annoncé « Paralysé ». Vous pouvez cacher la Mine Magnétique, mais vous devez rester à proximité pour l’activer : désactivé. La Mine Magnétique peut capturer trois personnes au maximum. Elle cesse de fonctionner au bout de 10 mn (lancez un compte à rebours). Note : faites-vous en plusieurs des fois qu’elle se perde ou s’abîme."
+    }, {
+        "nom": "Xenotech",
+        "domaine": "Scientifique",
+        "basique": "Marquage Chitauri : (5mn) (labo) Vous pouvez rendre un objet (arme, ou autre) utilisable par vous seul pendant 30mn (lancez un compte à rebours visible de vous seul et HJ). Si quelqu’un d’autre que vous devait le prendre en main, vous pouvez annoncer « Grave » à chaque fois qu’une personne autre que vous le prendra en main (même si vous êtes inconscient, comateux ou mort). Note : cet effet a besoin de votre présence à côté de l’objet, ne pratiquez donc pas le marquage sur un objet que vous laisseriez quelque part.",
+        "avance": "Arme en alliage d’Uru : (interdit aux non-humains, Prodige et Exosquelletes). Le métal asgardien est un supra conducteur. Votre Arme de contact est couverte d’un alliage en Uru. Vous pouvez annoncer « Grave » à distance en pointant la cible de votre arme (c’est un dégât à distance).",
+        "expert": "GH.325 (labo) (2/ GN maxi) : Ce serum d’origine Alien est capable de guérir les pires blessures.  Quel que soit l’état de la cible, elle repasse en Normal. Permet aussi de faire sortir les gens de la Paralysie, de la Douleur, de la Confusion, de la Peur et guérit les membres brisés ou tranchés, tant que la cible est encore vivante au moment des soins. Les effets secondaires sont toujours en cours d’Etude. Note : Si vous l’utilisez, soignez votre patient et prévenez les orgas",
+        "prodige": "Vacances à T.A.H.I.T.I. : Si vous veniez à mourir pendant le GN, vous reviendrez au prochain. Les points dépensés pour ce Prodige pourraient être relocalisés ailleurs, mais pas dans un niveau Surhumain.",
+        "note": "(réservé au SHIELD ou Ho.P.E.)"
+    }, {
+        "nom": "Robotique",
+        "domaine": "Scientifique",
+        "basique": "Projectile EMP : Vous lancez un projectile à main (sans danger et mou) sur votre cible et si vous touchez une arme énergétique, un robot,  ou un cyborg, annoncez « Désactivé ». Note : prévoyez des rechanges pour votre projectile s’il est abimé ou perdu.",
+        "avance": "Reprogrammation : (labo, 5 mn) Si vous mettez la main sur un robot « Désactivé », vous pouvez modifier son programme pour 15 mn (mettez un compte à rebours en marche, pour vous et HJ) au choix : Garde d’un lieu (personne ne passe), Seek’n’destroy (nommez la cible), Protection d’une personne. Au terme des 15 mn le robot n’est plus reprogrammable et il risque de ne pas être très content s’il est toujours actif.",
+        "expert": "Nanorobots : (seringue) (labo, 10 mn) Vous installez une veille métabolique. La cible remontera à Normal en 5mn si elle tombe dans le coma, et sans intervention.",
+        "prodige": "Mk II (2fois / jour) Vous pilotez à distance un robot humanoïde qui a votre apparence sauf la tête qui est celle d’un robot. Vous choisissez le type du robot à convoquer à chaque fois. Combattant : 8 coups, Arme de choc basique. Médecin : 10 Injections Niveau Médecin basique, utilisable hors labo et en combat. C’est vous qui jouez ce robot pendant que l’on considère que vous êtes à l’abri. Ce robot a une durée de vie de 30 mn maxi. Il ne peut utiliser aucune autre de vos compétences, peut parler mais de façon très robotique et très succincte. Mais il peut être upgradé ou réparé comme n’importe quel autre PJ. Il ne peut pas être soigné, ne peux reconnaître que deux personnes que vous assignez comme Ennemi ou Ami. Il n’a aucun de vos souvenirs."
+    }, {
+        "nom": "Commandement",
+        "domaine": "Diplomatique",
+        "basique": "Transfert de compétence : (permanent) vous pouvez transférer les PE entre les personnages, il vous suffit de discuter 5 mn avec deux personnes de vos histoires respectives pour transférer jusqu’à 2 PE d’une personne à une autre. Vous pouvez aussi transférer des PE d’une autre personne, vers vous. Note : Cette compétence nécessite la pleine collaboration des personnes y participant. Il est impossible de procéder à un échange sous la contrainte ou sans que toutes les parties soient d’accord.",
+        "avance": "Esprit de Corps : Tout groupe (de 2 à 6 personnes)  dont vous devenez le dirigeant officiel (avec titre, grade etc…), augmente son maximum de coups reçus de 2 pour le prochain combat tant qu’ils agissent sous vos ordres. Ils sont aussi insensibles à la Peur tant que vous restez groupés et que vous êtes conscient.",
+        "expert": "Réputation : Avec le groupe formé par Esprit de Corps, si vous êtes entouré de tous ses membres, vous pouvez Annoncer «Peur ».",
+        "prodige": "Harmonisateur : Vous êtes capable d’échanger temporairement les compétences de deux personnes pendant 10mn. Ainsi, vous pouvez créer de nouvelles combinaisons et optimisations pour des situations précises. Vous ne pouvez échanger qu’une compétence à la fois. Vous pouvez aussi faire cet échange mais vous ne pouvez pas échanger « Commandement ». Lors de cet échange vous choisissez l’une des compétences faisant partie de l’échange et la gardez aussi pour vous pendant 10mn."
+    }, {
+        "nom": "Renseignements",
+        "domaine": "Diplomatique",
+        "basique": "Who’s Who : (permanent) Vous avez accès à la liste de tous les personnages joueurs et PNjs recensés dans la zone. Avant le début du GN.",
+        "avance": "Liste rouge : (permanent) Vous recevez une petite fiche sur chaque personne soupçonnée d’avoir des rapports avec la Pègre et leur activité s’il  y a lieu. Ces informations restent des supputations corrélatives à vérifier. Avant le début du GN. Réseau : Vous pouvez convoquer un agent de votre réseau local afin d’obtenir un objet ou un renseignement libre. Il peut y avoir un coût en PE supplémentaire en fonction de la demande.",
+        "expert": "Liste noire : (permanent) Vous recevez une petite fiche sur chaque personne soupçonnée d’avoir eu ou d’avoir des accointances avec des organisations terroristes et leurs activités s’il y a lieu. Ces informations restent des supputations corrélatives à vérifier. Avant le début du GN. Secret Défense : Vous pouvez mettre un document dans une enveloppe « SECRET DEFENSE » et y apposer le sceau de l’organisation à laquelle vous appartenez. Toute personne qui verrait ou volerait ce document deviendrait de fait coupable de crime contre votre Organisation / Pays (et entrerait dans la liste noire)",
+        "prodige": "Alter Ego (permanent) L’identité que vous affichez et qui sur laquelle d’autres pourraient enquêter est une pure invention ou une usurpation, vous êtes immunisé aux Renseignements (celui qui cherche des infos sur vous en aura, mais elles seront fausses), mais aussi à toute autre forme de manipulation mentale destinée à vous faire dire qui vous êtes réellement. Seule la génétique peut vous trahir. Vous savez qui vous êtes mais vous êtes conditionné à agir comme qui vous prétendez être. Note : tout personnage peut jouer un infiltré sans avoir ce pouvoir, mais sa couverture sera alors beaucoup plus fragile."
+    }, {
+        "nom": "Accords",
+        "domaine": "Diplomatique",
+        "basique": "Immunité Diplomatique (permanent) : Vous ne pouvez être arrêté par les forces officielles de police, ou par l’armée, on ne peut pas vous retenir, mais on peut vous interroger comme témoin d’une enquête. Vous ne pouvez être la cible d’aucune condamnation. SAUF si des preuves démontrent votre engagement avec le Crime Organisé ou des Organisations terroristes. Otage : Votre statut diplomatique vous rend plus utile vivant que mort. Si vous êtes encore conscient et à deux doigts de mourir, annoncez « Par mon statut de Diplomate, faites de moi votre otage ». Votre bourreau devra négocier votre échange. Note : ne peuvent être officiellement diplomate que ceux qui représentent un état une organisation officiel(le)s. Par exemple, HYDRA peut très bien avoir des émissaires officiels, mais ils n’auraient aucune représentation, ni aucun pouvoir diplomatique. Note 2 : Toutes les discussions diplomatiques officielles sont des Zones de Stress en temps limité, à savoir 25mn (mettre le compte à rebours).",
+        "avance": "Signature (permanent) : Vous pouvez signer des accords officiels, que ce soit au nom de votre Pays ou de votre Organisation / Entreprise . Il existe différents accords et tous ne sont pas accessibles à tout le monde : Accord de Principe (tout le monde). Cet accord ne pèse pas lourd, il engage les signataires à trouver une autre date pour se mettre d’accord sur un point. Mais c’est un début. Accord de Coopération limitée (tout le monde) Cet accord engage clairement les différentes parties à régler un point bien précis avant une date donnée. Sans quoi serait encourue une perte de crédibilité. Accord Economique (Diplomates) Cet accord met en place des échanges de ressources, des achats de matériels etc… dans un délai clairement explicité. - Usage de la Force (tout le monde) Les parties engagées s’accordent à mettre en commun leurs ressources militaires pour protéger une ressource / un lieu clairement défini. Alliance Militaire (Diplomates) : Cet accord met en place une alliance militaire totale entre les parties qui promettent de se soutenir en cas de conflit avec un autre belligérant. Note : Pour le membre d’une organisation ou d’un pays, refuser d’appliquer un accord signé par son diplomate est un acte de Haute Trahison envers sa faction. Un Etat ne peut réfuter les décisions prises par son diplomate à moins de perdre la face.",
+        "expert": "Sanction : La Sanction est Economique ou Diplomatique, mais pas les deux. Vous réunissez tous les diplomates concernés par votre sanction (soit tous les émissaires de pays si c’est diplomatique, ou les représentants de toutes les entreprises présentent si c’est économique. Ensuite vous mettez au vote une Sanction contre une Société / Un pays, en exposant les faits. Pour ce vote, tout le monde a une voix sauf celui qui l’appelle qui en a deux. Si le vote passe tous les membres d’un pays / d’une entreprise ne peuvent plus faire de levée de fonds. Ni signer d’accords. Ils peuvent en revanche appeler un nouveau vote pour lever cette sanction. Si la Sanction est levée par vote, elle ne peut plus être proposée jusqu’à la fin du GN.",
+        "note": "En GN les accords ne sont rien de plus que des discussions et des signatures en bas d’un papier. Cependant, en tant que diplomate on représentant d’une entreprise, c’est votre pays ou votre société dont vous êtes la voix et le représentant. Toute bourde de votre part rejaillirait sur eux. A l’inverse ces documents ne sont pas uniquement là pour meubler, vos signatures d’accords peuvent avoir des influences en temps réel sur la situation sur le terrain et sur le jeu, ne négligez donc pas le pouvoir du papier. Le travail d’un diplomate n’est jamais terminé, d’une part parce qu’on lui a donné des objectifs à atteindre, mais aussi parce qu’il doit toujours consolider encore et encore les accords qu’il a passé en s’assurant de la crédibilité de ceux avec qui il les signe."
+    }, {
+        "nom": "Ressources",
+        "domaine": "Diplomatique",
+        "basique": "Rentier : Vous commencez le GN avec 15 k€ en poche. Levée de fonds : Vous pouvez lever jusqu’à 2000 € supplémentaires par PE et par jour.",
+        "avance": "Trader : Vous commencez le GN avec 30 k€ en poche. Levée de fonds : Vous pouvez lever jusqu’à 4000 € supplémentaires par PE et par jour.",
+        "expert": "Héritier : Vous commencez le GN avec  50 k€ en poche. Levée de fonds : Vous pouvez lever jusqu’à 6000 € supplémentaires par PE et par jour."
+    }, {
+        "nom": "xxx",
+        "domaine": "Diplomatique",
         "basique": "",
         "avance": "",
         "expert": "",
