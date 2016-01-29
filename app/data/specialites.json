@@ -3,41 +3,55 @@
         "nom": "Soldat",
         "cout": "0",
         "note": "1 Comp basique Martiale gratuite. Les Comp Diplomatique coûtent +1Pt.",
+        "domaine_bonus": "Martial",
+        "domaine_malus": "Diplomatique",
         "description": "Soldat de métier, Légionnaire, Garde du Corps, Maître d’arme, Mercenaire,  Mère au foyer."
     },
     "Scientifique": {
         "nom": "Scientifique",
         "cout": "0",
+        "domaine_bonus": "Scientifique",
+        "domaine_malus": "Artiste",
         "note": "1 Comp basique Scientifique gratuite. Les Comp Artiste coûtent +1Pt.",
         "description": "Laborantin, Professeur d’Université, Police Scientifique, Ethnologue, Astrophysicien, Blogueur conspirationniste."
     },
     "Diplomate": {
         "nom": "Diplomate",
         "cout": "0",
-        "note": "1 Comp basique Diplomatique gratuite. Les Comp Technicien coûtent +1Pt.",
+        "domaine_bonus": "Diplomatique",
+        "domaine_malus": "Technique",
+        "note": "1 Comp basique Diplomatique gratuite. Les Comp Technique coûtent +1Pt.",
         "description": "Ambassadeur, Politicien, Agent Secret, Négociateur, Commercial, PDG, Pilier de comptoir."
     },
     "Criminel": {
         "nom": "Criminel",
         "cout": "0",
+        "domaine_bonus": "Criminel",
+        "domaine_malus": "Scientifique",
         "note": "1 Comp basique Criminel gratuite. Les Comp Scientifique coûtent +1Pt.",
         "description": "Trafiquant, Contrebandier, Assassin, Ninja, Voleur, Faussaire, Hacker, Spoiler de série Télé."
     },
     "Artiste": {
         "nom": "Artiste",
         "cout": "0",
+        "domaine_bonus": "Artiste",
+        "domaine_malus": "Criminel",
         "note": "1 Comp basique Artiste gratuite. Les Comp Criminel coûtent +1Pt.",
         "description": "Musicien, Peintre, Prestidigitateur, Danseur, Effeuilleuse burlesque, Acteur, Cascadeur, Footballeur."
     },
     "Technicien": {
         "nom": "Technicien",
         "cout": "0",
-        "note": "1 Comp basique Technicien gratuite. Les Comp Soldat coûtent +1Pt.",
+        "domaine_bonus": "Technique",
+        "domaine_malus": "Martial",
+        "note": "1 Comp basique Technique gratuite. Les Comp Martial coûtent +1Pt.",
         "description": "Informaticien, Mécanicien, Electronicien, Architecte, Concepteur de jeux vidéo, Fan de Lego."
     },
     "Sans": {
         "nom": "Sans spécialité",
         "cout": "0",
+        "domaine_bonus": "Sans",
+        "domaine_malus": "Sans",
         "note": "",
         "description": "Aucune spécialité."
     }
