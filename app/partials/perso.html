@@ -25,10 +25,21 @@
     <li ng-show="perso.specialite.note">Note : {{perso.specialite.note}}</li>
 </ul>
 
-<h4>Compétences :</h4>
-<ul ng-repeat="c in perso.competences">
-    <li>{{c}}</li>
-</ul>
+<h4>Compétences</h4>
+<div ng-repeat="(domaine, comps) in perso.competences">
+    <h5>Domaine {{domaine|lowercase}}</h5>
+    <ul>
+        <li ng-repeat="(comp, niveaux) in comps">
+            <b>{{comp}}</b>
+            <ul>
+                <li ng-show="niveaux.basique">Niveau basique : <div ng-bind-html-unsafe="niveaux.basique"></div></li>
+                <li ng-show="niveaux.avance">Niveau avancé : <div ng-bind-html-unsafe="niveaux.avance"></div></li>
+                <li ng-show="niveaux.expert">Niveau expert : <div ng-bind-html-unsafe="niveaux.expert"></div></li>
+                <li ng-show="niveaux.prodige">Niveau prodige <div ng-bind-html-unsafe="niveaux.prodige"></div></li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
 <h4 ng-show="perso.haveAcccessPouvoirInhumain()">Pouvoir inhumain : {{perso.pouvoirInhumain.nom}}</h4>
 <ul ng-show="perso.haveAcccessPouvoirInhumain()">
