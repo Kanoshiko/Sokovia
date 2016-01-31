@@ -1,58 +1,58 @@
 {
-    "Ho.P.E.":{
+    "Ho.P.E.": {
         "nom": "Ho.P.E.",
         "cout": "1",
         "description": "Homeguard Protection of Europe : Un embryon d’armée Européenne composée d’agents spéciaux, de commandos, de scientifiques très doués et d’une poignée de surhumains.",
         "note": "Accès au Xenotech"
-    }, 
+    },
     "HYDRA": {
         "nom": "HYDRA",
         "cout": "1",
         "description": "Organisation terroriste née sous l’Allemagne nazie et dont le but n’est ni plus ni moins que la domination du monde.",
         "note": "Accès aux Armes Energétiques"
-    }, 
+    },
     "S.H.I.E.L.D.": {
         "nom": "S.H.I.E.L.D.",
         "cout": "1",
         "description": "Strategic Homeland Intervention Enforcement Logistics Division : Organisation Internationale d’origine américaine, récemment effondrée du fait de son infiltration à grande échelle par HYDRA et qui l’a plongé dans la clandestinité pour survivre.",
         "note": "Accès à Xenotech"
-    }, 
+    },
     "Stark Industries": {
         "nom": "Stark Industries",
         "cout": "1",
         "description": "Société de Tony Stark, agissant principalement pour le développement de technologies pour le bien-être et la protection des populations civiles.",
         "note": "Si vous êtes de type Exosquelette, votre Exosquelette vous coûte 2 Pts sinon, vous avez 2 comp Tech basiques gratuites."
-    }, 
+    },
     "Roxxon Oil": {
         "nom": "Roxxon Oil",
         "cout": "1",
-        "description": "Accès aux Armes Energétiques",
-        "note": "Société Texane de R&D spécialisé dans les nouvelles énergies."
-    }, 
+        "description": "Société Texane de R&D spécialisé dans les nouvelles énergies.",
+        "note": "Accès aux Armes Energétiques"
+    },
     "La Maggia": {
         "nom": "La Maggia",
         "cout": "1",
         "description": "Organisation criminelle originaire d’Italie et ayant des ramifications partout dans le monde.",
         "note": "2 comps Basique Criminel gratuites."
-    }, 
+    },
     "Les Dix Anneaux": {
         "nom": "Les Dix Anneaux",
         "cout": "1",
         "description": "Anciennement l’AIM : Advanced Idea Mechanics : Fondée par Aldrich Kilian, cette société a essayé de remplacer le Président des Etats Unis et a créé des super soldats à partir de vétérans mutilés. Eventé par Iron Man elle a plongée dans la clandestinité, devenant un groupe terroriste, les Dix Anneaux.",
         "note": "Accès à Extremis (Pouvoir d’Augmenté de la comp. Drogues)"
-    }, 
+    },
     "La Main": {
         "nom": "La Main",
         "cout": "1",
         "description": "Une organisation criminelle d’origine japonaise dont les origines et les intentions sont noyées dans un flot de rumeurs.",
-        "note": "2 Comp. Basique Martiale ou Artiste gratuite."
-    }, 
+        "note": "1 Comp. Basique Martiale gratuite et 1 Comp. Basique Artiste gratuite."
+    },
     "W.A.R.": {
         "nom": "W.A.R.",
         "cout": "1",
         "description": "Wakanda Agency for Resources : Le Wakanda, seul producteur au monde du Vibranium, est sans cesse à la recherche de nouvelles énergies pour exploiter son bien.",
         "note": "Manchon Parre-coup en vibranium."
-    }, 
+    },
     "Sans": {
         "nom": "Sans",
         "cout": "0",

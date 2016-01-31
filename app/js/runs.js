@@ -7,6 +7,26 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.budget = 11;
 
+                $rootScope.perso.comp_bonus = {
+                    "Commun": 0,
+                    "Martial": 0,
+                    "Technique": 0,
+                    "Scientifique": 0,
+                    "Diplomatique": 0,
+                    "Criminel": 0,
+                    "Artistique": 0
+                };
+
+                $rootScope.perso.comp_bonus_max = {
+                    "Commun": 0,
+                    "Martial": 0,
+                    "Technique": 0,
+                    "Scientifique": 0,
+                    "Diplomatique": 0,
+                    "Criminel": 0,
+                    "Artistique": 0
+                };
+
                 $http.get('data/types.json').success(function (data) {
                     $rootScope.listeTypes = data;
                     $rootScope.perso.type = $rootScope.listeTypes["humain"];
@@ -63,9 +83,62 @@ angular.module('myApp.runs', [])
 
                 // Allegeances
                 $rootScope.perso.changeAllegeance = function (allegeance) {
-                    this.budget = 10 - parseInt(this.type.cout) - parseInt(allegeance.cout);
+                    this.removeAllegeance();
+                    this.addAllegeance(allegeance);
+                };
+
+                $rootScope.perso.removeAllegeance = function () {
+                    this.budget = this.budget + parseInt(this.allegeance.cout);
+
+                    if (this.allegeance.nom === "La Maggia") {
+                        this.comp_bonus["Criminel"] = this.comp_bonus["Criminel"] - 2;
+                        this.comp_bonus_max["Criminel"] = this.comp_bonus["Criminel"] - 2;
+                    }
+
+                    if (this.allegeance.nom === "La Main") {
+                        this.comp_bonus["Martial"] = this.comp_bonus["Criminel"] - 1;
+                        this.comp_bonus_max["Martial"] = this.comp_bonus["Criminel"] - 1;
+                        this.comp_bonus["Artistique"] = this.comp_bonus["Artistique"] - 1;
+                        this.comp_bonus_max["Artistique"] = this.comp_bonus["Artistique"] - 1;
+                    }
+
+                    if (this.allegeance.nom === "Stark Industries") {
+                        if (this.type !== $rootScope.listeTypes["exosquelette"])
+                        {
+                            this.comp_bonus["Technique"] = this.comp_bonus["Technique"] - 2;
+                            this.comp_bonus_max["Technique"] = this.comp_bonus["Technique"] - 2;
+                        } else {
+                            this.budget = this.budget - 2;
+                        }
+                    }
+
+                    this.allegeance = $rootScope.listeAllegeances["Sans"];
+                };
+
+                $rootScope.perso.addAllegeance = function (allegeance) {
+                    this.budget = this.budget - parseInt(allegeance.cout);
+
+                    if (allegeance.nom === "La Maggia") {
+                        this.comp_bonus["Criminel"] = this.comp_bonus["Criminel"] + 2;
+                        this.comp_bonus_max["Criminel"] = this.comp_bonus["Criminel"] + 2;
+                    }
+
+                    if (allegeance.nom === "La Main") {
+                        this.comp_bonus["Martial"] = this.comp_bonus["Criminel"] + 1;
+                        this.comp_bonus_max["Martial"] = this.comp_bonus["Criminel"] + 1;
+                        this.comp_bonus["Artistique"] = this.comp_bonus["Artistique"] + 1;
+                        this.comp_bonus_max["Artistique"] = this.comp_bonus["Artistique"] + 1;
+                    }
+
+                    if (this.type !== $rootScope.listeTypes["exosquelette"])
+                    {
+                        this.comp_bonus["Technique"] = this.comp_bonus["Technique"] + 2;
+                        this.comp_bonus_max["Technique"] = this.comp_bonus["Technique"] + 2;
+                    } else {
+                        this.budget = this.budget + 2;
+                    }
+
                     this.allegeance = allegeance;
-                    this.competences = {};
                 };
 
                 $rootScope.perso.isAllegeanceSelected = function (allegeance) {
@@ -79,7 +152,34 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.changeSpecialite = function (specialite) {
                     this.budget = 10 - parseInt(this.type.cout) - parseInt(specialite.cout);
+
+                    $rootScope.perso.comp_bonus = {
+                        "Commun": 0,
+                        "Martial": 0,
+                        "Technique": 0,
+                        "Scientifique": 0,
+                        "Diplomatique": 0,
+                        "Criminel": 0,
+                        "Artistique": 0
+                    };
+
+                    $rootScope.perso.comp_bonus_max = {
+                        "Commun": 0,
+                        "Martial": 0,
+                        "Technique": 0,
+                        "Scientifique": 0,
+                        "Diplomatique": 0,
+                        "Criminel": 0,
+                        "Artistique": 0
+                    };
+
+                    this.comp_bonus[specialite.domaine_bonus] = this.comp_bonus[specialite.domaine_bonus] + 1;
+                    this.comp_bonus_max[specialite.domaine_bonus] = this.comp_bonus_max[specialite.domaine_bonus] + 1;
+
                     this.specialite = specialite;
+
+                    this.addAllegeance(this.allegeance);
+
                     this.competences = {};
                 };
 
@@ -110,6 +210,29 @@ angular.module('myApp.runs', [])
                     return (this.type === $rootScope.listeTypes["prodige"]);
                 };
 
+                $rootScope.perso.achatComp = function (comp) {
+                    this.budget = this.budget - this.coutComp(comp);
+                };
+
+                $rootScope.perso.libereComp = function (comp) {
+                    this.budget = this.budget + this.coutComp(comp);
+                };
+
+                $rootScope.perso.coutComp = function (comp) {
+                    if (comp.domaine === this.specialite.domaine_malus) {
+                        return 2;
+                    }
+                    return 1;
+                };
+
+                $rootScope.perso.isCompGratuite = function (comp) {
+                    if (this.comp_bonus[comp.domaine] > 0) {
+                        return 0;
+                    }
+
+                    return this.coutComp(comp);
+                };
+
                 $rootScope.perso.addBasiqueComp = function (comp) {
                     if (!this.competences[comp.domaine]) {
                         this.competences[comp.domaine] = {};
@@ -120,7 +243,11 @@ angular.module('myApp.runs', [])
                     }
 
                     if (!this.competences[comp.domaine][comp.nom]["basique"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
+                        if (this.comp_bonus[comp.domaine] > 0) {
+                            this.comp_bonus[comp.domaine] = this.comp_bonus[comp.domaine] - 1;
+                        } else {
+                            this.achatComp(comp);
+                        }
 
                         this.competences[comp.domaine][comp.nom]["basique"] = comp.basique;
                     }
@@ -129,7 +256,7 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.addAvanceComp = function (comp) {
                     this.addBasiqueComp(comp);
                     if (!this.competences[comp.domaine][comp.nom]["avance"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
+                        this.achatComp(comp);
                         this.competences[comp.domaine][comp.nom]["avance"] = comp.avance;
                     }
                 };
@@ -137,7 +264,7 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.addExpertComp = function (comp) {
                     this.addAvanceComp(comp);
                     if (!this.competences[comp.domaine][comp.nom]["expert"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
+                        this.achatComp(comp);
                         this.competences[comp.domaine][comp.nom]["expert"] = comp.expert;
                     }
                 };
@@ -145,7 +272,7 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.addProdigeComp = function (comp) {
                     this.addExpertComp(comp);
                     if (!this.competences[comp.domaine][comp.nom]["prodige"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
+                        this.achatComp(comp);
                         this.competences[comp.domaine][comp.nom]["prodige"] = comp.prodige;
                     }
                 };
@@ -153,7 +280,12 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.removeBasiqueComp = function (comp) {
                     if (this.competences[comp.domaine][comp.nom]["basique"]) {
                         delete this.competences[comp.domaine][comp.nom]["basique"];
-                        this.budget = this.budget + 1;
+
+                        if (this.comp_bonus[comp.domaine] < this.comp_bonus_max[comp.domaine]) {
+                            this.comp_bonus[comp.domaine] = this.comp_bonus[comp.domaine] + 1;
+                        } else {
+                            this.libereComp(comp);
+                        }
                     }
 
                     this.removeAvanceComp(comp);
@@ -162,7 +294,7 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.removeAvanceComp = function (comp) {
                     if (this.competences[comp.domaine][comp.nom]["avance"]) {
                         delete this.competences[comp.domaine][comp.nom]["avance"];
-                        this.budget = this.budget + 1;
+                        this.libereComp(comp);
                     }
 
                     this.removeExpertComp(comp);
@@ -171,7 +303,7 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.removeExpertComp = function (comp) {
                     if (this.competences[comp.domaine][comp.nom]["expert"]) {
                         delete this.competences[comp.domaine][comp.nom]["expert"];
-                        this.budget = this.budget + 1;
+                        this.libereComp(comp);
                     }
 
                     this.removeProdigeComp(comp);
@@ -179,7 +311,7 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.removeProdigeComp = function (comp) {
                     if (this.competences[comp.domaine][comp.nom]["prodige"]) {
-                        this.budget = this.budget + 1;
+                        this.libereComp(comp);
                         delete this.competences[comp.domaine][comp.nom]["prodige"];
                     }
                 };
