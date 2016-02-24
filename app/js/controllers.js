@@ -2,6 +2,8 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
+        controller('CtrPresentation', ['$rootScope', '$scope', function ($rootScope, $scope) {
+            }]).
         controller('CtrPerso', ['$rootScope', '$scope', function ($rootScope, $scope) {
             }]).
         controller('CtrType', ['$rootScope', '$scope', function ($rootScope, $scope) {
