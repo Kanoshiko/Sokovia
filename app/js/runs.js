@@ -32,6 +32,11 @@ angular.module('myApp.runs', [])
                     $rootScope.perso.type = $rootScope.listeTypes["humain"];
                 });
 
+                $http.get('data/limitations.json').success(function (data) {
+                    $rootScope.listeLimitations = data;
+                    $rootScope.perso.limitation = $rootScope.listeLimitations["Sans"];
+                });
+
                 $http.get('data/factions.json').success(function (data) {
                     $rootScope.listeFactions = data;
                     $rootScope.perso.faction = $rootScope.listeFactions["Autres"];
@@ -79,6 +84,16 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.isFactionSelected = function (faction) {
                     return (faction === this.faction);
+                };
+
+                // Limitations
+                $rootScope.perso.changeLimitation = function (limitation) {
+                    this.budget = this.budget + parseInt(this.limitation.cout) - parseInt(limitation.cout);
+                    this.limitation = limitation;
+                };
+
+                $rootScope.perso.isLimitationSelected = function (limitation) {
+                    return (limitation === this.limitation);
                 };
 
                 // Allegeances

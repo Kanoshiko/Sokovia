@@ -8,6 +8,8 @@ angular.module('myApp.controllers', []).
             }]).
         controller('CtrType', ['$rootScope', '$scope', function ($rootScope, $scope) {
             }]).
+        controller('CtrLimitation', ['$rootScope', '$scope', function ($rootScope, $scope) {
+            }]).
         controller('CtrFaction', ['$rootScope', '$scope', function ($rootScope, $scope) {
             }]).
         controller('CtrAllegeance', ['$rootScope', '$scope', function ($rootScope, $scope) {
