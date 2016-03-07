@@ -51,3 +51,23 @@
     <li>Effet : {{perso.pouvoirInhumain.effet}}</li>
     <li>Contrepartie : {{perso.pouvoirInhumain.contrepartie}}</li>
 </ul>
+
+<h4 ng-show="perso.haveAcccessPouvoirMystique()">Pouvoirs mystiques</h4>
+<ul ng-show="perso.haveAcccessPouvoirMystique()">
+    <li ng-repeat="p in perso.pouvoirsMystiques">
+        <div>
+            <b>{{p.nom}}</b>
+            Symbole : {{p.symbole}}<br/>
+            <div ng-bind-html-unsafe="p.sort_1"></div>
+            <div ng-bind-html-unsafe="p.sort_2"></div>
+            <u>Rituel</u> : <span ng-bind-html-unsafe="p.rituel"></span>
+        </div>
+    </li>
+</ul>
+
+<h4 ng-show="perso.haveAcccessExosquelette()">Exosquelette : {{perso.exosquelette.nom}}</h4>
+<ul ng-show="perso.haveAcccessExosquelette()">
+    <li>Capacité : <div ng-bind-html-unsafe="perso.exosquelette.capacite"></div></li>
+    <li>Type d'armure : <div ng-bind-html-unsafe="perso.exosquelette.type_armure"></div></li>
+</ul>
+

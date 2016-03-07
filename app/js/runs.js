@@ -62,6 +62,16 @@ angular.module('myApp.runs', [])
                     $rootScope.perso.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
                 });
 
+                $http.get('data/pouvoirs_mystiques.json').success(function (data) {
+                    $rootScope.listePouvoirsMystiques = data;
+                    $rootScope.perso.pouvoirsMystiques = {};
+                });
+
+                $http.get('data/exosquelettes.json').success(function (data) {
+                    $rootScope.listeExosquelettes = data;
+                    $rootScope.perso.exosquelette = $rootScope.listeExosquelettes["Autre"];
+                });
+
                 //Types
                 $rootScope.perso.changeType = function (type) {
                     this.budget = 10 - parseInt(type.cout);
@@ -70,6 +80,8 @@ angular.module('myApp.runs', [])
                     this.specialite = $rootScope.listeSpecialites["Sans"];
                     this.competences = {};
                     this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
+                    this.pouvoirMystique = {};
+                    this.exosquelette = {};
                 };
 
                 $rootScope.perso.isTypeSelected = function (type) {
@@ -214,6 +226,44 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.isPouvoirInhumainSelected = function (pouvoirInhumain) {
                     return (pouvoirInhumain === this.pouvoirInhumain);
+                };
+
+                // Pouvoir mystique
+                $rootScope.perso.haveAcccessPouvoirMystique = function () {
+                    return (this.type === $rootScope.listeTypes["mystique"]);
+                };
+
+                $rootScope.perso.addPouvoirMystique = function (pouvoirMystique) {
+                    if (pouvoirMystique.cout <= this.budget) {
+                        this.budget = this.budget - parseInt(pouvoirMystique.cout);
+                        this.pouvoirsMystiques[pouvoirMystique.nom] = pouvoirMystique;
+                    }
+                };
+
+                $rootScope.perso.removePouvoirMystique = function (pouvoirMystique) {
+                    this.budget = this.budget + parseInt(pouvoirMystique.cout);
+                    delete this.pouvoirsMystiques[pouvoirMystique.nom];
+                };
+
+                $rootScope.perso.isPouvoirMystiqueSelected = function (pouvoirMystique) {
+                    if (this.pouvoirsMystiques[pouvoirMystique.nom]) {
+                        return true;
+                    }
+
+                    return false;
+                };
+
+                // Exosquelette
+                $rootScope.perso.haveAcccessExosquelette = function () {
+                    return (this.type === $rootScope.listeTypes["exosquelette"]);
+                };
+
+                $rootScope.perso.changeExosquelette = function (exosquelette) {
+                    this.exosquelette = exosquelette;
+                };
+
+                $rootScope.perso.isExosqueletteSelected = function (exosquelette) {
+                    return (exosquelette === this.exosquelette);
                 };
 
                 //Compétences

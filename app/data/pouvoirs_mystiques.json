@@ -1,0 +1,73 @@
+[
+    {
+        "nom": "Voie d’Agamotto (Vérité)",
+        "symbole": "L’Oeil",
+        "sort_1": "<u>Toucher d’Agamotto</u> : Parler avec une personne et lorsque vous le voulez, faites le signe mystique et annoncez « Par Agamotto, dis-moi si tu m’as menti dans notre dsicussion ».",
+        "sort_2": "<u>Souffle des Vishantis</u> : Faites le signe mystique et annoncez « Par Les Vishantis Repoussé  sur groupe » en désignant tous les gens devant vous.",
+        "rituel": "Agamotto exige des rites très spirituels, avec un objet ancien, des parfums et des poudres de couleurs.",
+        "cout": "3"
+    }, {
+        "nom": "Voie d’Oshtur (Les Cieux)",
+        "symbole": "Le Soleil",
+        "sort_1": "<u>Main d’Oshtur</u> : Faites le signe mystique : Pendant un combat, jusqu’à cinq personnes peuvent poser la main sur vous. Chaque fois que quelqu’un essayera de vous blesser vous ou un de vos protégés vous pourrez annoncer « Par Oshtur Chute » et cela tant que vous ne bougez pas, à Volonté.<br/>Note : si les agresseurs sont trop nombreux, vous risquez quand même de prendre des coups et de chuter, vous et vos protégés.",
+        "sort_2": "<u>Rappel des Vishantis</u> : Résurrection d’un mort ayant perdu la vie dans l’heure. Il revient à la vie pour une heure et une heure seulement. Après avoir accompli le rituel dans le Sanctuaire, annoncez « Par les Vishantis, Reviens parmi les vivants, pour une heure seulement ».<br/>Note : On ne déroge pas à l’ordre naturel impunément.",
+        "rituel": "Ohstur aime l’abondance de lumières, bougies, globe lumineux etc...",
+        "cout": "3"
+    }, {
+        "nom": "Voie d’Hoggoth (Les Lames)",
+        "symbole": "Deux lames croisées",
+        "sort_1": "<u>Furie d’Hoggoth</u> : Que vous sachiez ou non vous servir d’une épée, vous faites le signe mystique, prenez une épée utilisez la Voie des Lames Avancée pour tout un combat (vous devez dépenser des PE pour les compétences utilisées).",
+        "sort_2": "<u>Voile des Vishantis</u> : Au terme du rituel vous porterez une cape. Les 6 prochains coups d’armes de contact que vos prendrez seront sans effet (même les coups de dos vous surprenant)",
+        "rituel": "Hoggoth apprécie les poignards sacrificiels et le sang.",
+        "cout": "3"
+    }, {
+        "nom": "Voie de Cyttorak (Destruction)",
+        "symbole": "Une boule rouge",
+        "sort_1": "<u>Lianes de Cyttorak</u> (nécessite une corde rouge) : Sur une personne volontaire ou inconsciente, vous nouez la corde rouge. Faites le signe mystique et annoncez « Par Cyttorak, cette corde est indestructible pendant 15mn »<br/>Note : la corde fait son office pendant 25mn maximum où jusqu’à ce que vous la détachiez.",
+        "sort_2": "<u>Fléau de Cyttorak</u> : Faites le signe mystique et annoncez « Par Cyttorak, toutes les armes autour de moi sont bloquées au sol pendant 1 mn »<br/>Lancez le compte à rebours pour vous.",
+        "rituel": "Cyttorak exige que l’on brise quelque chose pour répondre. Un objet, un matériau etc...",
+        "cout": "3"
+    }, {
+        "nom": "Voie d’Ikonn (illusions)",
+        "symbole": "Un masque",
+        "sort_1": "<u>Songe d’Ikonn</u> : Faites le signe mystique et annoncez : « Par Ikonn, tu vis ton pire cauchemar pendant 5mn »",
+        "sort_2": "<u>Farce d’Ikonn</u> : Au Terme du rituel vous pouvez à tout moment devenir un double mystique de vous-même. Il est exactement comme vous, mais ne peut pas se servir des compétences mystiques. Tous les PE qu’il dépense sont dépensés par vous. S’il devait tomber à 0PV il disparaitrait, vous laissant réapparaître dans le Sanctuaire, où pendant ce temps se trouve votre corps, invisible.",
+        "rituel": "Ikonn aime les papiers de couleurs, froissés ou déchirés et l’artisanat africain.",
+        "cout": "3"
+    }, {
+        "nom": "Voie de Raggadorr (La Puissance)",
+        "symbole": "Une flamme noir",
+        "sort_1": "<u>Brouillard de Raggadorr</u> (nécessite un fumigène blanc) (extérieur) : Le Brouillard fonctionne comme un portail de rappel vers le Sanctuaire. Allumez le fumigène (de préférence dans un récipient si vous avez le temps) faites le signe mystique et traverser la fumée, Annoncez « Disparition » et retournez au Sanctuaire en Hors-Jeu aussi vite que possible</br>Note : vous pouvez emmener quelqu’un.",
+        "sort_2": "<u>L’Anneau de Raggador</u> : L’anneau de Ragador est un sortilège qui augmente le pouvoir magique de celui qui l’utilise. C’est le seul qui permette de garder un même sortilège deux fois. Donc, il faut d’abord pratiquer le rituel de l’Anneau de Ragador : le sort suivant pourra être lancé deux fois de suite sans refaire un rituel.",
+        "rituel": "Raggador aime les percussions, les gongs, les tambours et tout ce qui fait du bruit.",
+        "cout": "3"
+    }, {
+        "nom": "Voie de Farallah (La Bête)",
+        "symbole": "Des Cornes de bouc",
+        "sort_1": "<u>Griffes de Farallah</u> (nécessite un masque bestial et des gants pourvues de longues griffes en latex) : Le Sortilège activé vous transforme en bête. Vos griffes font des dégâts standards de 1 coup (ne les annoncez donc pas), Vous pouvez dépenser 1PE pour annoncer « Confusion » sur une personne que vous touchez. Le sort se brise quand vous le décidez, mais sous cette forme, vous ne pouvez ni parler ni utiliser vos compétences.",
+        "sort_2": "<u>Fourrure de Farallah</u> (nécessite un morceau de fausse fourrure de la longueur d’un bras maximum et de moitié en largeur) : Faites le signe mystique, couvrez un objet de la peau annoncez « Par Farralah, disparition ». L’objet est considéré comme disparu et ne réapparaitra que lorsque vous ôterez la peau ou quand le sort se dissipera 5 mn plus tard (lancez un compte à rebours pour vous).",
+        "rituel": "Farallah aime les crânes d’animaux, les os, les trophées de chasse brandi en son nom.",
+        "cout": "3"
+    }, {
+        "nom": "Voie de Watoomb (Air)",
+        "symbole": "Une spirale",
+        "sort_1": "<u>La Bouche de Watoomb</u> : Ce sortilège est un anti-sort. Faîtes le geste mystique et annoncez « Par Watoomb, j’absorbe ce sort », pour annuler un sort qui vient d’être lancé autour de vous.",
+        "sort_2": "<u>La Porte de Watoomb</u> : Au terme de ce rituel, le sanctuaire ne peut plus laisser entrer que des sorciers ou créatures liées à la magie. Ce sort est permanent à moins d’être cassé par le lanceur ou par un anti-sort.</br>Note : Pensez à le notez HJ sur la porte. Inacessibles au Non-Soricers...",
+        "rituel": "Rituel : Eventails, plumes, oiseaux empaillés.",
+        "cout": "3"
+    }, {
+        "nom": "Voie de Chthon (Les Ténèbres)",
+        "symbole": "Le Crâne",
+        "sort_1": "<u>Mille noms de Chthon</u> : Après un évènement ou une discussion, faites le geste mystique et annoncez à une personne « Par Chthon, oublie que j’étais là, Figé».<br/>Note : C’est là que vous partez.",
+        "sort_2": "<u>Linceul de Chthon</u> (dans une pièce ou un lieu fermé) : Vous pouvez rappeler un mort (même mort depuis longtemps) pour discuter avec lui pendant 10mn (merci de prévenir les orgas  ) (le mort est un spectre intangible). Les morts sont souvent un peu ailleurs.",
+        "rituel": "Obscurité, bougies noires, une seule source de lumière, pratiquer le rituel les yeux bandés.",
+        "cout": "3"
+    }, {
+        "nom": "Voie de Mephisto (Les Enfers)",
+        "symbole": "Un sourire démesuré",
+        "sort_1": "<u>Marque de Zarathos</u> : Faites le signe mystique et annoncez à une personne « Par Zarathos, tu veux te venger de X ». Le sort ne peut se rompre qu’avec l’inconscience de la cible.",
+        "sort_2": "<u>Souffle d’Hadès</u> : Faites le geste mystique à la fin du rituel pratiqué dans le Sanctuaire et annoncez « Par l’Hadès, revient à la vie en pleine santé. Ton âme et celle de X appartiennent à mon maître). <br/>La résurrection est permanente, mais la cible du sort et une personne qui a demandé son retour, perdront son âme à Méphisto et seront désormais ses pions.",
+        "rituel": "Mephisto possède déjà votre âme, vous avez 5 mn pour le supplier d’en prendre soin. Flattez-le à haute voix, c’est tout ce qu’il demande.",
+        "cout": "3"
+    }
+]

@@ -19,6 +19,8 @@
                     <li data-match-route="/type"><a href="#/limitation">Limitation</a></li>
                     <li data-match-route="/competences"><a href="#/competences">Compétences</a></li>
                     <li data-match-route="/pouvoir_inhumain" ng-show="perso.haveAcccessPouvoirInhumain()"><a href="#/pouvoir_inhumain">Pouvoir inhumain</a></li>
+                    <li data-match-route="/pouvoir_mystique" ng-show="perso.haveAcccessPouvoirMystique()"><a href="#/pouvoir_mystique">Pouvoir mystique</a></li>
+                    <li data-match-route="/exosquelette" ng-show="perso.haveAcccessExosquelette()"><a href="#/exosquelette">Exosquelette</a></li>
                     <li data-match-route="/perso"><a href="#/perso">Perso</a></li>
                     <li><a><u>Budget : {{perso.budget}} points</u></a></li>
                 </ul>
@@ -28,7 +30,7 @@
         <div class="container">
             <div ng-view></div>
         </div>
-        
+
         <div align="center">
             <img src="img/LogoNCSokovia.png" height="180" width="180">
         </div>
