@@ -30,6 +30,7 @@ angular.module('myApp.runs', [])
                 $http.get('data/types.json').success(function (data) {
                     $rootScope.listeTypes = data;
                     $rootScope.perso.type = $rootScope.listeTypes["humain"];
+                    $rootScope.perso.compExpert = 2;
                 });
 
                 $http.get('data/limitations.json').success(function (data) {
@@ -80,8 +81,18 @@ angular.module('myApp.runs', [])
                     this.specialite = $rootScope.listeSpecialites["Sans"];
                     this.competences = {};
                     this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
-                    this.pouvoirMystique = {};
+                    this.pouvoirsMystiques = {};
                     this.exosquelette = {};
+                    this.compExpert = 0;
+                    this.compProdige = 0;
+                    if (type === $rootScope.listeTypes["humain"]) {
+                        this.compExpert = 2;
+                    }
+                    if (type === $rootScope.listeTypes["prodige"]) {
+                        this.compExpert = 1;
+                        this.compProdige = 1;
+                    }
+
                 };
 
                 $rootScope.perso.isTypeSelected = function (type) {
@@ -329,16 +340,22 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.addExpertComp = function (comp) {
                     this.addAvanceComp(comp);
                     if (!this.competences[comp.domaine][comp.nom]["expert"] && this.budget > 0) {
-                        this.achatComp(comp);
-                        this.competences[comp.domaine][comp.nom]["expert"] = comp.expert;
+                        if (this.compExpert > 0) {
+                            this.compExpert = this.compExpert - 1;
+                            this.achatComp(comp);
+                            this.competences[comp.domaine][comp.nom]["expert"] = comp.expert;
+                        }
                     }
                 };
 
                 $rootScope.perso.addProdigeComp = function (comp) {
                     this.addExpertComp(comp);
                     if (!this.competences[comp.domaine][comp.nom]["prodige"] && this.budget > 0) {
-                        this.achatComp(comp);
-                        this.competences[comp.domaine][comp.nom]["prodige"] = comp.prodige;
+                        if (this.compProdige > 0) {
+                            this.compProdige = this.compProdige - 1;
+                            this.achatComp(comp);
+                            this.competences[comp.domaine][comp.nom]["prodige"] = comp.prodige;
+                        }
                     }
                 };
 
@@ -367,6 +384,7 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.removeExpertComp = function (comp) {
                     if (this.competences[comp.domaine][comp.nom]["expert"]) {
+                        this.compExpert = this.compExpert + 1;
                         delete this.competences[comp.domaine][comp.nom]["expert"];
                         this.libereComp(comp);
                     }
@@ -376,6 +394,7 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.removeProdigeComp = function (comp) {
                     if (this.competences[comp.domaine][comp.nom]["prodige"]) {
+                        this.compProdige = this.compProdige + 1;
                         this.libereComp(comp);
                         delete this.competences[comp.domaine][comp.nom]["prodige"];
                     }
