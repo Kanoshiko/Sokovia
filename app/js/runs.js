@@ -149,6 +149,10 @@ angular.module('myApp.runs', [])
                 };
 
                 $rootScope.perso.addAllegeance = function (allegeance) {
+                    if(this.budget < parseInt(allegeance.cout)){
+                        return;
+                    }
+
                     this.budget = this.budget - parseInt(allegeance.cout);
 
                     if (allegeance.nom === "La Maggia") {
