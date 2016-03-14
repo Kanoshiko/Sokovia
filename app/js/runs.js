@@ -132,6 +132,27 @@ angular.module('myApp.runs', [])
                 };
 
                 $rootScope.perso.removeAllegeance = function () {
+
+                    this.comp_bonus = {
+                        "Commun": 0,
+                        "Martial": 0,
+                        "Technique": 0,
+                        "Scientifique": 0,
+                        "Diplomatique": 0,
+                        "Criminel": 0,
+                        "Artistique": 0
+                    };
+
+                    this.comp_bonus_max = {
+                        "Commun": 0,
+                        "Martial": 0,
+                        "Technique": 0,
+                        "Scientifique": 0,
+                        "Diplomatique": 0,
+                        "Criminel": 0,
+                        "Artistique": 0
+                    };
+                    
                     this.budget = this.budget + parseInt(this.allegeance.cout);
 
                     if (this.allegeance.nom === "La Maggia") {
@@ -178,12 +199,14 @@ angular.module('myApp.runs', [])
                         this.comp_bonus_max["Artistique"] = this.comp_bonus["Artistique"] + 1;
                     }
 
-                    if (this.type !== $rootScope.listeTypes["exosquelette"])
-                    {
-                        this.comp_bonus["Technique"] = this.comp_bonus["Technique"] + 2;
-                        this.comp_bonus_max["Technique"] = this.comp_bonus["Technique"] + 2;
-                    } else {
-                        this.budget = this.budget + 2;
+                    if (this.allegeance.nom === "Stark Industries") {
+                        if (this.type !== $rootScope.listeTypes["exosquelette"])
+                        {
+                            this.comp_bonus["Technique"] = this.comp_bonus["Technique"] + 2;
+                            this.comp_bonus_max["Technique"] = this.comp_bonus["Technique"] + 2;
+                        } else {
+                            this.budget = this.budget + 2;
+                        }
                     }
 
                     this.allegeance = allegeance;
