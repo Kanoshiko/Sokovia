@@ -3,30 +3,30 @@
 
 <h4>Type : {{perso.type.nom}}</h4>
 <ul>
-    <li>Description : {{perso.type.description}}</li>
+    <li>{{perso.type.description}}</li>
     <li ng-show="perso.type.note">Note : {{perso.type.note}}</li>
 </ul>
 
 <h4>Limitation : {{perso.limitation.nom}}</h4>
 <ul>
-    <li>Description : {{perso.limitation.description}}</li>
+    <li>{{perso.limitation.description}}</li>
 </ul>
 
 <h4>Faction : {{perso.faction.nom}}</h4>
 <ul>
-    <li>Description : {{perso.faction.description}}</li>
+    <li>{{perso.faction.description}}</li>
     <li ng-show="perso.faction.note">Note : {{perso.faction.note}}</li>
 </ul>
 
 <h4>Allégeance : {{perso.allegeance.nom}}</h4>
 <ul>
-    <li>Description : {{perso.allegeance.description}}</li>
+    <li>{{perso.allegeance.description}}</li>
     <li ng-show="perso.allegeance.note">Note : {{perso.allegeance.note}}</li>
 </ul>
 
 <h4 ng-show="perso.haveAcccessSpecialite()">Spécialité : {{perso.specialite.nom}}</h4>
 <ul ng-show="perso.haveAcccessSpecialite()">
-    <li>Description : {{perso.specialite.description}}</li>
+    <li>{{perso.specialite.description}}</li>
     <li ng-show="perso.specialite.note">Note : {{perso.specialite.note}}</li>
 </ul>
 
