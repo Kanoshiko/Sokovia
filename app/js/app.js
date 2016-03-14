@@ -13,6 +13,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
                 $routeProvider.when('/specialite', {templateUrl: 'partials/specialite.html', controller: 'CtrSpecialite'});
                 $routeProvider.when('/competences', {templateUrl: 'partials/competence.html', controller: 'CtrCompetences'});
                 $routeProvider.when('/pouvoir_inhumain', {templateUrl: 'partials/pouvoir_inhumain.html', controller: 'CtrPouvoirInhumain'});
+                $routeProvider.when('/pouvoir_augmente', {templateUrl: 'partials/pouvoir_augmente.html', controller: 'CtrPouvoirAugmente'});
                 $routeProvider.when('/pouvoir_mystique', {templateUrl: 'partials/pouvoir_mystique.html', controller: 'CtrPouvoirMystique'});
                 $routeProvider.when('/exosquelette', {templateUrl: 'partials/exosquelette.html', controller: 'CtrExosquelette'});
                 $routeProvider.otherwise({redirectTo: '/presentation'});

@@ -8,7 +8,7 @@
     </tr>
     <tr ng-repeat="p in listePouvoirsAugmentes">
         <td><b>{{p.nom}}</b></td>
-        <td>{{p.effet}}</td>
+        <td><div ng-bind-html-unsafe="p.effet"></div></td>
         <td>
             <span class="btn btn-primary" ng-click="perso.changePouvoirAugmente(p)" ng-show="!perso.isPouvoirAugmenteSelected(p)">Choisir</span>
             <span ng-show="perso.isPouvoirAugmenteSelected(p)">✓</span>

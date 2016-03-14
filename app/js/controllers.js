@@ -24,6 +24,8 @@ angular.module('myApp.controllers', []).
             }]).
         controller('CtrPouvoirInhumain', ['$rootScope', '$scope', function ($rootScope, $scope) {
             }]).
+        controller('CtrPouvoirAugmente', ['$rootScope', '$scope', function ($rootScope, $scope) {
+            }]).
         controller('CtrPouvoirMystique', ['$rootScope', '$scope', function ($rootScope, $scope) {
             }]).
         controller('CtrExosquelette', ['$rootScope', '$scope', function ($rootScope, $scope) {

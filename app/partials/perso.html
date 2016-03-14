@@ -52,6 +52,11 @@
     <li>Contrepartie : {{perso.pouvoirInhumain.contrepartie}}</li>
 </ul>
 
+<h4 ng-show="perso.haveAcccessPouvoirAugmente()">Pouvoir augmente : {{perso.pouvoirAugmente.nom}}</h4>
+<ul ng-show="perso.haveAcccessPouvoirAugmente()">
+    <li><span ng-bind-html-unsafe="perso.pouvoirAugmente.effet"></span></li>
+</ul>
+
 <h4 ng-show="perso.haveAcccessPouvoirMystique()">Pouvoirs mystiques</h4>
 <ul ng-show="perso.haveAcccessPouvoirMystique()">
     <li ng-repeat="p in perso.pouvoirsMystiques">

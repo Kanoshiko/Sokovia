@@ -62,6 +62,11 @@ angular.module('myApp.runs', [])
                     $rootScope.perso.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
                 });
 
+                $http.get('data/pouvoirs_augmentes.json').success(function (data) {
+                    $rootScope.listePouvoirsAugmentes = data;
+                    $rootScope.perso.pouvoirAugmente = {};
+                });
+
                 $http.get('data/pouvoirs_mystiques.json').success(function (data) {
                     $rootScope.listePouvoirsMystiques = data;
                     $rootScope.perso.pouvoirsMystiques = {};
@@ -80,6 +85,7 @@ angular.module('myApp.runs', [])
                     this.specialite = $rootScope.listeSpecialites["Sans"];
                     this.competences = {};
                     this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
+                    this.pouvoirAugmente = {};
                     this.pouvoirMystique = {};
                     this.exosquelette = {};
                 };
@@ -220,12 +226,24 @@ angular.module('myApp.runs', [])
                 };
 
                 $rootScope.perso.changePouvoirInhumain = function (pouvoirInhumain) {
-                    this.budget = this.budget + parseInt(this.pouvoirInhumain.cout) - parseInt(pouvoirInhumain.cout);
                     this.pouvoirInhumain = pouvoirInhumain;
                 };
 
                 $rootScope.perso.isPouvoirInhumainSelected = function (pouvoirInhumain) {
                     return (pouvoirInhumain === this.pouvoirInhumain);
+                };
+
+                // Pouvoir augmente
+                $rootScope.perso.haveAcccessPouvoirAugmente = function () {
+                    return (this.type === $rootScope.listeTypes["augmente"]);
+                };
+
+                $rootScope.perso.changePouvoirAugmente = function (pouvoirAugmente) {
+                    this.pouvoirAugmente = pouvoirAugmente;
+                };
+
+                $rootScope.perso.isPouvoirAugmenteSelected = function (pouvoirAugmente) {
+                    return (pouvoirAugmente === this.pouvoirAugmente);
                 };
 
                 // Pouvoir mystique
