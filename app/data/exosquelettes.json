@@ -16,10 +16,6 @@
         "capacite": "Vous ignorez toutes les annonces « Grave » pendant 1 Combat (2PE)<br/>Immunisé aux Poisons de lame (permanent)",
         "type_armure": "Armure moyenne couvrant tout le corps, casque intégral"
     }, {
-        "nom": "Classe Centurion",
-        "capacite": "Vous ignorez toutes les annonces « Grave » pendant 1 Combat (2PE)<br/>Immunisé aux Poisons de lame (permanent)",
-        "type_armure": "Armure moyenne couvrant tout le corps, casque intégral"
-    }, {
         "nom": "Classe Goliath",
         "capacite": "Vous ignorez  les Chutes et les Repoussés pendant un combat pour 2PE. Immunisé aux Poisons de lame (permanent)",
         "type_armure": "Armure lourde couvrant tout le corps, casque intégral"
