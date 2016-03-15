@@ -83,6 +83,7 @@ angular.module('myApp.runs', [])
                     this.budget = 10 - parseInt(type.cout);
                     this.type = type;
                     this.allegeance = $rootScope.listeAllegeances["Sans"];
+                    this.limitation = $rootScope.listeLimitations["Sans"];
                     this.specialite = $rootScope.listeSpecialites["Sans"];
                     this.competences = {};
                     this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
