@@ -85,7 +85,7 @@ angular.module('myApp.runs', [])
                     this.allegeance = $rootScope.listeAllegeances["Sans"];
                     this.limitation = $rootScope.listeLimitations["Sans"];
                     this.specialite = $rootScope.listeSpecialites["Sans"];
-                    this.competences = {};
+                    this.competences = [];
                     this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
                     this.pouvoirAugmente = {};
                     this.pouvoirsMystiques = {};
@@ -252,7 +252,7 @@ angular.module('myApp.runs', [])
 
                     this.addAllegeance(this.allegeance);
 
-                    this.competences = {};
+                    this.competences = [];
                 };
 
                 $rootScope.perso.isSpecialiteSelected = function (specialite) {
@@ -364,14 +364,16 @@ angular.module('myApp.runs', [])
                         this.competences[comp.domaine][comp.nom] = {};
                     }
 
-                    if (!this.competences[comp.domaine][comp.nom]["basique"] && this.budget > 0) {
+                    if (!this.competences[comp.domaine][comp.nom]["basique"]) {
                         if (this.comp_bonus[comp.domaine] > 0) {
                             this.comp_bonus[comp.domaine] = this.comp_bonus[comp.domaine] - 1;
+                            this.competences[comp.domaine][comp.nom]["basique"] = comp.basique;
                         } else {
-                            this.achatComp(comp);
+                            if (this.budget > 0) {
+                                this.achatComp(comp);
+                                this.competences[comp.domaine][comp.nom]["basique"] = comp.basique;
+                            }
                         }
-
-                        this.competences[comp.domaine][comp.nom]["basique"] = comp.basique;
                     }
                 };
 
@@ -406,6 +408,8 @@ angular.module('myApp.runs', [])
                 };
 
                 $rootScope.perso.removeBasiqueComp = function (comp) {
+                    this.removeAvanceComp(comp);
+
                     if (this.competences[comp.domaine][comp.nom]["basique"]) {
                         delete this.competences[comp.domaine][comp.nom]["basique"];
 
@@ -415,27 +419,25 @@ angular.module('myApp.runs', [])
                             this.libereComp(comp);
                         }
                     }
-
-                    this.removeAvanceComp(comp);
                 };
 
                 $rootScope.perso.removeAvanceComp = function (comp) {
+                    this.removeExpertComp(comp);
+
                     if (this.competences[comp.domaine][comp.nom]["avance"]) {
                         delete this.competences[comp.domaine][comp.nom]["avance"];
                         this.libereComp(comp);
                     }
-
-                    this.removeExpertComp(comp);
                 };
 
                 $rootScope.perso.removeExpertComp = function (comp) {
+                    this.removeProdigeComp(comp);
+
                     if (this.competences[comp.domaine][comp.nom]["expert"]) {
                         this.compExpert = this.compExpert + 1;
                         delete this.competences[comp.domaine][comp.nom]["expert"];
                         this.libereComp(comp);
                     }
-
-                    this.removeProdigeComp(comp);
                 };
 
                 $rootScope.perso.removeProdigeComp = function (comp) {
