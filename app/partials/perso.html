@@ -32,18 +32,14 @@
 
 <h4>Compétences</h4>
 <div ng-repeat="(domaine, comps) in perso.competences">
-    <h5>Domaine {{domaine|lowercase}}</h5>
-    <ul>
-        <li ng-repeat="(comp, niveaux) in comps">
-            <b>{{comp}}</b>
-            <ul>
-                <li ng-show="niveaux.basique">Niveau basique : <div ng-bind-html-unsafe="niveaux.basique"></div></li>
-                <li ng-show="niveaux.avance">Niveau avancé : <div ng-bind-html-unsafe="niveaux.avance"></div></li>
-                <li ng-show="niveaux.expert">Niveau expert : <div ng-bind-html-unsafe="niveaux.expert"></div></li>
-                <li ng-show="niveaux.prodige">Niveau prodige : <div ng-bind-html-unsafe="niveaux.prodige"></div></li>
-            </ul>
-        </li>
-    </ul>
+    <div ng-repeat="(comp, niveaux) in comps">
+        <ul>
+            <li ng-show="niveaux.basique"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Basique</b> : <div ng-bind-html-unsafe="niveaux.basique"></div></li>
+            <li ng-show="niveaux.avance"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Avancé</b> : <div ng-bind-html-unsafe="niveaux.avance"></div></li>
+            <li ng-show="niveaux.expert"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Expert</b> : <div ng-bind-html-unsafe="niveaux.expert"></div></li>
+            <li ng-show="niveaux.prodige"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Prodige</b> : <div ng-bind-html-unsafe="niveaux.prodige"></div></li>
+        </ul>
+    </div
 </div>
 
 <h4 ng-show="perso.haveAcccessPouvoirInhumain()">Pouvoir inhumain : {{perso.pouvoirInhumain.nom}}</h4>
