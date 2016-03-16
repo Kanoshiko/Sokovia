@@ -37,7 +37,7 @@
     },
     "Drogues": {
         "nom": "Drogues",
-        "effet": "<u>Extremis</u> (réservé « Dix Anneaux ») : Vous êtes l’un des derniers survivants du programme Extremis, un ancien vétéran handicapé ou amputé, qui s’est porté volontaire pour des tests. L’A.IM.qui dirigeait ces tests vous a injecté une partie du programme, un mélange de drogues et de virus aux effets permanents qui a notamment fait repousser le membre manquant.<br/>En plaçant les mains devant vous vous pouvez annoncer « Absorbé » si on vous tire dessus.  Vous ne pouvez pas bouger les pieds du sol.<br/>Si vous perdez un bras ou une jambe (cassé ou brisé), ils se régénèrent tout seul au bout de 5mn (permanent)<br/>Note : vous pouvez absorber un  dégât / annonce d’arme à distance par PE dépensé. Ne fonctionne pas sur les armes de contact."
+        "effet": "<u>Extremis</u> (réservé « Dix Anneaux ») : Vous êtes l’un des derniers survivants du programme Extremis, un ancien vétéran handicapé ou amputé, qui s’est porté volontaire pour des tests. L’AIM qui dirigeait ces tests vous a injecté une partie du programme, un mélange de drogues et de virus aux effets permanents qui a notamment fait repousser le membre manquant.<br/>En plaçant les mains devant vous vous pouvez annoncer « Absorbé » si on vous tire dessus.  Vous ne pouvez pas bouger les pieds du sol.<br/>Si vous perdez un bras ou une jambe (cassé ou brisé), ils se régénèrent tout seul au bout de 5mn (permanent)<br/>Note : vous pouvez absorber un  dégât / annonce d’arme à distance par PE dépensé. Ne fonctionne pas sur les armes de contact."
     },
     "Marché Noir": {
         "nom": "Marché Noir",
