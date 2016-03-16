@@ -133,26 +133,6 @@ angular.module('myApp.runs', [])
                 };
 
                 $rootScope.perso.removeAllegeance = function () {
-
-                    this.comp_bonus = {
-                        "Commun": 0,
-                        "Martial": 0,
-                        "Technique": 0,
-                        "Scientifique": 0,
-                        "Diplomatique": 0,
-                        "Criminel": 0,
-                        "Artistique": 0
-                    };
-
-                    this.comp_bonus_max = {
-                        "Commun": 0,
-                        "Martial": 0,
-                        "Technique": 0,
-                        "Scientifique": 0,
-                        "Diplomatique": 0,
-                        "Criminel": 0,
-                        "Artistique": 0
-                    };
                     
                     this.budget = this.budget + parseInt(this.allegeance.cout);
 
