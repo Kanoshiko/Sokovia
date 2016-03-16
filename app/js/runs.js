@@ -180,7 +180,7 @@ angular.module('myApp.runs', [])
                         this.comp_bonus_max["Artistique"] = this.comp_bonus["Artistique"] + 1;
                     }
 
-                    if (this.allegeance.nom === "Stark Industries") {
+                    if (allegeance.nom === "Stark Industries") {
                         if (this.type !== $rootScope.listeTypes["exosquelette"])
                         {
                             this.comp_bonus["Technique"] = this.comp_bonus["Technique"] + 2;
