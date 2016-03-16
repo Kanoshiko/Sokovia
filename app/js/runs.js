@@ -85,7 +85,7 @@ angular.module('myApp.runs', [])
                     this.allegeance = $rootScope.listeAllegeances["Sans"];
                     this.limitation = $rootScope.listeLimitations["Sans"];
                     this.specialite = $rootScope.listeSpecialites["Sans"];
-                    this.competences = [];
+                    this.competences = {};
                     this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
                     this.pouvoirAugmente = {};
                     this.pouvoirsMystiques = {};
@@ -252,7 +252,7 @@ angular.module('myApp.runs', [])
 
                     this.addAllegeance(this.allegeance);
 
-                    this.competences = [];
+                    this.competences = {};
                 };
 
                 $rootScope.perso.isSpecialiteSelected = function (specialite) {

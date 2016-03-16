@@ -30,18 +30,6 @@
     <li ng-show="perso.specialite.note">Note : {{perso.specialite.note}}</li>
 </ul>
 
-<h4>Compétences</h4>
-<div ng-repeat="(domaine, comps) in perso.competences">
-    <div ng-repeat="(comp, niveaux) in comps">
-        <ul>
-            <li ng-show="niveaux.basique"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Basique</b> : <div ng-bind-html-unsafe="niveaux.basique"></div></li>
-            <li ng-show="niveaux.avance"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Avancé</b> : <div ng-bind-html-unsafe="niveaux.avance"></div></li>
-            <li ng-show="niveaux.expert"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Expert</b> : <div ng-bind-html-unsafe="niveaux.expert"></div></li>
-            <li ng-show="niveaux.prodige"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Prodige</b> : <div ng-bind-html-unsafe="niveaux.prodige"></div></li>
-        </ul>
-    </div
-</div>
-
 <h4 ng-show="perso.haveAcccessPouvoirInhumain()">Pouvoir inhumain : {{perso.pouvoirInhumain.nom}}</h4>
 <ul ng-show="perso.haveAcccessPouvoirInhumain()">
     <li>Effet : {{perso.pouvoirInhumain.effet}}</li>
@@ -72,3 +60,14 @@
     <li>Type d'armure : <div ng-bind-html-unsafe="perso.exosquelette.type_armure"></div></li>
 </ul>
 
+<h4>Compétences :</h4>
+<div ng-repeat="(domaine, comps) in perso.competences">
+    <div ng-repeat="(comp, niveaux) in comps">
+        <ul>
+            <li ng-show="niveaux.basique"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Basique</b> : <div ng-bind-html-unsafe="niveaux.basique"></li>
+            <li ng-show="niveaux.avance"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Avancé</b> : <div ng-bind-html-unsafe="niveaux.avance"></li>
+            <li ng-show="niveaux.expert"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Expert</b> : <div ng-bind-html-unsafe="niveaux.expert"></li>
+            <li ng-show="niveaux.prodige"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Prodige</b> : <div ng-bind-html-unsafe="niveaux.prodige"></li>
+        </ul>
+    </div
+</div>
