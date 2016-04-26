@@ -117,14 +117,6 @@
         "avance": "<u>Mémoire Eidétique</u> : Après avoir passé 10mn  à observer un document, vous vous en souvenez par cœur. Vous pouvez soit garder une copie HJ des éléments importants du plan et /ou rendre le plan aux orgas et le considéré détruit (s’il peut être détruit), vous serez le seul à pouvoir vous souvenir de ce plan (pensez bien à garder une copie des éléments de jeu du plan si vous le détruisez).",
         "expert": "<u>Faille</u> : Vous êtes doué pour trouver ce qui cloche dans les objets et les machines. Touchez un objet ou une créature technologique et annoncez « Désactivé »."
     }, {
-        "nom": "Communications",
-        "domaine": "Technique",
-        "basique": "<u>Mobile</u> : (permanent) Vous avez le droit d’avoir un téléphone portable En Jeu. Il faudra nous donner le numéro de téléphone et le nom de votre personnage associé. Vous aurez le droit d’appeler et de téléphoner ou d’envoyer des SMS uniquement aux autres joueurs ayant la compétence Communication.<br/>Note : Vous ne pouvez appeler personne d’autre que les joueurs ayant cette compétence au moins en Basique.<br/>Note 2 : le fonctionnement de cette compétence dépend bien évidemment du réseau.",
-        "avance": "<u>Traîner l’oreille</u> : Vous avez le droit d’avoir sur vous un dictaphone ou d’utiliser la fonction dictaphone de votre téléphone pour enregistrer les discussions",
-        "expert": "<u>Avoir l’Oeil</u> : Vous avez le droit d’avoir sur vous un appareil photo ou de prendre des photos pendant le GN, ou des vidéos, que vous pourrez utiliser EJ (pour prouver une innocence, accuser quelqu’un, copier des documents etc…)<br/>Note : pensez bien à triller vos photos d’avant GN afin de ne pas tout mélanger entre le personnel et le GN.",
-        "prodige": "<u>TGCM : Brouilleur d’Ondes Cérébrales</u> : Votre cible choisie par vous et informée par vous-même ou un PNJ, sera incapable de communiquer avec la parole ou l’écriture pendant 10 mn (sauf annonces HJ).",
-        "note": "les appareils technologiques liés à cette compétence ne peuvent être volés."
-    }, {
         "nom": "Cryptographie",
         "domaine": "Technique",
         "basique": "<u>Acharné</u> : (permanent) Vous avez le droit de tenter de casser tout type de codes ou de langage codé / secret, à l’exception langage magique (ce n’est pas un code, mais il ne peut être lu que par une personne pratiquant la magie). Note : Une personne n’ayant pas Cryptographie en basique ne peut pas essayer de lire les codes. ",
