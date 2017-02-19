@@ -1,0 +1,17 @@
+<h2 class="page-header">Pouvoir augmenté</h2>
+<p>Tout usage de pouvoir coûte 1PE sauf indication contraire.</p>
+<table class="table" ng-show="perso.haveAcccessPouvoirAugmente()">
+    <tr>
+        <th>Pouvoir augmenté</th>
+        <th>Effet</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="p in listePouvoirsAugmentes">
+        <td><b>{{p.nom}}</b></td>
+        <td><div ng-bind-html-unsafe="p.effet"></div></td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.changePouvoirAugmente(p)" ng-show="!perso.isPouvoirAugmenteSelected(p)">Choisir</span>
+            <span ng-show="perso.isPouvoirAugmenteSelected(p)">✓</span>
+        </td>
+    </tr>
+</table>

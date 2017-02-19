@@ -1,6 +1,7 @@
 <h2 class="page-header">Faction</h2>
 <table class="table">
     <tr>
+        <th></th>
         <th>Faction</th>
         <th>Description</th>
         <th>Note</th>
@@ -8,6 +9,7 @@
         <th></th>
     </tr>
     <tr ng-repeat="f in listeFactions">
+        <td><span ng-show="f.logo"><img src="img/{{ f.logo}}.png" width="120"></span></td>
         <td><b>{{f.nom}}</b></td>
         <td>{{f.description}}</td>
         <td>{{f.note}}</td>

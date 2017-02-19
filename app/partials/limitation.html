@@ -1,0 +1,18 @@
+<h2 class="page-header">Limitation</h2>
+<table class="table">
+    <tr>
+        <th>Limitation</th>
+        <th>Description</th>
+        <th>Coût</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="l in listeLimitations">
+        <td><b>{{l.nom}}</b></td>
+        <td>{{l.description}}</td>
+        <td>{{l.cout}} pt.</td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.changeLimitation(l)" ng-show="!perso.isLimitationSelected(l)">Choisir</span>
+            <span ng-show="perso.isLimitationSelected(l)">✓</span>
+        </td>
+    </tr>
+</table>

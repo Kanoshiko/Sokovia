@@ -1,0 +1,97 @@
+{
+    "Respect de la vie": {
+        "nom": "Respect de la vie",
+        "cout": "-1",
+        "description": "Quoi qu’il arrive, vous ne tuerez jamais quelqu’un, même un ennemi, même celui qui a tué votre mère. Tout type d’achèvement vous est interdit ainsi que de participer à quoi que ce soit qui vise à clairement tuer une personne. La violence ne vous est pas interdite, même l’agression, mais si la finalité n’est pas de tuer mais de mettre hors d’état de nuire. Vous ne supporterez pas non plus de voir une autre personne tuer."
+    },
+    "Sadique": {
+        "nom": "Sadique",
+        "cout": "-1",
+        "description": "Vous aimez faire souffrir les autres, et vous ne ratez jamais une occasion, que ce soit physiquement ou mentalement, brutal ou insidieux. Exception faîtes des gens qui vous sont proches. Vous pouvez torturer par plaisir sans poser de question à la victime. Pour vous empêcher de faire souffrir physiquement une personne en état de faiblesse en votre présence, vous devez soit sortir de la pièce, soit dépenser 1PV."
+    },
+    "Compulsif": {
+        "nom": "Compulsif",
+        "cout": "-1",
+        "description": "Vous aimez garder un souvenir des gens, vous essayez de leur prendre quelque chose, cheveux, papier, mouchoir, broche etc… systématiquement."
+    },
+    "Joueur": {
+        "nom": "Joueur",
+        "cout": "-1",
+        "description": "Vous pariez sur tout et n’importe quoi, vous le faites souvent, très souvent, et vous aimez que les gens parient avec vous, pour quelque chose ou pour rien. Vous croyez un peu trop en votre chance."
+    },
+    "Vantard": {
+        "nom": "Vantard",
+        "cout": "-1",
+        "description": "Il y a un sujet en particulier sur lequel vous ne pouvez pas vous empêcher d’en faire des tonnes pour rappeler à quel point vous êtes bon, fort, intelligent etc… Même dans les situations critiques ou dangereuses, il faut toujours que vous vous mettiez en avant."
+    },
+    "Timide": {
+        "nom": "Timide",
+        "cout": "-1",
+        "description": "Prendre la parole en publique vous terrorise et vous ne le ferez jamais, sous aucun prétexte, vous ne pouvez pas être présenté à une nouvelle personne sans y être aidé ou invité, et toutes les personnes avec un titre officiel vous donnent envie de regarder par terre."
+    },
+    "Chétif": {
+        "nom": "Chétif",
+        "cout": "-1",
+        "description": "Vous pouvez supporter 3 coups maximum en Normal et 1 seul en blessé. Toute compétence augmentant ce nombre vous est interdit."
+    },
+    "Borgne": {
+        "nom": "Borgne",
+        "cout": "-1",
+        "description": "Vous ne pouvez utiliser ni projectile, ni arme à feu, ni énergétique."
+    },
+    "Manchot": {
+        "nom": "Manchot",
+        "cout": "-1",
+        "description": "Pourquoi remettre à deux mains ce qu’on peut faire avec une seule ?"
+    },
+    "Boiteux": {
+        "nom": "Boiteux",
+        "cout": "-1",
+        "description": "Vous ne pouvez pas, jamais, courir, vous avez une canne et, sans elle, marcher vous est très pénible. Quand vous fuyez, c’est avec classe et dignité."
+    },
+    "Défiguré": {
+        "nom": "Défiguré",
+        "cout": "-1",
+        "description": "Quelle qu’en soit la raison, de naissance ou accidentelle, votre visage est méconnaissable. Ce qui en plus d’être pénible, devient dangereux dans un monde où des monstres surgissent un peu partout, ce serait dommage que l’on vous prenne pour l’un d’entre eux (ne peut être pris que si vous n’êtes ni Prodige, ni Augmenté, ni Inhumain). C’est également un problème pour établir votre identité."
+    },
+    "Dépendant": {
+        "nom": "Dépendant",
+        "cout": "-1",
+        "description": "Vous êtes dépendant à une substance difficile à trouver. Il vous en faut une dose toutes les 24h (Début de GN et Dimanche à 12h), sinon vous perdez l’usage de toutes vos compétences Avancées ou Expertes jusqu’à la prochaine dose. Une personne possédant la compétence « Drogues », peut vous fabriquer votre dose en utilisant 1 PE. Vous ne pouvez pas vous fabriquer votre propre dose."
+    },
+    "Code Moral : Sauveur": {
+        "nom": "Code Moral : Sauveur",
+        "cout": "-1",
+        "description": "Vous ne pouvez pas vous empêcher de sauver toute personne qui se trouve en danger que ce soit en fumant une cigarette ou en sautant sur une mine, vous essayerez toujours de tout faire pour porter secours à quelqu’un, même si c’est au péril de votre vie. Ceci ne s’applique pas à un ennemi déclaré ou quelqu’un qui vous a agressé."
+    },
+    "Code Moral : Parangon": {
+        "nom": "Code Moral : Parangon",
+        "cout": "-1",
+        "description": "Vous pensez incarner quelque chose, votre pays, une idée, un concept, un modèle social et vous ne feriez rien en public ou en privé pour déroger à cela. Toute votre vie est dirigée par votre incarnation des traditions, vous n’hésitez jamais, vous ne faites jamais d’exception, vous êtes incapable de faire preuve de nuance quand il le faudrait."
+    },
+    "Sang impur": {
+        "nom": "Sang impur",
+        "cout": "-1",
+        "description": "Il y a de vieilles histoires de malédiction dans votre famille. Vous avez souvent fait des cauchemars, vous êtes d’humeur sombre et vous avez tendance à attirer les problèmes d’ordre occulte."
+    },
+    "Code Moral : Sbire": {
+        "nom": "Code Moral : Sbire",
+        "cout": "-1",
+        "description": "Vous êtes le serviteur dévoué d’un autre personnage joueur qui est votre maître. Qu’il soit bon ou mauvais peu importe, vous n’existez que pour le servir, ce qui ne vous rend pas incapable d’avoir vos objectifs personnels, mais quoi qu’il arrive, vous serez fidèle à votre maître peu importe ce qui lui arrive, peu importe de quoi on l’accuse et vous prendrez les risques les plus absurdes pour faciliter ou lui sauver la vie, même s’il n’a besoin de rien ou n’est pas vraiment en danger, ce qui peut parfois être pénible."
+    },
+    "Code Moral : Ambitieux": {
+        "nom": "Code Moral : Ambitieux",
+        "cout": "-1",
+        "description": "Vous êtes attiré par le pouvoir. Il vous séduit, et vous serez toujours tenté de trahir vos engagements ou vos accords pour la promesse sérieuse d’un plus grand pouvoir."
+    },
+    "Code Moral : Rancunier": {
+        "nom": "Code Moral : Rancunier",
+        "cout": "-1",
+        "description": "Vous ne supportez pas qu’on fasse du tort à vos proches. Que ce soit physiquement, moralement ou socialement, ni à vous. Si vous ou un de vos proches est gravement blessé ou humilié par un tiers, vous n’aurez de cesse de lui rendre la pareille."
+    },
+    "Sans": {
+        "nom": "Sans",
+        "cout": "0",
+        "description": "RAS."
+    }
+}

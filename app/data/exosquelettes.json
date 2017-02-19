@@ -1,0 +1,27 @@
+[
+    {
+        "nom": "Classe Faraday",
+        "capacite": "Vous pouvez ignorer les armes énergétiques pendant un combat. Pour 2PE, vous pouvez renvoyer un tir d'arme énergétique sur le tireur. Annoncez Renvoi.<br/>Immunisé aux Désactivations. (permanent)",
+        "type_armure": "Armure légère couvrant au moins le torse"
+    }, {
+        "nom": "Classe Neo",
+        "capacite": "Langage de la Matrice :<br/>Vous pouvez parler aux machines, ordinateur, robots, sans passer par un clavier ou une interface. Vous n’avez qu’à poser votre main sur la cible et lui parler comme à une personne normale (les autres joueurs ne sont pas censés pas vous entendre En  Jeu donc soyez discret). Vous pouvez même parler aux Cyborgs quand ils sont inconscients ou dans le Coma.<br/>Si c’est un PJ ou un PNJ vous lui chuchoter à l’oreille pour discuter sans que personne n’entende et vous pouvez lui donner un ordre simple tenant en cinq mots maximum. Si c’est un objet inerte, il vous faudra un orga ou un PNj brieffé.<br/>Si c’est un objet inerte, au lieu de lui parler vous pouvez lui convertir son énergie et récupérer jusqu’à 3 coups perdus.",
+        "type_armure": "Armure légère couvrant au moins un bras et le torse, ou la tête et le torse."
+    }, {
+        "nom": "Classe Stingray",
+        "capacite": "Vous pouvez encaisser jusqu’à 8 coups en Pleine Forme et utilisez toutes vos compétences de combat en Blessé (pas les autres) sans cout supplémentaire. (permanent)",
+        "type_armure": "Armure moyenne couvrant torse et bras."
+    }, {
+        "nom": "Classe Centurion",
+        "capacite": "Pour 2PV, vous Réduisez de 2 points toutes les dégats recus pendant 1 Combat <br/>Immunisé aux Poisons de lame (permanent)",
+        "type_armure": "Armure moyenne couvrant tout le corps, casque intégral"
+    }, {
+        "nom": "Classe Goliath",
+        "capacite": "Vous ignorez  les Chutes et les Repoussés pendant un combat pour 2PE. POur 1PE, vous pouvez annoncer Repoussé sur un de vos coups qui touche l'adversaire. Immunisé aux Poisons de lame (permanent)",
+        "type_armure": "Armure lourde couvrant tout le corps, casque intégral"
+    }, {
+        "nom": "Classe Fortress",
+        "capacite": "Tir de Barrage : portée 5m  (2PE)<br/>Ne bougez plus, Annoncez « 3 sur groupe », et « Chute sur groupe », vous pouvez le faire 1 fois toutes les 3mn (ayez un compte à rebours sur vous), si vous n’avez pas bougé. C’est une artillerie qui nécessite d’avoir une position protégé par d’autres.<br/>Note : Quand vous êtes en tir de barrage vous ne pouvez bénéficier d’aucune protection qui nécessite que vous soyez en contact physique avec quelqu’un.",
+        "type_armure": "Au moins pieds et torse en  armure lourde possédant des armes lourdes visibles (mitrailleuse montée sur le dos cf Warmachine, ou batteries de mini-missiles, ou brassard portant ce type d’arme.  Les armes ne lancent pas de projectiles mais fond lumières et bruits."
+    }
+]

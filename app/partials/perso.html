@@ -3,31 +3,31 @@
 
 <h4>Type : {{perso.type.nom}}</h4>
 <ul>
-    <li>Description : {{perso.type.description}}</li>
+    <li>{{perso.type.description}}</li>
     <li ng-show="perso.type.note">Note : {{perso.type.note}}</li>
+</ul>
+
+<h4>Limitation : {{perso.limitation.nom}}</h4>
+<ul>
+    <li>{{perso.limitation.description}}</li>
 </ul>
 
 <h4>Faction : {{perso.faction.nom}}</h4>
 <ul>
-    <li>Description : {{perso.faction.description}}</li>
+    <li>{{perso.faction.description}}</li>
     <li ng-show="perso.faction.note">Note : {{perso.faction.note}}</li>
 </ul>
 
 <h4>Allégeance : {{perso.allegeance.nom}}</h4>
 <ul>
-    <li>Description : {{perso.allegeance.description}}</li>
+    <li>{{perso.allegeance.description}}</li>
     <li ng-show="perso.allegeance.note">Note : {{perso.allegeance.note}}</li>
 </ul>
 
 <h4 ng-show="perso.haveAcccessSpecialite()">Spécialité : {{perso.specialite.nom}}</h4>
 <ul ng-show="perso.haveAcccessSpecialite()">
-    <li>Description : {{perso.specialite.description}}</li>
+    <li>{{perso.specialite.description}}</li>
     <li ng-show="perso.specialite.note">Note : {{perso.specialite.note}}</li>
-</ul>
-
-<h4>Compétences :</h4>
-<ul ng-repeat="c in perso.competences">
-    <li>{{c}}</li>
 </ul>
 
 <h4 ng-show="perso.haveAcccessPouvoirInhumain()">Pouvoir inhumain : {{perso.pouvoirInhumain.nom}}</h4>
@@ -35,3 +35,39 @@
     <li>Effet : {{perso.pouvoirInhumain.effet}}</li>
     <li>Contrepartie : {{perso.pouvoirInhumain.contrepartie}}</li>
 </ul>
+
+<h4 ng-show="perso.haveAcccessPouvoirAugmente()">Pouvoir augmente : {{perso.pouvoirAugmente.nom}}</h4>
+<ul ng-show="perso.haveAcccessPouvoirAugmente()">
+    <li><span ng-bind-html-unsafe="perso.pouvoirAugmente.effet"></span></li>
+</ul>
+
+<h4 ng-show="perso.haveAcccessPouvoirMystique()">Pouvoirs mystiques</h4>
+<ul ng-show="perso.haveAcccessPouvoirMystique()">
+    <li ng-repeat="p in perso.pouvoirsMystiques">
+        <div>
+            <b>{{p.nom}}</b>
+            Symbole : {{p.symbole}}<br/>
+            <div ng-bind-html-unsafe="p.sort_1"></div>
+            <div ng-bind-html-unsafe="p.sort_2"></div>
+            <u>Rituel</u> : <span ng-bind-html-unsafe="p.rituel"></span>
+        </div>
+    </li>
+</ul>
+
+<h4 ng-show="perso.haveAcccessExosquelette()">Exosquelette : {{perso.exosquelette.nom}}</h4>
+<ul ng-show="perso.haveAcccessExosquelette()">
+    <li>Capacité : <div ng-bind-html-unsafe="perso.exosquelette.capacite"></div></li>
+    <li>Type d'armure : <div ng-bind-html-unsafe="perso.exosquelette.type_armure"></div></li>
+</ul>
+
+<h4>Compétences :</h4>
+<div ng-repeat="(domaine, comps) in perso.competences">
+    <div ng-repeat="(comp, niveaux) in comps">
+        <ul>
+            <li ng-show="niveaux.basique"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Basique</b> : <div ng-bind-html-unsafe="niveaux.basique"></li>
+            <li ng-show="niveaux.avance"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Avancé</b> : <div ng-bind-html-unsafe="niveaux.avance"></li>
+            <li ng-show="niveaux.expert"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Expert</b> : <div ng-bind-html-unsafe="niveaux.expert"></li>
+            <li ng-show="niveaux.prodige"><b>{{domaine}}</b> >> <b>{{comp}}</b> >> <b>Prodige</b> : <div ng-bind-html-unsafe="niveaux.prodige"></li>
+        </ul>
+    </div
+</div>

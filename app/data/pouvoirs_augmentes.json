@@ -1,0 +1,50 @@
+{
+    "Endurance": {
+        "nom": "Endurance",
+        "effet": "Vous pouvez supporter 12 coups en Normal et vous resistez aux annonces « Assommer » (permanent)"
+    },
+    "Agilité": {
+        "nom": "Agilité",
+        "effet": "<u>Esquive absolue</u> : vous pouvez utiliser votre esquive sur tout type de dégâts."
+    },
+    "Voie des Poings": {
+        "nom": "Voie des Poings",
+        "effet": "<u>Le Rand-Kaï</u> : Sur un coup, vous pouvez annoncer « Moribond » (1 fois / combat)"
+    },
+    "Observation": {
+        "nom": "Observation",
+        "effet": "<u>Invisibilité électromagnétique</u> : Si un cyborg, un robot, ou un objet technologique autonome vous cible, quel que soit l’effet, vous annoncez « Invisible aux Machines ». "
+    },
+    "Fixeur": {
+        "nom": "Fixeur",
+        "effet": "<u>Cyborg</u> (permanent) : Vous êtes un Cyborg, un homme partiellement machine (et cela doit se voir, un bras, une jambe, le visage, quelque chose de voyant).<br/>10 PV en Pleine Forme.<br/>Provoque la Peur sur une cible pour 1PE<br/>Peut être soigné par un Fixeur autant  que par un médecin.<br/>Note : Si désactivé : retourne à 4 PV maximum et perd les avantages ci-dessus. Roleplay : la moitié de votre corps ne fonctionne plus."
+    },
+    "Médecine": {
+        "nom": "Médecine",
+        "effet": "<u>Apposition Absolue</u> : Vous touchez une personne et lui annoncez « Soins Complet ». Vous pouvez le faire sur vous-même du moins pour tous les états où vous êtes conscient. Quel que soit l’état de la cible, elle repasse en Pleine Forme. Permet aussi de faire sortir les gens de la Paralysie, de la Douleur, de la Confusion, de la Peur et guérit les membres brisés ou tranchés, tant que la cible est encore vivante au moment des soins."
+    },
+    "Physique / Chimie": {
+        "nom": "Physique / Chimie",
+        "effet": "<u>Piège gravitique</u> (une fois par heure maxi) : Vous posez une mine gravitique au sol, sous la forme d’une demi-sphère  (en mousse), peinte en rouge, dès qu’une personne passe à côté, vous pouvez lui annoncé « Paralysé ». Vous pouvez cacher la Mine Magnétique, mais vous devez rester à proximité pour l’activer / désactiver.<br/>La Mine Magnétique peut capturer trois personnes au maximum. Elle cesse de fonctionner au bout de 10 mn (lancez un compte à rebours).<br/>Note : faites-vous en plusieurs des fois qu’elle se perde ou s’abîme."
+    },
+    "Police": {
+        "nom": "Police",
+        "effet": "<u>Quelque part un crime se commet</u> (permanent) : Vous faites partie d’un programme particulier visant à améliorer vos capacités de policier, votre identité est cachée par un nom de code, vous avez oublié l’essentiel de votre passé. Que ce soit une modification génétique ou cybernétique vous n’êtes plus qu’un être au service de la Loi. Votre visage doit être caché.<br/>+4PV"
+    },
+    "Interrogation": {
+        "nom": "Interrogation",
+        "effet": "<u>Mesmérisme</u> :Si vous discutez pendant 5 minutes avec une personne, seul à seul, qu’elle soit contrainte ou libre, vous pouvez implanter l’une de ces suggestions dans son esprit :<br/>-Suspicion : la cible nourrit des soupçons de trahison à l’égard d’une personne et cherchera à la confondre.<br/>-Confusion : la cible nourrira des émotions troublées d’attirance à l’égard d’une personne et chercher à tout faire pour lui être agréable.<br/>-Haine : la cible nourrira une haine terrible pour une personne<br/>Note : Vous n’annoncez rien à la cible, vous passez voir les orgas et leur donner votre choix de suggestion qui sera porté à la cible par un PNJ. Afin que la cible ne sache pas qui a pu lui mettre ça en tête.<br/>L’effet de la suggestion dure 1h, vous ne pouvez implanter qu’une suggestion par jour et par personne (dans la limite de vos PE évidemment)."
+    },
+    "Drogues": {
+        "nom": "Drogues",
+        "effet": "<u>Extremis</u> (réservé « Dix Anneaux ») : Vous êtes l’un des derniers survivants du programme Extremis, un ancien vétéran handicapé ou amputé, qui s’est porté volontaire pour des tests. L’AIM qui dirigeait ces tests vous a injecté une partie du programme, un mélange de drogues et de virus aux effets permanents qui a notamment fait repousser le membre manquant.<br/>En plaçant les mains devant vous vous pouvez annoncer « Absorbé » si on vous tire dessus.  Vous ne pouvez pas bouger les pieds du sol.<br/>Si vous perdez un bras ou une jambe (cassé ou brisé), ils se régénèrent tout seul au bout de 5mn (permanent)<br/>Note : vous pouvez absorber un  dégât / annonce d’arme à distance par PE dépensé. Ne fonctionne pas sur les armes de contact."
+    },
+    "Marché Noir": {
+        "nom": "Marché Noir",
+        "effet": "<u>Relique</u> : Vous avez en votre possession une relique qui vous a malgré-vous investi de sa puissance. De son origine dépendra ses effets et sa forme :<br/>-Asgard : Arme en Uru (épée, hache ou lance), envoi des décharges (annonce « Touche » à distance et +1 dans la Voie correspondant à l’arme.<br/>-Chitauri : Une plaque de métal gravée fichée dans votre tête. Toute personne qui essayerait de prendre un objet sur vous, que vous soyez conscient ou inconscient subirait une « Touche » que vous pourrez annoncer.<br/>-Mystique : Un pendentif relié à l’un des Vishantis. Pouvoir fixé par les orgas."
+    },
+    "Furtivité": {
+        "nom": "Furtivité",
+        "effet": "<u>Sans Ombre</u> : Vous pouvez vous rendre invisible et marcher sans restriction (5mn), OU  intangible (5mn) (et donc visible et sans bandeau bleu).<br/>Il vous est possible désormais en étant intangible de traverser une porte fermée, un barrage, des gens qui vous barrent un passage. Vous êtes également insensibles aux coups des armes de contact, de projectiles et armes à feu, mais pas des armes énergétiques.<br/>Note : Si vous êtes intangible, vous ne pouvez pas vous battre ni rien saisir."
+    }
+}

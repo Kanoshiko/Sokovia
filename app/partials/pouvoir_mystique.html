@@ -1,0 +1,36 @@
+<h2 class="page-header">Domaine Mystique</h2>
+
+<p>La Sorcellerie, ou Magie, se pratique essentiellement dans un Sanctuaire, un endroit adapté aux rituels et à la concentration. Il est tout à fait possible pour des Sorciers de travailler ensemble, c’est même une pratique très courante car la plupart des Entités avec lesquelles il faut interagir sont très puissantes. Ce qui explique que les praticiens de la Sorcellerie font souvent Sanctuaire commun.</p>
+<ul>
+    <li>Tous les Sortilèges se préparent à l’avance pendant un rituel qui dure 5 mn et coûtent 1PE. La case Rituel vous aide en listant ce qui peut servir de base pour le décorum de l’invocation du sort...</li>
+    <li>Tous les Sorciers possèdent un pendentif dont le bijou est environ de la taille d’une paume et comporte le symbole de sa divinité tutélaire.</li>
+    <li>Tout sort se lance avec un même geste mystique : Auriculaire, index et pouce levés, annulaire et majeur  pliés.</li>
+    <li>Vous ne pouvez pas garder plus d’un sortilège en « réserve », mais une fois qu’un rituel est pratiqué pour un sortilège, vous pouvez le lancer n’importe quand.</li>
+    <li>Invocations conjointes : Deux Sorciers invoquant la même Entité peuvent travailler ensemble, leur temps d’invocation passera de 5 à 1 mn.</li>
+    <li>Le matériel pour vos rituels dépend de vos sorts et doit être amené par le joueur.</li>
+    <li>NE FAITES RIEN BRULER EN INTERIEUR</li>
+</ul>
+
+<table class="table" ng-show="perso.haveAcccessPouvoirMystique()">
+    <tr>
+        <th>Pouvoir mystique</th>
+        <th>Sort 1</th>
+        <th>Sort 2</th>
+        <th>Rituel</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="p in listePouvoirsMystiques">
+        <td>
+            <b>{{p.nom}}</b>
+            <br/>
+            Symbole : {{p.symbole}}
+        </td>
+        <td><div ng-bind-html-unsafe="p.sort_1"></div></td>
+        <td><div ng-bind-html-unsafe="p.sort_2"></div></td>
+        <td><div ng-bind-html-unsafe="p.rituel"></div></td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.addPouvoirMystique(p)" ng-show="!perso.isPouvoirMystiqueSelected(p)">{{ p.cout}}&nbsp;pt.</span>
+            <span class="btn btn-danger" ng-click="perso.removePouvoirMystique(p)" ng-show="perso.isPouvoirMystiqueSelected(p)">Supprimer</span>
+        </td>
+    </tr>
+</table>

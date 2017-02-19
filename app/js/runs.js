@@ -7,16 +7,42 @@ angular.module('myApp.runs', [])
 
                 $rootScope.perso.budget = 11;
 
+                $rootScope.perso.comp_bonus = {
+                    "Commun": 0,
+                    "Martial": 0,
+                    "Technique": 0,
+                    "Scientifique": 0,
+                    "Diplomatique": 0,
+                    "Criminel": 0,
+                    "Artistique": 0
+                };
+
+                $rootScope.perso.comp_bonus_max = {
+                    "Commun": 0,
+                    "Martial": 0,
+                    "Technique": 0,
+                    "Scientifique": 0,
+                    "Diplomatique": 0,
+                    "Criminel": 0,
+                    "Artistique": 0
+                };
+
                 $http.get('data/types.json').success(function (data) {
                     $rootScope.listeTypes = data;
                     $rootScope.perso.type = $rootScope.listeTypes["humain"];
+                    $rootScope.perso.compExpert = 2;
+                });
+
+                $http.get('data/limitations.json').success(function (data) {
+                    $rootScope.listeLimitations = data;
+                    $rootScope.perso.limitation = $rootScope.listeLimitations["Sans"];
                 });
 
                 $http.get('data/factions.json').success(function (data) {
                     $rootScope.listeFactions = data;
                     $rootScope.perso.faction = $rootScope.listeFactions["Autres"];
                 });
-                
+
                 $http.get('data/allegeances.json').success(function (data) {
                     $rootScope.listeAllegeances = data;
                     $rootScope.perso.allegeance = $rootScope.listeAllegeances["Sans"];
@@ -31,10 +57,25 @@ angular.module('myApp.runs', [])
                     $rootScope.listeCompetences = data;
                     $rootScope.perso.competences = {};
                 });
-                
+
                 $http.get('data/pouvoirs_inhumains.json').success(function (data) {
                     $rootScope.listePouvoirsInhumains = data;
                     $rootScope.perso.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
+                });
+
+                $http.get('data/pouvoirs_augmentes.json').success(function (data) {
+                    $rootScope.listePouvoirsAugmentes = data;
+                    $rootScope.perso.pouvoirAugmente = {};
+                });
+
+                $http.get('data/pouvoirs_mystiques.json').success(function (data) {
+                    $rootScope.listePouvoirsMystiques = data;
+                    $rootScope.perso.pouvoirsMystiques = {};
+                });
+
+                $http.get('data/exosquelettes.json').success(function (data) {
+                    $rootScope.listeExosquelettes = data;
+                    $rootScope.perso.exosquelette = $rootScope.listeExosquelettes["Autre"];
                 });
 
                 //Types
@@ -42,9 +83,23 @@ angular.module('myApp.runs', [])
                     this.budget = 10 - parseInt(type.cout);
                     this.type = type;
                     this.allegeance = $rootScope.listeAllegeances["Sans"];
+                    this.limitation = $rootScope.listeLimitations["Sans"];
                     this.specialite = $rootScope.listeSpecialites["Sans"];
                     this.competences = {};
                     this.pouvoirInhumain = $rootScope.listePouvoirsInhumains["Autre"];
+                    this.pouvoirAugmente = {};
+                    this.pouvoirsMystiques = {};
+                    this.exosquelette = {};
+                    this.compExpert = 0;
+                    this.compProdige = 0;
+                    if (type === $rootScope.listeTypes["humain"]) {
+                        this.compExpert = 2;
+                    }
+                    if (type === $rootScope.listeTypes["prodige"]) {
+                        this.compExpert = 1;
+                        this.compProdige = 1;
+                    }
+
                 };
 
                 $rootScope.perso.isTypeSelected = function (type) {
@@ -60,12 +115,82 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.isFactionSelected = function (faction) {
                     return (faction === this.faction);
                 };
-                
+
+                // Limitations
+                $rootScope.perso.changeLimitation = function (limitation) {
+                    this.budget = this.budget + parseInt(this.limitation.cout) - parseInt(limitation.cout);
+                    this.limitation = limitation;
+                };
+
+                $rootScope.perso.isLimitationSelected = function (limitation) {
+                    return (limitation === this.limitation);
+                };
+
                 // Allegeances
                 $rootScope.perso.changeAllegeance = function (allegeance) {
-                    this.budget = 10 - parseInt(this.type.cout) - parseInt(allegeance.cout);
+                    this.removeAllegeance();
+                    this.addAllegeance(allegeance);
+                };
+
+                $rootScope.perso.removeAllegeance = function () {
+                    
+                    this.budget = this.budget + parseInt(this.allegeance.cout);
+
+                    if (this.allegeance.nom === "La Maggia") {
+                        this.comp_bonus["Criminel"] = this.comp_bonus["Criminel"] - 2;
+                        this.comp_bonus_max["Criminel"] = this.comp_bonus["Criminel"] - 2;
+                    }
+
+                    if (this.allegeance.nom === "La Main") {
+                        this.comp_bonus["Martial"] = this.comp_bonus["Criminel"] - 1;
+                        this.comp_bonus_max["Martial"] = this.comp_bonus["Criminel"] - 1;
+                        this.comp_bonus["Artistique"] = this.comp_bonus["Artistique"] - 1;
+                        this.comp_bonus_max["Artistique"] = this.comp_bonus["Artistique"] - 1;
+                    }
+
+                    if (this.allegeance.nom === "Stark Industries") {
+                        if (this.type !== $rootScope.listeTypes["exosquelette"])
+                        {
+                            this.comp_bonus["Technique"] = this.comp_bonus["Technique"] - 2;
+                            this.comp_bonus_max["Technique"] = this.comp_bonus["Technique"] - 2;
+                        } else {
+                            this.budget = this.budget - 2;
+                        }
+                    }
+
+                    this.allegeance = $rootScope.listeAllegeances["Sans"];
+                };
+
+                $rootScope.perso.addAllegeance = function (allegeance) {
+                    if(this.budget < parseInt(allegeance.cout)){
+                        return;
+                    }
+
+                    this.budget = this.budget - parseInt(allegeance.cout);
+
+                    if (allegeance.nom === "La Maggia") {
+                        this.comp_bonus["Criminel"] = this.comp_bonus["Criminel"] + 2;
+                        this.comp_bonus_max["Criminel"] = this.comp_bonus["Criminel"] + 2;
+                    }
+
+                    if (allegeance.nom === "La Main") {
+                        this.comp_bonus["Martial"] = this.comp_bonus["Criminel"] + 1;
+                        this.comp_bonus_max["Martial"] = this.comp_bonus["Criminel"] + 1;
+                        this.comp_bonus["Artistique"] = this.comp_bonus["Artistique"] + 1;
+                        this.comp_bonus_max["Artistique"] = this.comp_bonus["Artistique"] + 1;
+                    }
+
+                    if (allegeance.nom === "Stark Industries") {
+                        if (this.type !== $rootScope.listeTypes["exosquelette"])
+                        {
+                            this.comp_bonus["Technique"] = this.comp_bonus["Technique"] + 2;
+                            this.comp_bonus_max["Technique"] = this.comp_bonus["Technique"] + 2;
+                        } else {
+                            this.budget = this.budget + 2;
+                        }
+                    }
+
                     this.allegeance = allegeance;
-                    this.competences = {};
                 };
 
                 $rootScope.perso.isAllegeanceSelected = function (allegeance) {
@@ -76,31 +201,107 @@ angular.module('myApp.runs', [])
                 $rootScope.perso.haveAcccessSpecialite = function () {
                     return (this.type !== $rootScope.listeTypes["mystique"] && this.type !== $rootScope.listeTypes["inhumain"]);
                 };
-                
+
                 $rootScope.perso.changeSpecialite = function (specialite) {
                     this.budget = 10 - parseInt(this.type.cout) - parseInt(specialite.cout);
+
+                    $rootScope.perso.comp_bonus = {
+                        "Commun": 0,
+                        "Martial": 0,
+                        "Technique": 0,
+                        "Scientifique": 0,
+                        "Diplomatique": 0,
+                        "Criminel": 0,
+                        "Artistique": 0
+                    };
+
+                    $rootScope.perso.comp_bonus_max = {
+                        "Commun": 0,
+                        "Martial": 0,
+                        "Technique": 0,
+                        "Scientifique": 0,
+                        "Diplomatique": 0,
+                        "Criminel": 0,
+                        "Artistique": 0
+                    };
+
+                    this.comp_bonus[specialite.domaine_bonus] = this.comp_bonus[specialite.domaine_bonus] + 1;
+                    this.comp_bonus_max[specialite.domaine_bonus] = this.comp_bonus_max[specialite.domaine_bonus] + 1;
+
                     this.specialite = specialite;
+
+                    this.addAllegeance(this.allegeance);
+
                     this.competences = {};
                 };
 
                 $rootScope.perso.isSpecialiteSelected = function (specialite) {
                     return (specialite === this.specialite);
                 };
-                
+
                 // Pouvoir inhumain
                 $rootScope.perso.haveAcccessPouvoirInhumain = function () {
                     return (this.type === $rootScope.listeTypes["inhumain"]);
                 };
-                
+
                 $rootScope.perso.changePouvoirInhumain = function (pouvoirInhumain) {
-                    this.budget = this.budget + parseInt(this.pouvoirInhumain.cout) - parseInt(pouvoirInhumain.cout);
                     this.pouvoirInhumain = pouvoirInhumain;
                 };
 
                 $rootScope.perso.isPouvoirInhumainSelected = function (pouvoirInhumain) {
                     return (pouvoirInhumain === this.pouvoirInhumain);
                 };
-                
+
+                // Pouvoir augmente
+                $rootScope.perso.haveAcccessPouvoirAugmente = function () {
+                    return (this.type === $rootScope.listeTypes["augmente"]);
+                };
+
+                $rootScope.perso.changePouvoirAugmente = function (pouvoirAugmente) {
+                    this.pouvoirAugmente = pouvoirAugmente;
+                };
+
+                $rootScope.perso.isPouvoirAugmenteSelected = function (pouvoirAugmente) {
+                    return (pouvoirAugmente === this.pouvoirAugmente);
+                };
+
+                // Pouvoir mystique
+                $rootScope.perso.haveAcccessPouvoirMystique = function () {
+                    return (this.type === $rootScope.listeTypes["mystique"]);
+                };
+
+                $rootScope.perso.addPouvoirMystique = function (pouvoirMystique) {
+                    if (pouvoirMystique.cout <= this.budget) {
+                        this.budget = this.budget - parseInt(pouvoirMystique.cout);
+                        this.pouvoirsMystiques[pouvoirMystique.nom] = pouvoirMystique;
+                    }
+                };
+
+                $rootScope.perso.removePouvoirMystique = function (pouvoirMystique) {
+                    this.budget = this.budget + parseInt(pouvoirMystique.cout);
+                    delete this.pouvoirsMystiques[pouvoirMystique.nom];
+                };
+
+                $rootScope.perso.isPouvoirMystiqueSelected = function (pouvoirMystique) {
+                    if (this.pouvoirsMystiques[pouvoirMystique.nom]) {
+                        return true;
+                    }
+
+                    return false;
+                };
+
+                // Exosquelette
+                $rootScope.perso.haveAcccessExosquelette = function () {
+                    return (this.type === $rootScope.listeTypes["exosquelette"]);
+                };
+
+                $rootScope.perso.changeExosquelette = function (exosquelette) {
+                    this.exosquelette = exosquelette;
+                };
+
+                $rootScope.perso.isExosqueletteSelected = function (exosquelette) {
+                    return (exosquelette === this.exosquelette);
+                };
 
                 //Compétences
                 $rootScope.perso.haveAcccessExpertComp = function () {
@@ -111,84 +312,167 @@ angular.module('myApp.runs', [])
                     return (this.type === $rootScope.listeTypes["prodige"]);
                 };
 
+                $rootScope.perso.achatComp = function (comp) {
+                    this.budget = this.budget - this.coutComp(comp);
+                };
+
+                $rootScope.perso.libereComp = function (comp) {
+                    this.budget = this.budget + this.coutComp(comp);
+                };
+
+                $rootScope.perso.coutComp = function (comp) {
+                    if (comp.domaine === this.specialite.domaine_malus) {
+                        return 2;
+                    }
+                    return 1;
+                };
+
+                $rootScope.perso.isCompGratuite = function (comp) {
+                    if (this.comp_bonus[comp.domaine] > 0) {
+                        return 0;
+                    }
+
+                    return this.coutComp(comp);
+                };
+
                 $rootScope.perso.addBasiqueComp = function (comp) {
-                    if (!this.competences[comp.nom.toString() + "1"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
-                        this.competences[comp.nom.toString() + "1"] = comp.nom + " - basique : " + comp.basique;
+                    if (!this.competences[comp.domaine]) {
+                        this.competences[comp.domaine] = {};
+                    }
+
+                    if (!this.competences[comp.domaine][comp.nom]) {
+                        this.competences[comp.domaine][comp.nom] = {};
+                    }
+
+                    if (!this.competences[comp.domaine][comp.nom]["basique"]) {
+                        if (this.comp_bonus[comp.domaine] > 0) {
+                            this.comp_bonus[comp.domaine] = this.comp_bonus[comp.domaine] - 1;
+                            this.competences[comp.domaine][comp.nom]["basique"] = comp.basique;
+                        } else {
+                            if (this.budget > 0) {
+                                this.achatComp(comp);
+                                this.competences[comp.domaine][comp.nom]["basique"] = comp.basique;
+                            }
+                        }
                     }
                 };
 
                 $rootScope.perso.addAvanceComp = function (comp) {
                     this.addBasiqueComp(comp);
-                    if (!this.competences[comp.nom.toString() + "2"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
-                        this.competences[comp.nom.toString() + "2"] = comp.nom + " - avancé : " + comp.avance;
+                    if (!this.competences[comp.domaine][comp.nom]["avance"] && this.budget > 0) {
+                        this.achatComp(comp);
+                        this.competences[comp.domaine][comp.nom]["avance"] = comp.avance;
                     }
-                }
+                };
 
                 $rootScope.perso.addExpertComp = function (comp) {
                     this.addAvanceComp(comp);
-                    if (!this.competences[comp.nom.toString() + "3"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
-                        this.competences[comp.nom.toString() + "3"] = comp.nom + " - expert : " + comp.expert;
+                    if (!this.competences[comp.domaine][comp.nom]["expert"] && this.budget > 0) {
+                        if (this.compExpert > 0) {
+                            this.compExpert = this.compExpert - 1;
+                            this.achatComp(comp);
+                            this.competences[comp.domaine][comp.nom]["expert"] = comp.expert;
+                        }
                     }
-                }
+                };
 
                 $rootScope.perso.addProdigeComp = function (comp) {
                     this.addExpertComp(comp);
-                    if (!this.competences[comp.nom.toString() + "4"] && this.budget > 0) {
-                        this.budget = this.budget - 1;
-                        this.competences[comp.nom.toString() + "4"] = comp.nom + " - prodige : " + comp.prodige;
+                    if (!this.competences[comp.domaine][comp.nom]["prodige"] && this.budget > 0) {
+                        if (this.compProdige > 0) {
+                            this.compProdige = this.compProdige - 1;
+                            this.achatComp(comp);
+                            this.competences[comp.domaine][comp.nom]["prodige"] = comp.prodige;
+                        }
                     }
-                }
+                };
 
                 $rootScope.perso.removeBasiqueComp = function (comp) {
-                    if (this.competences[comp.nom.toString() + "1"]) {
-                        delete this.competences[comp.nom.toString() + "1"];
-                        this.budget = this.budget + 1;
-                    }
-
                     this.removeAvanceComp(comp);
+
+                    if (this.competences[comp.domaine][comp.nom]["basique"]) {
+                        delete this.competences[comp.domaine][comp.nom]["basique"];
+
+                        if (this.comp_bonus[comp.domaine] < this.comp_bonus_max[comp.domaine]) {
+                            this.comp_bonus[comp.domaine] = this.comp_bonus[comp.domaine] + 1;
+                        } else {
+                            this.libereComp(comp);
+                        }
+                    }
                 };
 
                 $rootScope.perso.removeAvanceComp = function (comp) {
-                    if (this.competences[comp.nom.toString() + "2"]) {
-                        delete this.competences[comp.nom.toString() + "2"];
-                        this.budget = this.budget + 1;
-                    }
-
                     this.removeExpertComp(comp);
-                }
+
+                    if (this.competences[comp.domaine][comp.nom]["avance"]) {
+                        delete this.competences[comp.domaine][comp.nom]["avance"];
+                        this.libereComp(comp);
+                    }
+                };
 
                 $rootScope.perso.removeExpertComp = function (comp) {
-                    if (this.competences[comp.nom.toString() + "3"]) {
-                        delete this.competences[comp.nom.toString() + "3"];
-                        this.budget = this.budget + 1;
-                    }
-                    
                     this.removeProdigeComp(comp);
-                }
+
+                    if (this.competences[comp.domaine][comp.nom]["expert"]) {
+                        this.compExpert = this.compExpert + 1;
+                        delete this.competences[comp.domaine][comp.nom]["expert"];
+                        this.libereComp(comp);
+                    }
+                };
 
                 $rootScope.perso.removeProdigeComp = function (comp) {
-                    if (this.competences[comp.nom.toString() + "4"]) {
-                        this.budget = this.budget + 1;
-                        delete this.competences[comp.nom.toString() + "4"];
+                    if (this.competences[comp.domaine][comp.nom]["prodige"]) {
+                        this.compProdige = this.compProdige + 1;
+                        this.libereComp(comp);
+                        delete this.competences[comp.domaine][comp.nom]["prodige"];
                     }
-                }
+                };
 
                 $rootScope.perso.haveBasiqueComp = function (comp) {
-                    return this.competences[comp.nom + "1"];
+                    if (this.competences[comp.domaine]) {
+                        if (this.competences[comp.domaine][comp.nom]) {
+                            if (this.competences[comp.domaine][comp.nom]["basique"]) {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return false;
                 };
 
                 $rootScope.perso.haveAvanceComp = function (comp) {
-                    return this.competences[comp.nom + "2"];
+                    if (this.competences[comp.domaine]) {
+                        if (this.competences[comp.domaine][comp.nom]) {
+                            if (this.competences[comp.domaine][comp.nom]["avance"]) {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return false;
                 };
 
                 $rootScope.perso.haveExpertComp = function (comp) {
-                    return this.competences[comp.nom + "3"];
+                    if (this.competences[comp.domaine]) {
+                        if (this.competences[comp.domaine][comp.nom]) {
+                            if (this.competences[comp.domaine][comp.nom]["expert"]) {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return false;
                 };
 
                 $rootScope.perso.haveProdigeComp = function (comp) {
-                    return this.competences[comp.nom + "4"];
+                    if (this.competences[comp.domaine]) {
+                        if (this.competences[comp.domaine][comp.nom]) {
+                            if (this.competences[comp.domaine][comp.nom]["prodige"]) {
+                                return true;
+                            }
+                        }
+                    }
+
+                    return false;
                 };
             }]);

@@ -1,0 +1,27 @@
+<h2 class="page-header">Exosquelettes</h2>
+
+<p>Chaque utilisation d’une capacité coûte 1PE sauf indication contraire.</p>
+
+<p>Certains exosquelettes font office d’armure et sont des protections dirigées contre un type de dégât ou d’annonce, ce sont des armures spécialisées. Mais aucune armure ne peut protéger contre tout. Si vous pouvez physiquement courir avec votre costume d’armure, même lourde, alors vous pouvez courir en jeu, c’est beau, c’est Marvel. Si vous avez un doute sur le look de votre armure ou de votre exosquelette, n’hésitez pas à nous contacter :-).</p>
+
+<p>- Les porteurs d’exosquelettes ne se soignent pas, SI à la fin d’un combat ils sont toujours dans leur stade « Normal », il suffit de rester sans rien faire 5mn pour que l’armure revienne. S’ils sont dans l’Etat Blessé, il leur faut des soins d’un médecin, s’ils sont Inconscients ou dans le Coma, il faut une réparation en plus des soins médicaux (allez voir un Fixeur). Tant que l’exosquelette n’est pas réparé votre maximum de coups est de 4 et vous n’avez plus accès aux fonctions de l’exosquelette.</p>
+
+<p>- Les exosquelettes peuvent être Désactivés, si cela arrive, vous ne portez plus que de la tôle inutile ne donnant ni bonus ni protection en plus (et vous retombez à 4 coups maxi).</p>
+
+<table class="table" ng-show="perso.haveAcccessExosquelette()">
+    <tr>
+        <th>Exosquelette</th>
+        <th>Capacité</th>
+        <th>Type d'armure</th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="e in listeExosquelettes">
+        <td><b>{{e.nom}}</b></td>
+        <td><div ng-bind-html-unsafe="e.capacite"></div></td>
+        <td><div ng-bind-html-unsafe="e.type_armure"></div></td>
+        <td>
+            <span class="btn btn-primary" ng-click="perso.changeExosquelette(e)" ng-show="!perso.isExosqueletteSelected(e)">Choisir</span>
+            <span ng-show="perso.isExosqueletteSelected(e)">✓</span>
+        </td>
+    </tr>
+</table>
