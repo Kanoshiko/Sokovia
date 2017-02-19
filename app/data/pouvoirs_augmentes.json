@@ -1,7 +1,7 @@
 {
     "Endurance": {
         "nom": "Endurance",
-        "effet": "Vous pouvez supporter 10 coups en Normal et 4 en Blessé (permanent)"
+        "effet": "Vous pouvez supporter 12 coups en Normal et vous resistez aux annonces « Assommer » (permanent)"
     },
     "Agilité": {
         "nom": "Agilité",
@@ -9,7 +9,7 @@
     },
     "Voie des Poings": {
         "nom": "Voie des Poings",
-        "effet": "<u>Le Rand-Kaï</u> : Sur un coup, vous pouvez annoncer « Coma » (1 fois / combat)"
+        "effet": "<u>Le Rand-Kaï</u> : Sur un coup, vous pouvez annoncer « Moribond » (1 fois / combat)"
     },
     "Observation": {
         "nom": "Observation",
@@ -17,11 +17,11 @@
     },
     "Fixeur": {
         "nom": "Fixeur",
-        "effet": "<u>Cyborg</u> (permanent) : Vous êtes un Cyborg, un homme partiellement machine (et cela doit se voir, un bras, une jambe, le visage, quelque chose de voyant).<br/>Limite de coups de 10<br/>Provoque la Peur sur une cible pour 1PE<br/>Peut être soigné par un Fixeur autant  que par un médecin.<br/>Note : Si désactivé : retourne à 4 coups maximum et perd les avantages ci-dessus. Roleplay : la moitié de votre corps ne fonctionne plus."
+        "effet": "<u>Cyborg</u> (permanent) : Vous êtes un Cyborg, un homme partiellement machine (et cela doit se voir, un bras, une jambe, le visage, quelque chose de voyant).<br/>10 PV en Pleine Forme.<br/>Provoque la Peur sur une cible pour 1PE<br/>Peut être soigné par un Fixeur autant  que par un médecin.<br/>Note : Si désactivé : retourne à 4 PV maximum et perd les avantages ci-dessus. Roleplay : la moitié de votre corps ne fonctionne plus."
     },
     "Médecine": {
         "nom": "Médecine",
-        "effet": "<u>Apposition Absolue</u> : Vous touchez une personne et lui annoncez « Soins Complet ». Vous pouvez le faire sur vous-même du moins pour tous les états où vous êtes conscient. Quel que soit l’état de la cible, elle repasse en Normal. Permet aussi de faire sortir les gens de la Paralysie, de la Douleur, de la Confusion, de la Peur et guérit les membres brisés ou tranchés, tant que la cible est encore vivante au moment des soins."
+        "effet": "<u>Apposition Absolue</u> : Vous touchez une personne et lui annoncez « Soins Complet ». Vous pouvez le faire sur vous-même du moins pour tous les états où vous êtes conscient. Quel que soit l’état de la cible, elle repasse en Pleine Forme. Permet aussi de faire sortir les gens de la Paralysie, de la Douleur, de la Confusion, de la Peur et guérit les membres brisés ou tranchés, tant que la cible est encore vivante au moment des soins."
     },
     "Physique / Chimie": {
         "nom": "Physique / Chimie",
