@@ -10,8 +10,7 @@
         "nom": "Endurance",
         "domaine": "Commun",
         "basique": "Vous pouvez supporter 6 coups en Normal  (permanent)",
-        "avance": "<u>Héroïsme</u> : Ignorez tous les coups pour sauver une personne se trouvant au milieu d’un combat. Dès qu’elle est à l’abri, vous tombez Inconscient (vous marquez les coups quand même) ; Vous vous réveillerez dans l’état Moribond. <br /><u>Tête dure</u> :Vous pouvez résister à un effet « Assommer » en dépensant 1PE
-",
+        "avance": "<u>Héroïsme</u> : Ignorez tous les coups pour sauver une personne se trouvant au milieu d’un combat. Dès qu’elle est à l’abri, vous tombez Inconscient (vous marquez les coups quand même) ; Vous vous réveillerez dans l’état Moribond. <br /><u>Tête dure</u> :Vous pouvez résister à un effet « Assommer » en dépensant 1PE",
         "expert": "Vous pouvez supporter 10 coups dans l'état Pleine Forme (permanent)"
     }, {
         "nom": "Agilité",
