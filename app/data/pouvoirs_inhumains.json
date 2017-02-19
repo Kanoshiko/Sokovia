@@ -6,7 +6,7 @@
     }, 
     "Onde de choc": {
         "nom": "Onde de choc",
-        "effet": "Vous frappez vos mains l’une contre l’autre (prévoyez quelque chose sur vos paumes qui fassent un bruit bien fort, métal ou autre), vous annoncez « Blessé » en désignant une personne devant vous.",
+        "effet": "Vous frappez vos mains l’une contre l’autre (prévoyez quelque chose sur vos paumes qui fassent un bruit bien fort, métal ou autre), vous annoncez « 3 » en désignant une personne devant vous.",
         "contrepartie": "Vos mains sont assez grosses, maladroites (comme portant des gants très épais) vous avez du mal à saisir de petits objets ou à manipuler des machines."
     }, 
     "Regard du Basilic": {
@@ -16,12 +16,12 @@
     }, 
     "Vol vital": {
         "nom": "Vol vital",
-        "effet": "Vous touchez votre cible et vous annoncez « Grave », Vous récupérez ces 3 coups pour vous. Vous pouvez dépasser votre maximum de coups de 3.",
+        "effet": "Vous touchez votre cible et vous annoncez « 3 degats », Vous récupérez ces 3 PV pour vous. Vous pouvez dépasser votre maximum de PV de 3.",
         "contrepartie": "Vos mains portent des ventouses ou des petites bouches et vos cheveux sont totalement blancs (il est impossible de les teindre, mais vous pouvez les cacher). Si vous touchez quelqu’un que vous ayez ou pas des gants, il perd un coup et vous ne gagnez rien. "
     }, 
     "Force surhumaine": {
         "nom": "Force surhumaine",
-        "effet": "Pour 2PE, vous frappez à « Grave » pendant tout un combat, quel que soit l’arme de contact que vous utilisez. Dans cet état, vous pouvez dépenser 1PE de plus pour transformer votre « Grave » en « Blessure ».",
+        "effet": "Pour 2PE, vous frappez à « 3 » pendant tout un combat, quel que soit l’arme de contact que vous utilisez.",
         "contrepartie": "Quelque chose de visible chez vous ne peut laisser aucun doute quant à votre nature d’Inhumain. Que vous ayez des cornes, une queue, un visage défiguré, des yeux en plus, des crocs, ou tout ça en même temps.  "
     }, 
     "Lecture d’Aura": {
@@ -31,12 +31,12 @@
     }, 
     "Peau Résistante": {
         "nom": "Peau Résistante",
-        "effet": "Pour 1PE Vous ignorez tous les annonces de dégât « Grave » pendant un combat (vous marquez le coup, mais c’est une égratignure). Pour 1PE de plus dans cet état vous pouvez ignorer une annonce « Blessure »",
+        "effet": "Pour 1PE Vous réduisez de 2 points toutes les annonces de dégât pendant un combat (vous marquez le coup, mais c’est une égratignure). Pour 1PE, vous pouvez resister à une annonce Blessé ou Assommer ",
         "contrepartie": "Votre peau a une apparence repoussante, couleur surnaturelle, métallique, écaille, peau trouée, plaies ouvertes… Motifs sur toutes la peau etc…"
     }, 
     "Régénération": {
         "nom": "Régénération",
-        "effet": "Votre corps dépasse de très loin les capacités de réparation des humains. Pour chaque tranche de 20s que vous passez sans rien faire ni rien dire vous regagnez 1 coup. Si vous êtes Blessé vous repassez en Normal. Si vous êtes Inconscient, votre inconscience ne dure que 10s et vous repassez à Blessé, si vous êtes dans le Coma, au bout des 15 mn vous repassez Inconscient au lieu de mourir, puis de Inconscient à Blessé etc… Vos membres brisés ou tranché reviennent à la normale en 10mn. Si vous êtes achevé en revanche, vous êtes bien mort. Vous êtes toujours cependant sensibles aux poisons et drogues.",
+        "effet": "Votre corps dépasse de très loin les capacités de réparation des humains. Pour chaque tranche de 20s que vous passez sans rien faire ni rien dire vous regagnez 1 coup. Si vous êtes Blessé vous repassez en Pleine Forme en 3 minutes. Si vous êtes Inconscient, votre inconscience ne dure que 10s et vous repassez à Blessé, si vous êtes dans le Coma, au bout des 15 mn vous repassez Inconscient au lieu de mourir, puis de Inconscient à Blessé etc… Vos membres brisés ou tranché reviennent à la normale en 10mn. Si vous êtes achevé en revanche, vous êtes bien mort. Vous êtes toujours cependant sensibles aux poisons et drogues.",
         "contrepartie": "Vous ne pouvez recevoir aucun autre soin que ceux que votre corps prodigue. Aucun implant, aucune amélioration génétique, rien. Votre sang n’est pas utilisable dans aucun composé, votre ADN non plus."
     }, 
     "Soins par apposition des mains": {
